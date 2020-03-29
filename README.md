@@ -4,6 +4,12 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ## Array
 
+* Find the minimum item of an array
+
+~~~ javascript
+const min = arr => Math.min(...arr);
+~~~
+
 * Get the sum of array of numbers
 
 ~~~ javascript
