@@ -81,6 +81,15 @@ const reverse = (str) => (str === '') ? '' : `${reverse(str.substr(1))}${str.cha
 
 ## Misc
 
+* Check if an object is empty
+
+~~~ javascript
+const isEmpty = (obj) => Object.keys(obj).length === 0 && obj.constructor === Object;
+
+// Or
+const isEmpty = (obj) => JSON.stringify(obj) === '{}';
+~~~
+
 * Create an empty map that doesn't have properties
 
 ~~~ javascript
