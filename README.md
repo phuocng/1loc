@@ -62,6 +62,12 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## String
 
+* Get the file extension from a file name
+
+~~~ javascript
+const ext = (fileName) => fileName.split('.').pop();
+~~~
+
 * Get the file name from an URL
 
 ~~~ javascript
