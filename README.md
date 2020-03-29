@@ -145,6 +145,12 @@ const reload = () => (location.href = location.href);
 const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
 ~~~
 
+* Scroll to top of the page
+
+~~~ javascript
+const goToTop = () => window.scrollTo(0, 0);
+~~~
+
 ## String
 
 * Capitalize a string
