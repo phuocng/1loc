@@ -151,6 +151,12 @@ const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
 const goToTop = () => window.scrollTo(0, 0);
 ~~~
 
+* Strip HTML from a given text
+
+~~~ javascript
+const stripHtml = (html) => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
+~~~
+
 ## String
 
 * Capitalize a string
