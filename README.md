@@ -8,7 +8,6 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ~~~ javascript
 const range = (min, max) => Array(max - min + 1).fill(0).map((_, i) => max - min + i);
-
 // range(5, 10) === [5, 6, 7, 8, 9, 10]
 ~~~
 
@@ -62,6 +61,13 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## String
 
+* Capitalize a string
+
+~~~ javascript
+const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+// capitalize('hello world') === 'Hello world'
+~~~
+
 * Get the file extension from a file name
 
 ~~~ javascript
@@ -72,7 +78,6 @@ const ext = (fileName) => fileName.split('.').pop();
 
 ~~~ javascript
 const fileName = url => url.substring(url.lastIndexOf('/') + 1);
-
 // fileName('http://domain.com/path/to/document.pdf') === 'document.pdf'
 ~~~
 
@@ -118,7 +123,6 @@ const map = Object.create(null);
 
 ~~~ javascript
 const toNumber = (str) => +str;
-
 // toNumber('42') === 42
 ~~~
 
