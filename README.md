@@ -130,6 +130,15 @@ const insertHtmlBefore = (html, ele) => ele.insertAdjacentHTML('beforebegin', ht
 const goTo = (url) => location.href = url;
 ~~~
 
+* Reload the current page
+
+~~~ javascript
+const reload = () => location.reload();
+
+// Or
+const reload = () => (location.href = location.href);
+~~~
+
 ## String
 
 * Capitalize a string
