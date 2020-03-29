@@ -94,12 +94,6 @@ history.back();
 history.go(-1);
 ~~~
 
-* Insert given html after an element
-
-~~~ javascript
-const insertHtmlAfter = (html, ele) => ele.insertAdjacentHTML('afterend', html);
-~~~
-
 * Insert an element after other one
 
 ~~~ javascript
@@ -116,6 +110,18 @@ const insertBefore = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele
 
 // Or
 const insertBefore = (ele, anotherEle) => anotherEle.insertAdjacentElement('beforebegin', ele);
+~~~
+
+* Insert given HTML after an element
+
+~~~ javascript
+const insertHtmlAfter = (html, ele) => ele.insertAdjacentHTML('afterend', html);
+~~~
+
+* Insert given HTML before an element
+
+~~~ javascript
+const insertHtmlBefore = (html, ele) => ele.insertAdjacentHTML('beforebegin', html);
 ~~~
 
 ## String
