@@ -139,6 +139,12 @@ const reload = () => location.reload();
 const reload = () => (location.href = location.href);
 ~~~
 
+* Replace an element
+
+~~~ javascript
+const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
+~~~
+
 ## String
 
 * Capitalize a string
