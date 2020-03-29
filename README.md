@@ -157,6 +157,12 @@ const goToTop = () => window.scrollTo(0, 0);
 const stripHtml = (html) => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
 ~~~
 
+* Toggle an element
+
+~~~ javascript
+const toggle = (ele) => (ele.style.display = (ele.style.display === 'none') ? 'block' : 'none');
+~~~
+
 ## String
 
 * Capitalize a string
