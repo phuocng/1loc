@@ -94,6 +94,12 @@ history.back();
 history.go(-1);
 ~~~
 
+* Insert given html after an element
+
+~~~ javascript
+const insertHtmlAfter = (html, ele) => ele.insertAdjacentHTML('afterend', html);
+~~~
+
 * Insert an element after other one
 
 ~~~ javascript
