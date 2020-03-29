@@ -94,6 +94,15 @@ history.back();
 history.go(-1);
 ~~~
 
+* Insert an element after other one
+
+~~~ javascript
+const insertAfter = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele, anotherEle.nextSibling);
+
+// Or
+const insertAfter = (ele, anotherEle) => anotherEle.insertAdjacentElement('afterend', ele);
+~~~
+
 ## String
 
 * Capitalize a string
