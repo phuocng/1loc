@@ -59,6 +59,14 @@ const unique = arr => [...new Set(arr)];
 const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 ~~~
 
+## DOM
+
+* Detect macOS browser
+
+~~~ javascript
+const isMacBrowser = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+~~~
+
 ## String
 
 * Capitalize a string
