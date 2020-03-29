@@ -16,6 +16,12 @@ const max = arr => Math.max(...arr);
 const min = arr => Math.min(...arr);
 ~~~
 
+* Get the average of an array
+
+~~~ javascript
+const average = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
+~~~
+
 * Get the sum of array of numbers
 
 ~~~ javascript
