@@ -62,6 +62,14 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## String
 
+* Get the file name from an URL
+
+~~~ javascript
+const fileName = url => url.substring(url.lastIndexOf('/') + 1);
+
+// fileName('http://domain.com/path/to/document.pdf') === 'document.pdf'
+~~~
+
 * Reverse a string
 
 ~~~ javascript
