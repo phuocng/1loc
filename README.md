@@ -60,6 +60,25 @@ const unique = arr => [...new Set(arr)];
 const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 ~~~
 
+## String
+
+* Reverse a string
+
+~~~ javascript
+const reverse = (str) => str.split('').reverse().join('');
+
+// Or
+const reverse = (str) => [...str].reverse().join('');
+
+// Or
+const reverse = (str) => str.split('').reduce((rev, char)=> `${char}${rev}`, '');
+
+// Or
+const reverse = (str) => (str === '') ? '' : `${reverse(str.substr(1))}${str.charAt(0)}`;
+
+// reverse('hello world') === 'dlrow olleh'
+~~~
+
 ## Misc
 
 * Create an empty map that doesn't have properties
