@@ -16,6 +16,12 @@ const max = arr => Math.max(...arr);
 const min = arr => Math.min(...arr);
 ~~~
 
+* Get a random item from an array
+
+~~~ javascript
+const randomItem = arr => arr[Math.floor(Math.random() * arr.length)];
+~~~
+
 * Get the average of an array
 
 ~~~ javascript
