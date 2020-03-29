@@ -39,6 +39,12 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## Misc
 
+* Generate a random number in given range
+
+~~~ javascript
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+~~~
+
 * Swap two variables
 
 ~~~ javascript
