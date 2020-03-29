@@ -4,6 +4,15 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ## Array
 
+* Empty an array
+
+~~~ javascript
+const empty = arr => arr.length = 0;
+
+// Or
+const empty = arr => arr = [];
+~~~
+
 * Find the maximum item of an array
 
 ~~~ javascript
