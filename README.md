@@ -85,6 +85,15 @@ const isMacBrowser = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 const siblings = ele => [].slice.call(ele.parentNode.children).filter((child) => (child !== ele));
 ~~~
 
+* Go back to the previous page
+
+~~~ javascript
+history.back();
+
+// Or
+history.go(-1);
+~~~
+
 ## String
 
 * Capitalize a string
