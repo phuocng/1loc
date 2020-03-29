@@ -79,6 +79,12 @@ const hasFocus = ele => (ele === document.activeElement);
 const isMacBrowser = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 ~~~
 
+* Get all siblings of an element
+
+~~~ javascript
+const siblings = ele => [].slice.call(ele.parentNode.children).filter((child) => (child !== ele));
+~~~
+
 ## String
 
 * Capitalize a string
