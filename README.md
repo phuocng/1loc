@@ -4,6 +4,14 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ## Array
 
+* Create an array of number in given range
+
+~~~ javascript
+const range = (min, max) => Array(max - min + 1).fill(0).map((_, i) => max - min + i);
+
+// range(5, 10) === [5, 6, 7, 8, 9, 10]
+~~~
+
 * Empty an array
 
 ~~~ javascript
@@ -60,7 +68,7 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 // `map` doesn't have any properties
 const map = Object.create(null);
 
-// The following `map` has \`__proto__\` property
+// The following `map` has `__proto__` property
 // const map = {};
 ~~~
 
