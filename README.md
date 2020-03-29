@@ -61,6 +61,12 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## DOM
 
+* Check if an element is a descendant of another
+
+~~~ javascript
+const isDescendant = (child, parent) => parent.contains(child);
+~~~
+
 * Check if an element is focused
 
 ~~~ javascript
