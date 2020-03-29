@@ -61,6 +61,12 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## DOM
 
+* Check if an element is focused
+
+~~~ javascript
+const hasFocus = ele => (ele === document.activeElement);
+~~~
+
 * Detect macOS browser
 
 ~~~ javascript
