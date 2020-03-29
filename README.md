@@ -103,6 +103,15 @@ const insertAfter = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele,
 const insertAfter = (ele, anotherEle) => anotherEle.insertAdjacentElement('afterend', ele);
 ~~~
 
+* Insert an element before other one
+
+~~~ javascript
+const insertBefore = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele, anotherEle);
+
+// Or
+const insertBefore = (ele, anotherEle) => anotherEle.insertAdjacentElement('beforebegin', ele);
+~~~
+
 ## String
 
 * Capitalize a string
