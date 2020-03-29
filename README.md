@@ -124,6 +124,12 @@ const insertHtmlAfter = (html, ele) => ele.insertAdjacentHTML('afterend', html);
 const insertHtmlBefore = (html, ele) => ele.insertAdjacentHTML('beforebegin', html);
 ~~~
 
+* Redirect to another page
+
+~~~ javascript
+const goTo = (url) => location.href = url;
+~~~
+
 ## String
 
 * Capitalize a string
