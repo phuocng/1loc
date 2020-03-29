@@ -45,6 +45,16 @@ const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 ## Misc
 
+* Create an empty map that doesn't have properties
+
+~~~ javascript
+// `map` doesn't have any properties
+const map = Object.create(null);
+
+// The following `map` has \`__proto__\` property
+// const map = {};
+~~~
+
 * Generate a random number in given range
 
 ~~~ javascript
