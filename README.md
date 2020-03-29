@@ -100,6 +100,14 @@ const map = Object.create(null);
 // const map = {};
 ~~~
 
+* Convert a string to number
+
+~~~ javascript
+const toNumber = (str) => +str;
+
+// toNumber('42') === 42
+~~~
+
 * Generate a random number in given range
 
 ~~~ javascript
