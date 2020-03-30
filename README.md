@@ -312,10 +312,16 @@ const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 // capitalize('hello world') === 'Hello world'
 ~~~
 
-* Checks if a string is lower case
+* Check if a string is lower case
 
 ~~~ javascript
 const isLowerCase = str => str === str.toLowerCase();
+~~~
+
+* Check if a string is upper case
+
+~~~ javascript
+const isUpperCase = str => str === str.toUpperCase();
 ~~~
 
 * Get the file extension from a file name
