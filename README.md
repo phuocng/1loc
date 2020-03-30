@@ -4,7 +4,7 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ## Array
 
-* Create an array of number in given range
+* Create an array of numbers in given range
 
 ~~~ javascript
 const range = (min, max) => Array(max - min + 1).fill(0).map((_, i) => max - min + i);
@@ -211,6 +211,12 @@ const isEmpty = (obj) => Object.keys(obj).length === 0 && obj.constructor === Ob
 
 // Or
 const isEmpty = (obj) => JSON.stringify(obj) === '{}';
+~~~
+
+* Create an empty function
+
+~~~ javascript
+const noop = () => {};
 ~~~
 
 * Create an empty map that doesn't have properties
