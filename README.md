@@ -93,6 +93,20 @@ const unique = arr => [...new Set(arr)];
 const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 ~~~
 
+* Merge two arrays
+
+~~~ javascript
+// Merge but don't remove the duplications
+const merge = (a, b) => a.concat(b);
+// Or
+const merge = (a, b) => [...a, ...b];
+
+// Merge and remove the duplications
+const merge = [...new Set(a.concat(b))];
+// Or
+const merge = [...new Set([...a, ...b])];
+~~~
+
 ## Date time
 
 * Calculate the number of difference days between two dates
