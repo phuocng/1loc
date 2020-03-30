@@ -312,6 +312,13 @@ const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 // capitalize('hello world') === 'Hello world'
 ~~~
 
+* Check if a string contains whitespace
+
+~~~ javascript
+const containsWhitespace = str => str => /\s/.test(str);
+// containsWhitespace('hello world') === true
+~~~
+
 * Check if a string is lower case
 
 ~~~ javascript
