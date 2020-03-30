@@ -59,6 +59,18 @@ const unique = arr => [...new Set(arr)];
 const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 ~~~
 
+## Date time
+
+* Check if a year is leap year
+
+~~~ javascript
+const isLeapYear = year => (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));
+
+// Or
+// Get the number of days in February
+const isLeapYear = year => new Date(year, 1, 29).getDate() === 29;
+~~~
+
 ## DOM
 
 * Check if an element is a descendant of another
@@ -127,7 +139,7 @@ const insertHtmlBefore = (html, ele) => ele.insertAdjacentHTML('beforebegin', ht
 * Redirect to another page
 
 ~~~ javascript
-const goTo = (url) => location.href = url;
+const goTo = url => location.href = url;
 ~~~
 
 * Reload the current page
@@ -154,13 +166,13 @@ const goToTop = () => window.scrollTo(0, 0);
 * Strip HTML from a given text
 
 ~~~ javascript
-const stripHtml = (html) => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
+const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
 ~~~
 
 * Toggle an element
 
 ~~~ javascript
-const toggle = (ele) => (ele.style.display = (ele.style.display === 'none') ? 'block' : 'none');
+const toggle = ele => (ele.style.display = (ele.style.display === 'none') ? 'block' : 'none');
 ~~~
 
 ## String
@@ -168,14 +180,14 @@ const toggle = (ele) => (ele.style.display = (ele.style.display === 'none') ? 'b
 * Capitalize a string
 
 ~~~ javascript
-const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 // capitalize('hello world') === 'Hello world'
 ~~~
 
 * Get the file extension from a file name
 
 ~~~ javascript
-const ext = (fileName) => fileName.split('.').pop();
+const ext = fileName => fileName.split('.').pop();
 ~~~
 
 * Get the file name from an URL
@@ -188,16 +200,16 @@ const fileName = url => url.substring(url.lastIndexOf('/') + 1);
 * Reverse a string
 
 ~~~ javascript
-const reverse = (str) => str.split('').reverse().join('');
+const reverse = str => str.split('').reverse().join('');
 
 // Or
-const reverse = (str) => [...str].reverse().join('');
+const reverse = str => [...str].reverse().join('');
 
 // Or
-const reverse = (str) => str.split('').reduce((rev, char)=> `${char}${rev}`, '');
+const reverse = str => str.split('').reduce((rev, char)=> `${char}${rev}`, '');
 
 // Or
-const reverse = (str) => (str === '') ? '' : `${reverse(str.substr(1))}${str.charAt(0)}`;
+const reverse = str => (str === '') ? '' : `${reverse(str.substr(1))}${str.charAt(0)}`;
 
 // reverse('hello world') === 'dlrow olleh'
 ~~~
@@ -207,10 +219,10 @@ const reverse = (str) => (str === '') ? '' : `${reverse(str.substr(1))}${str.cha
 * Check if an object is empty
 
 ~~~ javascript
-const isEmpty = (obj) => Object.keys(obj).length === 0 && obj.constructor === Object;
+const isEmpty = obj => Object.keys(obj).length === 0 && obj.constructor === Object;
 
 // Or
-const isEmpty = (obj) => JSON.stringify(obj) === '{}';
+const isEmpty = obj => JSON.stringify(obj) === '{}';
 ~~~
 
 * Create an empty function
@@ -232,7 +244,7 @@ const map = Object.create(null);
 * Convert a string to number
 
 ~~~ javascript
-const toNumber = (str) => +str;
+const toNumber = str => +str;
 // toNumber('42') === 42
 ~~~
 
