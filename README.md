@@ -365,6 +365,14 @@ const isEmpty = obj => Object.keys(obj).length === 0 && obj.constructor === Obje
 const isEmpty = obj => JSON.stringify(obj) === '{}';
 ~~~
 
+* Convert hex to RGB
+
+~~~ javascript
+const hexToRgb = hex => hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`).substring(1).match(/.{2}/g).map(x => parseInt(x, 16))
+// hexToRgb('#00ffff') === [0, 255, 255] 
+// hexToRgb('#0ff') === [0, 255, 255]
+~~~
+
 * Convert RGB color to hex
 
 ~~~ javascript
