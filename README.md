@@ -4,6 +4,14 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 ## Array
 
+* Check if all items in an array are equal
+
+~~~ javascript
+const areEqual = arr => arr.length > 0 && arr.every(item => item === arr[0]);
+// areEqual([1, 2, 3, 4]) === false
+// areEqual(['hello', 'hello', 'hello']) === true
+~~~
+
 * Create an array of numbers in given range
 
 ~~~ javascript
