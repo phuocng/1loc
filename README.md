@@ -71,6 +71,13 @@ const isLeapYear = year => (((year % 4 === 0) && (year % 100 !== 0)) || (year % 
 const isLeapYear = year => new Date(year, 1, 29).getDate() === 29;
 ~~~
 
+* Get the number of days in given month
+
+~~~ javascript
+// `month` is zero-based index
+const daysInMonth = (month, year) => new Date(year, month, 0).getDate();
+~~~
+
 ## DOM
 
 * Check if an element is a descendant of another
