@@ -2,6 +2,13 @@
 
 What's your favorite JavaScript single LOC (line of code)? Let me know!
 
+* [Array](#array)
+* [Date time](#date-time)
+* [DOM](#dom)
+* [Number](#number)
+* [String](#string)
+* [Misc](#misc)
+
 ## Array
 
 * Check if all items in an array are equal
@@ -267,6 +274,35 @@ const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).b
 const toggle = ele => (ele.style.display = (ele.style.display === 'none') ? 'block' : 'none');
 ~~~
 
+## Number
+
+* Check if a given integer is a prime number
+
+~~~ javascript
+const isPrime = num => (num > 1) && Array(Math.floor(Math.sqrt(num)) - 1).fill(0).map((_, i) => i + 2).every(i => num % i !== 0);
+~~~
+
+* Check if a number is a power of 2
+
+~~~ javascript
+const isPowerOfTwo = number => (number & (number - 1)) === 0;
+// isPowerOfTwo(256) === true
+// isPowerOfTwo(129) === false
+~~~
+
+* Convert a string to number
+
+~~~ javascript
+const toNumber = str => +str;
+// toNumber('42') === 42
+~~~
+
+* Generate a random number in given range
+
+~~~ javascript
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+~~~
+
 ## String
 
 * Capitalize a string
@@ -308,14 +344,6 @@ const reverse = str => (str === '') ? '' : `${reverse(str.substr(1))}${str.charA
 
 ## Misc
 
-* Check if a number is a power of 2
-
-~~~ javascript
-const isPowerOfTwo = number => (number & (number - 1)) === 0;
-// isPowerOfTwo(256) === true
-// isPowerOfTwo(129) === false
-~~~
-
 * Check if an object is empty
 
 ~~~ javascript
@@ -339,19 +367,6 @@ const map = Object.create(null);
 
 // The following `map` has `__proto__` property
 // const map = {};
-~~~
-
-* Convert a string to number
-
-~~~ javascript
-const toNumber = str => +str;
-// toNumber('42') === 42
-~~~
-
-* Generate a random number in given range
-
-~~~ javascript
-const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 ~~~
 
 * Swap two variables
