@@ -79,6 +79,14 @@ const isLeapYear = year => (((year % 4 === 0) && (year % 100 !== 0)) || (year % 
 const isLeapYear = year => new Date(year, 1, 29).getDate() === 29;
 ~~~
 
+* Compare two dates
+
+~~~ javascript
+// `a` and `b` are `Date` instances
+const compare = (a, b) => a.getTime() > b.getTime();
+// compare(new Date('2020-03-30'), new Date('2020-01-01')) === true
+~~~
+
 * Get the current timestamp in seconds
 
 ~~~ javascript
