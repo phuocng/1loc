@@ -260,6 +260,14 @@ const reverse = str => (str === '') ? '' : `${reverse(str.substr(1))}${str.charA
 
 ## Misc
 
+* Check if a number is a power of 2
+
+~~~ javascript
+const isPowerOfTwo = number => (number & (number - 1)) === 0;
+// isPowerOfTwo(256) === true
+// isPowerOfTwo(129) === false
+~~~
+
 * Check if an object is empty
 
 ~~~ javascript
