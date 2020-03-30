@@ -69,6 +69,13 @@ const diffDays = (date, otherDate) => Math.ceil(Math.abs(date - otherDate) / (10
 // diffDays(new Date('2014-12-19'), new Date('2020-01-01')) === 1839
 ~~~
 
+* Check if a date is between two dates
+
+~~~ javascript
+// `min`, `max` and `date` are `Date` instances
+const isBetween = (date, min, max) => (date.getTime() >= min.getTime() && date.getTime() <= max.getTime());
+~~~
+
 * Check if a year is leap year
 
 ~~~ javascript
