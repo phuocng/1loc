@@ -107,6 +107,14 @@ const ts = () => Math.floor(new Date().getTime() / 1000);
 const daysInMonth = (month, year) => new Date(year, month, 0).getDate();
 ~~~
 
+* Sort an array of dates
+
+~~~ javascript
+// `arr` is an array of `Date` items
+const sortDescending = arr => arr.sort((a, b) => a.getTime() > b.getTime());
+const sortAscending = arr => arr.sort((a, b) => a.getTime() < b.getTime());
+~~~
+
 ## DOM
 
 * Check if an element is a descendant of another
