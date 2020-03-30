@@ -12,6 +12,12 @@ const areEqual = arr => arr.length > 0 && arr.every(item => item === arr[0]);
 // areEqual(['hello', 'hello', 'hello']) === true
 ~~~
 
+* Check if an object is an array
+
+~~~ javascript
+const isArray = obj => Array.isArray(obj);
+~~~
+
 * Create an array of cumulative sum
 
 ~~~ javascript
