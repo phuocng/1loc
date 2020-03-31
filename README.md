@@ -344,6 +344,15 @@ const fileName = url => url.substring(url.lastIndexOf('/') + 1);
 // fileName('http://domain.com/path/to/document.pdf') === 'document.pdf'
 ~~~
 
+* Repeat a string
+
+~~~ javascript
+const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes);
+
+// Or
+const repeat = (str, numberOfTimes) => Array(numberOfTimes).join(str);
+~~~
+
 * Reverse a string
 
 ~~~ javascript
