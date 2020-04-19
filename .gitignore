@@ -1,0 +1,4 @@
+.netlify
+data/*
+dist
+node_modules

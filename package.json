@@ -1,0 +1,64 @@
+{
+    "name": "1loc",
+    "description": "What's your favorite JavaScript single LOC (line of code)",
+    "author": {
+        "name": "Nguyen Huu Phuoc",
+        "email": "me@phuoc.ng",
+        "url": "https://twitter.com/nghuuphuoc"
+    },
+    "homepage": "https://1loc.dev",
+    "keywords": [
+        "JavaScript",
+        "utility"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phuoc-ng/1loc"
+    },
+    "bugs": {
+        "url": "https://github.com/phuoc-ng/1loc/issues"
+    },
+    "license": "MIT",
+    "scripts": {
+        "data": "node bin/generateData.js",
+        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
+        "dev": "npm run copy && webpack --mode development",
+        "dev-server": "npm run copy && webpack-dev-server",
+        "build": "npm run copy && webpack --mode production && npm run export",
+        "export": "react-snap",
+        "deploy": "npm run build && netlify deploy --dir=dist --prod"
+    },
+    "dependencies": {
+        "highlight.js": "^9.18.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-markdown": "^4.3.1",
+        "react-router-dom": "^5.1.2"
+    },
+    "devDependencies": {
+        "@types/react": "^16.9.34",
+        "@types/react-dom": "^16.9.6",
+        "@types/react-router-dom": "^5.1.4",
+        "css-loader": "^3.5.2",
+        "cssnano": "^4.1.10",
+        "html-webpack-plugin": "^4.2.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "postcss-loader": "^3.0.0",
+        "react-snap": "^1.23.0",
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^1.1.4",
+        "tailwindcss": "^1.2.0",
+        "ts-loader": "^7.0.0",
+        "typescript": "^3.8.3",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    },
+    "reactSnap": {
+        "source": "dist",
+        "minifyHtml": {
+            "collapseWhitespace": false,
+            "removeComments": false
+        }
+    }
+}
