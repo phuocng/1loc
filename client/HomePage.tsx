@@ -30,7 +30,7 @@ const HomePage = () => {
                         return (
                             <div key={item.category} className='mb-16'>
                                 <div className='mb-4'>
-                                    <Separator>{item.category.toUpperCase()}</Separator>
+                                    <Separator>{item.category.split('-').join(' ').toUpperCase()}</Separator>
                                 </div>
                                 {
                                     item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)

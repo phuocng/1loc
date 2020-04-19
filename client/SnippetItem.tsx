@@ -15,18 +15,15 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
 
     const toggle = () => {
         const contentEle = contentRef.current;
-        if (!contentEle) {
-            return;
-        }
-        contentEle.classList.toggle('hidden');
+        contentEle && contentEle.classList.toggle('hidden');
     };
 
     return (
-        <div className='border border-gray-400'>
-            <h2 className='cursor-pointer p-2 text-xl' onClick={toggle}>
+        <div className='border border-gray-400 mb-3'>
+            <h2 className='cursor-pointer py-1 px-2 bg-gray-100' onClick={toggle}>
                 {formatName(snippet.name)}
             </h2>
-            <div ref={contentRef} className='hidden border-t border-gray-400'>
+            <div ref={contentRef} className='hidden border-t border-gray-400 text-sm'>
                 <Markdown content={snippet.body} />
             </div>
         </div>
