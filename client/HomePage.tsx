@@ -1,16 +1,19 @@
 import React from 'react';
 
 import Layout from './Layout';
+import Separator from './Separator';
+import snippets from './snippets';
+import SnippetItem from './SnippetItem';
 
 const HomePage = () => {
     return (
         <Layout>
             <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>favorite JavaScript utilities</h1>
-            <h3 className='font-light mb-12 text-2xl sm:text-3xl text-center'>
+            <h3 className='font-light mb-8 text-2xl sm:text-3xl text-center'>
                 in <span className='bg-blue-200 p-1'>single</span> line of code
             </h3>
 
-            <div className="mb-12 text-center">
+            <div className="mb-16 text-center">
                 <a
                     className="text-2xl bg-gray-400 px-4 py-2"
                     href="https://github.com/phuoc-ng/1loc"
@@ -22,7 +25,20 @@ const HomePage = () => {
             </div>
 
             <div className='ml-auto mr-auto max-w-4xl'>
-                
+                {
+                    snippets.map((item) => {
+                        return (
+                            <div key={item.category} className='mb-16'>
+                                <div className='mb-4'>
+                                    <Separator>{item.category.toUpperCase()}</Separator>
+                                </div>
+                                {
+                                    item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)
+                                }
+                            </div>
+                        ); 
+                    })
+                }
             </div>
         </Layout>
     );

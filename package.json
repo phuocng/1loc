@@ -21,7 +21,7 @@
     "license": "MIT",
     "scripts": {
         "data": "node bin/generateData.js",
-        "copy": "rm -rf dist && mkdir dist",
+        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
