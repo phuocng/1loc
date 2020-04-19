@@ -19,13 +19,13 @@ const output = getDirectories(collectionsDir).map((dir) => {
     const files = getFiles(dirPath).map((item) => {
         return {
             name: getFileName(item.name),
-            content: fs.readFileSync(path.join(dirPath, '/', item.name), 'utf8'),
+            body: fs.readFileSync(path.join(dirPath, '/', item.name), 'utf8'),
         };
     });
 
     return {
         category: dir,
-        items: files,
+        snippets: files,
     };
 });
 

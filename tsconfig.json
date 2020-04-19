@@ -6,6 +6,7 @@
         "noImplicitAny": true,
         "module": "esnext",
         "moduleResolution": "node",
+        "resolveJsonModule": true,
         "target": "esnext",
         "jsx": "react"
     }
