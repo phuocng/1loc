@@ -22,9 +22,9 @@
     "scripts": {
         "data": "node bin/generateData.js",
         "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
-        "dev": "npm run copy && webpack --mode development",
-        "dev-server": "npm run copy && webpack-dev-server",
-        "build": "npm run copy && webpack --mode production && npm run export",
+        "dev": "npm run copy && npm run data && webpack --mode development",
+        "dev-server": "npm run copy && npm run data && webpack-dev-server",
+        "build": "npm run copy && npm run data && webpack --mode production && npm run export",
         "export": "react-snap",
         "deploy": "npm run build && netlify deploy --dir=dist --prod"
     },

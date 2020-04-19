@@ -2,6 +2,8 @@
 
 What's your favorite JavaScript single LOC (line of code)? Let me know!
 
+![JavaScript single LOC](public/assets/screenshot.png)
+
 ## Running it on local
 
 1. Clone the project:
@@ -43,12 +45,12 @@ Be my friend on
 
 You might be interesting in my products:
 
-| Product                                           | Description                                                       |
-|---------------------------------------------------|-------------------------------------------------------------------|
-| [1 LOC](https://1loc.dev)                         | Favorite JavaScript utilities in single line of code              |
-| [Blur Page](https://blur.page)                    | A browser extension to hide sensitive information on a web page   |
-| [CSS Layout](https://csslayout.io)                | A collection of popular layouts and patterns made with CSS        |
-| [Fake Numbers](https://fakenumbers.io)            | Generate fake and valid numbers                                   |
-| [Form Validation](https://formvalidation.io)      | The best validation library for JavaScript                        |
-| [HTML DOM](https://htmldom.dev)                   | How to manage HTML DOM with vanilla JavaScript                    |
-| [React PDF Viewer](https://react-pdf-viewer.dev)  | A React component to view a PDF document                          |
+| Product                                               | Description                                                       |
+|-------------------------------------------------------|-------------------------------------------------------------------|
+| 01. [1 LOC](https://1loc.dev)                         | Favorite JavaScript utilities in single line of code              |
+| 02. [Blur Page](https://blur.page)                    | A browser extension to hide sensitive information on a web page   |
+| 03. [CSS Layout](https://csslayout.io)                | A collection of popular layouts and patterns made with CSS        |
+| 04. [Fake Numbers](https://fakenumbers.io)            | Generate fake and valid numbers                                   |
+| 05. [Form Validation](https://formvalidation.io)      | The best validation library for JavaScript                        |
+| 06. [HTML DOM](https://htmldom.dev)                   | How to manage HTML DOM with vanilla JavaScript                    |
+| 07. [React PDF Viewer](https://react-pdf-viewer.dev)  | A React component to view a PDF document                          |
