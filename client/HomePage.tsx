@@ -11,7 +11,7 @@ const HomePage = () => {
         <Layout>
             <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>favorite JavaScript utilities</h1>
             <h3 className='font-light mb-8 text-2xl sm:text-3xl text-center'>
-                in <span className='bg-blue-200 p-1'>single</span> line of code
+                in <span className='border-b-2 border-black'>single line of code</span>! No more!
             </h3>
 
             <div className="mb-16 text-center">
