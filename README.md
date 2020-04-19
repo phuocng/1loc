@@ -30,7 +30,7 @@ Open http://localhost:1234 in your browser to see it in action.
 ## Contributing
 
 Pull requests are welcomed. To submit your favorite JavaScript single line of code, please create a markdown file, and put it in 
-a particular category of the `collections` folder.
+a particular category of the [collections](collections) folder.
 
 ## About
 

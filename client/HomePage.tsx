@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AddYourButton from './AddYourButton';
 import Layout from './Layout';
 import Separator from './Separator';
 import snippets from './snippets';
@@ -35,6 +36,7 @@ const HomePage = () => {
                                 {
                                     item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)
                                 }
+                                <AddYourButton />
                             </div>
                         ); 
                     })
