@@ -4,5 +4,8 @@ const prefixWithZeros = (number, length) => (number / Math.pow(10, length)).toFi
 // Or
 const prefixWithZeros = (number, length) => `${Array(length).join('0')}${number}`.slice(-length);
 
+// Or
+const prefixWithZeros = (number, length) => String(number).padStart(length, '0');
+
 // prefixWithZeros(42, 5) === '00042'
 ~~~
