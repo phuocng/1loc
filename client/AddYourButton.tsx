@@ -9,7 +9,7 @@ const AddYourButton: React.FC<{}> = () => {
                 target="_blank"
                 className='p-2 text-2xl text-center w-full'
             >
-                Add your ...
+                Add yours ...
             </a>
         </div>
     );
