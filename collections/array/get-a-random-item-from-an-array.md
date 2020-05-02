@@ -1,3 +1,3 @@
 ~~~ javascript
-const randomItem = arr => arr[Math.floor(Math.random() * arr.length)];
+const randomItem = arr => arr[(Math.random() * arr.length) | 0];
 ~~~
