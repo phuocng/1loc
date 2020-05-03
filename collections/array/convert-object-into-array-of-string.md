@@ -1,6 +1,6 @@
 ~~~javascript
 const object={
-    a: 'something;
+    a: 'something';
     b: 9;
     c: true;    
 };
