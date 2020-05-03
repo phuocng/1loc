@@ -1,3 +1,3 @@
 ~~~ javascript
-const selectedRadioBtn = Array.from(document.getElementsByName("formNameHere")).find(input => input.checked);
+const selectedRadioBtnForForm = (formName) => Array.from(document.getElementsByName(formName)).find(input => input.checked);
 ~~~
