@@ -1,5 +1,5 @@
 ~~~ javascript
-const toNumbers = arr => arr.map(Number);
+const toNumbers = arr => arr.map(x=>+x);
 
 // toNumbers(["2", "3", "4"]) returns [2, 3, 4]
 ~~~
