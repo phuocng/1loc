@@ -1,0 +1,11 @@
+~~~ javascript
+const insertIf = (isTrue, ...elements) => condtion ? elements : typeof elements === 'object' ? {} : [];
+// insertIf(true, 1, 2, 3) --> [1, 2, 3]
+// insertIf(false, 1, 2, 3) --> []
+// [0, ...insertIf(true, [1, 2, 3])] --> [0,1,2,3]
+// [0, ...insertIf(false, [1, 2, 3])] --> [0]
+
+// also works with objects
+// { key: 'value', ...insertIf(true, { someOtherKey: 'someOtherValue' }) } --> { key: 'value', someOtherKey: 'someOtherValue' }
+// { key: 'value', ...insertIf(false, { someOtherKey: 'someOtherValue' }) } --> { key: 'value' }
+~~~
