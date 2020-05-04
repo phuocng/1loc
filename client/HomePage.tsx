@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import AddYourButton from './AddYourButton';
 import Layout from './Layout';
@@ -7,6 +7,17 @@ import snippets from './snippets';
 import SnippetItem from './SnippetItem';
 
 const HomePage = () => {
+    const [totalStars, setTotalStars] = useState(0);
+
+    useEffect(() => {
+        fetch('https://api.github.com/repos/phuoc-ng/1loc')
+            .then(res => res.json())
+            .then(data => {
+                setTotalStars(data.stargazers_count);
+            })
+            .catch(console.log)
+    })
+
     return (
         <Layout>
             <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>favorite JavaScript utilities</h1>
@@ -21,7 +32,7 @@ const HomePage = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                 >
-                    GitHub ∙ 580 ★
+                    GitHub ∙ {totalStars} ★
                 </a>
             </div>
 
