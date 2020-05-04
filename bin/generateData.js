@@ -29,4 +29,7 @@ const output = getDirectories(collectionsDir).map((dir) => {
     };
 }).sort((a, b) => a.category.toLowerCase() > b.category.toLowerCase());
 
+if (!fs.existsSync('./data')) {
+    fs.mkdirSync('./data');
+}
 fs.writeFileSync(path.resolve(__dirname, '../data/data.json'), JSON.stringify(output));
