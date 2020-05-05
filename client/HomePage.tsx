@@ -15,8 +15,8 @@ const HomePage = () => {
             .then(data => {
                 setTotalStars(data.stargazers_count);
             })
-            .catch(console.log)
-    })
+            .catch(console.log);
+    });
 
     return (
         <Layout>
