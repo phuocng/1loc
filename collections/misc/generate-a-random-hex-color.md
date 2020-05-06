@@ -1,3 +1,3 @@
 ~~~ javascript
-const randomColor = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
+const randomColor = () => `#${Math.random().toString(16).slice(2, 8).padEnd(6, '0')}`;
 ~~~
