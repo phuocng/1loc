@@ -1,3 +1,4 @@
+~~~ javascript
 // Add an element to an array only if it is not already added
 const push = (arr, el) => !arr.includes(el) && arr.push(el);
 
@@ -19,3 +20,4 @@ const arr = [
 ];
 push(arr, {name: 'a', value: 'b'}); // Returns undefined and does not add object to array
 push(arr, {name: 'e', value: 'f'}); // Returns the new array length and add object to array
+~~~
