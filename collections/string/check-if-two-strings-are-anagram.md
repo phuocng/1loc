@@ -9,4 +9,5 @@ const areAnagrams = (str1, str2) => (alphagram = (word) => word.toLowerCase().sp
 // areAnagrams('listen', 'silent') === true
 // areAnagrams('New York Times', 'monkeys write') === true
 // areAnagrams('forty-five', 'over forty') === true
+// areAnagrams('éclair', 'lacier') === true
 ~~~
