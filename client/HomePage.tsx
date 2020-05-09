@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-import AddYourButton from './AddYourButton';
-import Layout from './Layout';
-import Separator from './Separator';
-import snippets from './snippets';
-import SnippetItem from './SnippetItem';
+import AddYourButton from './components/AddYourButton';
+import Separator from './components/Separator';
+import SnippetItem from './components/SnippetItem';
+import Layout from './layout/Layout';
+import snippets from './models/snippets';
 
 const HomePage = () => {
     const [totalStars, setTotalStars] = useState(0);
+    const total = snippets.map(item => item.snippets.length).reduce((a, b) => a + b, 0);
 
     useEffect(() => {
         fetch('https://api.github.com/repos/phuoc-ng/1loc')
@@ -18,7 +19,7 @@ const HomePage = () => {
 
     return (
         <Layout>
-            <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>favorite JavaScript utilities</h1>
+            <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>{total} favorite JavaScript utilities</h1>
             <h3 className='font-light mb-8 text-2xl sm:text-3xl text-center'>
                 in <span className='border-b-2 border-black'>single line of code</span>! No more!
             </h3>
