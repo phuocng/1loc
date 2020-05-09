@@ -1,5 +1,6 @@
 ~~~ javascript
 const noop = () => {};
-// or
+
+// Or
 const noop = Function.prototype;
 ~~~
