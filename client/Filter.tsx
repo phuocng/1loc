@@ -49,7 +49,7 @@ const Filter: React.FC<{}> = () => {
                             return (
                                 <li
                                     key={index}
-                                    className={`border-gray-400 hover:bg-gray-200 truncate ${index === 0 ? '' : 'border-t'}`}
+                                    className='border-gray-400 hover:bg-gray-200 truncate border-t'
                                 >
                                     <a
                                         className='p-1 block'
