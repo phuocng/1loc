@@ -20,7 +20,7 @@ const Filter: React.FC<{}> = () => {
                 : [];
 
     return (
-        <div className='w-full relative'>
+        <div className='border border-gray-400 w-full relative'>
             <div>
                 <input
                     ref={searchBoxRef}

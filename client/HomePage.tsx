@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AddYourButton from './AddYourButton';
 import Layout from './Layout';
@@ -12,9 +12,7 @@ const HomePage = () => {
     useEffect(() => {
         fetch('https://api.github.com/repos/phuoc-ng/1loc')
             .then(res => res.json())
-            .then(data => {
-                setTotalStars(data.stargazers_count);
-            })
+            .then(data => setTotalStars(data.stargazers_count))
             .catch(console.log);
     });
 
