@@ -1,6 +1,6 @@
 ~~~ javascript
-const mixedArray = [0, "a string", "", NaN, true, 5, undefined, "another string", false];
+const removeFalsy = arr => arr.filter(Boolean);
 
-const trueValues = mixedArray.filter(Boolean);
-// console.log(trueValue) -> [ 'a string', true, 5, 'another string' ]
+// removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false])
+// returns ['a string', true, 5, 'another string']
 ~~~

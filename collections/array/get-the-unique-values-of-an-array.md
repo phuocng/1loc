@@ -5,5 +5,5 @@ const unique = arr => [...new Set(arr)];
 const unique = arr => arr.filter((el, i, array) => array.indexOf(el) === i);
 
 // Or
-arr.reduce((unique, el) => unique.includes(el) ? unique : [...unique, el], []);
+const unique = arr => arr.reduce((acc, el) => acc.includes(el) ? acc : [...acc, el], []);
 ~~~
