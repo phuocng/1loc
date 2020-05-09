@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import highlight from './highlight';
+import highlight from '../helpers/highlight';
 
 interface SampleCodeProps {
     code: string;
