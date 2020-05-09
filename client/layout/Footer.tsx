@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SubscribeForm from './SubscribeForm';
+import SubscribeForm from '../components/SubscribeForm';
 
 const Footer: React.FC<{}> = () => {
     return (

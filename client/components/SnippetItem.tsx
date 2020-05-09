@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
-import anchor from './helpers/anchor';
-import formatName from './helpers/formatName';
+import anchor from '../helpers/anchor';
+import formatName from '../helpers/formatName';
+import { Snippet } from '../models/snippets';
 import Markdown from './Markdown';
-import { Snippet } from './snippets';
 
 interface SnippetItemProps {
     snippet: Snippet;

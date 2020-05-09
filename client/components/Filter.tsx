@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import anchor from './helpers/anchor';
-import formatName from './helpers/formatName';
-import snippets from './snippets';
+import anchor from '../helpers/anchor';
+import formatName from '../helpers/formatName';
+import snippets from '../models/snippets';
 import SearchIcon from './SearchIcon';
 
 const Filter: React.FC<{}> = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Filter from './Filter';
+import Filter from '../components/Filter';
 
 const Header = () => {
     return (
