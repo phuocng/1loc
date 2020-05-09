@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
+import anchor from './helpers/anchor';
+import formatName from './helpers/formatName';
 import Markdown from './Markdown';
 import { Snippet } from './snippets';
 
@@ -11,15 +13,10 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const contentRef = useRef<HTMLDivElement | null>(null);
 
-    const capitalize = (str: string) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-    const formatName = (name: string) => capitalize(name.split('-').join(' '));
-
     const toggle = () => {
         const contentEle = contentRef.current;
         contentEle && contentEle.classList.toggle('hidden');
     };
-
-    const anchor = (str: string) => str.toLowerCase().split(' ').join('');
 
     const id = anchor(snippet.name);
 
