@@ -3,13 +3,12 @@ import React, { useRef, useState } from 'react';
 import anchor from '../helpers/anchor';
 import formatName from '../helpers/formatName';
 import snippets from '../models/snippets';
-import SearchIcon from './SearchIcon';
 
 const Filter: React.FC<{}> = () => {
     const [keyword, setKeyword] = useState('');
     const searchBoxRef = useRef<HTMLInputElement>();
 
-    const onClickSearchIcon = () => searchBoxRef.current.focus();
+    const onClearSearch = () => setKeyword('');
     const onChangeSearchBox = (e: React.ChangeEvent<HTMLInputElement>) => setKeyword(e.target.value);
     const onClickTask = () => setKeyword('');
 
@@ -29,11 +28,13 @@ const Filter: React.FC<{}> = () => {
                     onChange={onChangeSearchBox}
                 />
             </div>
-            <button className='absolute border-none p-2 right-0 top-0' onClick={onClickSearchIcon}>
-                <SearchIcon />
-            </button>
+            {keyword && (
+                <button className='text-gray-600 absolute border-none p-2 right-0 top-0' onClick={onClearSearch}>
+                    clear
+                </button>
+            )}
             {keyword && result.length === 0 && (
-                <div className='absolute left-0 w-full bg-white border-l border-r border-b border-gray-400 p-2'>
+                <div className='absolute left-0 w-full bg-white border border-gray-400 p-2'>
                     Not found
                 </div>
             )}
