@@ -1,17 +1,18 @@
 ```js
-// returns an array with `length = num` of the results
-const generateData = (num, cb) => [...(function * () { for (let i = 0; i < num; i++) yield cb(i, () => { num = -1 }) })()]
+// returns an array with `length = num` of the callback results
+const generateData = (num, cb) => [...(function * (i) { while (i < num) yield cb(i++, () => { num = -1 }) })(0)]
 
-// EX: generate a set of random numbers
-// another one-liner
-const random = (a, b) => Math.round(Math.random() * Math.abs(a - b) + (a - b < 0 ? a : b))
+// with shortened variable names
+const gen = (n, c) => [...(function * (i) { while (i < n) yield c(i++, () => { n = -1 }) })(0)]
 
-// limit to 100 elements
-generateData(100, (i, halt) => {
-  // get a random number between 5 and the index/cycle
-  const number = Math.round(random(5, i))
-  // if that number is 20 interrupt
-  if (number === 20) halt()
+/* EX: generate a weird set of random numbers */
+// limit to 1000 elements
+const data = generateData(1000, (i, halt) => {
+  // get a random number
+  const number = Math.round(Math.random() * -i) + i
+  // if true, break
+  if (number === i && i > 100) halt()
   return number
 })
+console.log(data)
 ```
