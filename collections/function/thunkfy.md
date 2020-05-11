@@ -6,6 +6,7 @@ function heavyComputation (x) {
   return doStuff(x)
 }
 
+// example
 const unnecessarySlow = manyThings.map(heavyComputation).find(result => result.criteria)
 const probablyFaster = manyThings.map(thunkfy(heavyComputation))
   .find(thunk => thunk().criteria)
