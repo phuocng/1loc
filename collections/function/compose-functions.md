@@ -1,13 +1,14 @@
 ~~~ javascript
+// Compose functions from right to left
 const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
 
-/*
-const isEven = arr => arr.filter(x => x % 2 === 0);
+// Example
+const lowercase = str => str.toLowerCase();
+const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+const reverse = str => str.split('').reverse().join('');
 
-const isPositive = arr => arr.filter(x => x > 0);
+const fn = compose(reverse, capitalize, lowercase);
 
-// Find all positive and even numbers in `arr`
-const find = compose(isEven, isPositive);
-// find([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]) returns [2, 4]
-*/
+// We will execute `lowercase`, `capitalize` and `reverse` in order
+fn('Hello World') === 'dlrow olleH';
 ~~~
