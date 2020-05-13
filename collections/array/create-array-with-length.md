@@ -1,8 +1,8 @@
 ~~~ javascript
 
-const withLength = LENGTH => Array.from({ length: LENGTH })
+const withLength = length => Array.from({ length })
 
-const withLengthAndValues = LENGTH => Array.from({ length: LENGTH }, (_x, index) => index + 1)
+const withLengthAndValues = length => Array.from({ length }, (_x, index) => index + 1)
 
 /*
 withLength(2)
