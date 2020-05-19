@@ -1,7 +1,7 @@
 ~~~ javascript
-const isEqual = arr => arr.every(item => item === 'foo');
+const isEqual = (arr, value) => arr.every(item => item === value);
 
-// isEqual(['foo', 'foo']) === true
-// isEqual(['foo', 'bar']) === false
-// isEqual(['bar', 'bar']) === false
+// isEqual(['foo', 'foo'], 'foo') === true
+// isEqual(['foo', 'bar'], 'foo') === false
+// isEqual(['bar', 'bar'], 'foo') === false
 ~~~
