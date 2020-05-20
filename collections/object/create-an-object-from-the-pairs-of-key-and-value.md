@@ -1,4 +1,7 @@
 ~~~ javascript
+const toObj = arr => Object.fromEntries(arr)
+
+//Or
 const toObj = arr => arr.reduce((a, c) => ((a[c[0]] = c[1]), a), {});
 
 // Example
