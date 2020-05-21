@@ -1,0 +1,7 @@
+const emailIsValid = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+// emailIsValid('test@test.com') > true
+// emailisValid('test@test') > false
+// emailisValid('testtest.pl') > false
