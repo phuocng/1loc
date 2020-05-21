@@ -1,3 +1,6 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
 .hljs, code {
     font-family: 'Source Code Pro', monospace;
 }
