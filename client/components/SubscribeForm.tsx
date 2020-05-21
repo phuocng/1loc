@@ -3,7 +3,7 @@ import React from 'react';
 const SubscribeForm: React.FC<{}> = () => {
     return (
         <div className='text-center mb-8'>
-            <div className='mb-4'>
+            <div className='mb-4 text-white'>
                 Hit the Subscribe button for the latest news on my tools. No spam. Ever!
             </div>
             <form
@@ -14,7 +14,7 @@ const SubscribeForm: React.FC<{}> = () => {
                 noValidate={true}
             >
                 <input
-                    className='border border-gray-400 p-2 w-56 sm:w-64'
+                    className='p-2 w-56 rounded-none sm:w-64'
                     type="email"
                     name="EMAIL"
                     placeholder="Email address"
@@ -26,7 +26,8 @@ const SubscribeForm: React.FC<{}> = () => {
                 <button
                     type="submit"
                     name="subscribe"
-                    className='bg-black border-black border px-4 py-2 text-white'
+                    className='px-4 py-2 text-white'
+                    style={{ backgroundColor: '#00B894' }}
                 >
                     Subscribe
                 </button>

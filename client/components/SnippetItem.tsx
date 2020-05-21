@@ -42,9 +42,9 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
     }, []);
 
     return (
-        <div className='pt-2 mb-1' id={id} ref={containerRef}>
-            <div className='border border-gray-400'>
-                <h2 className='py-1 px-2 bg-gray-100 flex justify-between group'>
+        <div className='pt-2 mb-2' id={id} ref={containerRef}>
+            <div className='border shadow' style={{ borderColor: '#C2C2C2' }}>
+                <h2 className='py-1 px-2 flex justify-between text-xl'>
                     <div className='flex-1 cursor-pointer' onClick={toggle}>{formatName(snippet.name)}</div>
                     <a href={`#${id}`}>#</a>
                 </h2>

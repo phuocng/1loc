@@ -19,19 +19,22 @@ const HomePage = () => {
 
     return (
         <Layout>
-            <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>{total} favorite JavaScript utilities</h1>
-            <h3 className='font-light mb-8 text-2xl sm:text-3xl text-center'>
-                in <span className='border-b-2 border-black'>single line of code</span>! No more!
+            <h1 className='font-extrabold pt-24 text-center text-2xl sm:text-4xl px-1'>{total} Favorite JavaScript Utilities</h1>
+            <h3 className='font-light mb-16 text-2xl sm:text-3xl text-center'>
+                in <span className='font-bold' style={{ color: '#0984E3' }}>single line of code!</span> No more!
             </h3>
 
-            <div className="mb-16 text-center">
+            <div className="mb-48 text-center">
                 <a
-                    className="text-2xl bg-gray-400 px-4 py-2"
+                    className="text-2xl text-white px-4 py-2 rounded-full"
                     href="https://github.com/phuoc-ng/1loc"
                     rel="noopener noreferrer"
                     target="_blank"
+                    style={{
+                        backgroundColor: '#6C5CE7',
+                    }}
                 >
-                    GitHub ∙ {totalStars} ★
+                    GitHub ★ {totalStars}
                 </a>
             </div>
 

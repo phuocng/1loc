@@ -1,17 +1,23 @@
 import React from 'react';
 
 const Separator: React.FC<{}> = ({ children }) => {
-    const zigZag = "url('/assets/zig-zag.svg')";
-
     return (
         <div
-            className={`bg-repeat-x bg-center w-full text-center ${children ? '' : 'h-2'}`}
-            style={{ backgroundImage: zigZag }}
+            className={`w-full text-center ${children ? '' : 'h-2'}`}
         >
             { children && (
-            <span className='bg-white px-4 text-4xl'>
+            <div className='inline px-4 relative text-5xl font-bold'>
+                <div
+                    className='absolute bottom-0 h-6 left-0 w-full'
+                    style={{
+                        backgroundColor: '#FFEAA7',
+                        borderRadius: '48% 16% 64% 16%',
+                        transform: 'rotate(-4deg)',
+                        zIndex: -1,
+                    }}
+                />
                 {children}
-            </span>
+            </div>
             )}
         </div>
     );
