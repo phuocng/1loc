@@ -3,12 +3,10 @@ import React from 'react';
 import SubscribeForm from '../components/SubscribeForm';
 
 const Footer: React.FC<{}> = () => {
-    const wave = "url('/assets/wave.svg')";
-
     return (
         <div
             className='bg-repeat-x bg-cover'
-            style={{ backgroundImage: wave }}
+            style={{ backgroundImage: 'url(/assets/wave.svg)' }}
         >
             <div className='ml-auto mr-auto max-w-3xl px-2 lg:px-0 pt-32'>
                 <SubscribeForm />
