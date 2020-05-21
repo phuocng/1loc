@@ -27,7 +27,7 @@ const SubscribeForm: React.FC<{}> = () => {
                     type="submit"
                     name="subscribe"
                     className='px-4 py-2 text-white'
-                    style={{ backgroundColor: '#E84393' }}
+                    style={{ backgroundColor: '#00B894' }}
                 >
                     Subscribe
                 </button>
