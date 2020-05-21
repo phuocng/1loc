@@ -14,7 +14,7 @@ const SubscribeForm: React.FC<{}> = () => {
                 noValidate={true}
             >
                 <input
-                    className='p-2 w-56 sm:w-64'
+                    className='p-2 w-56 rounded-none sm:w-64'
                     type="email"
                     name="EMAIL"
                     placeholder="Email address"

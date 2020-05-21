@@ -21,7 +21,15 @@ const HomePage = () => {
         <Layout>
             <h1 className='font-extrabold mt-32 text-center text-2xl sm:text-4xl px-1'>{total} Favorite JavaScript Utilities</h1>
             <h3 className='font-light mb-8 text-2xl sm:text-3xl text-center'>
-                in <span className='border-b-2 border-black'>single line of code</span>! No more!
+                in <span className='relative font-bold'>
+                    <span
+                        className='absolute bottom-0 h-3 left-0 w-full'
+                        style={{
+                            backgroundColor: '#FFEAA7',
+                            transform: 'rotate(-2deg)',
+                            zIndex: -1,
+                        }}
+                    />single line of code!</span> No more!
             </h3>
 
             <div className="mb-16 text-center">
