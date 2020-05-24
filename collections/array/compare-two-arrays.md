@@ -5,6 +5,7 @@ const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 // Or
 const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
 
-// isEqual([1, 2, 3], [1, 2, 3]) === true
-// isEqual([1, 2, 3], [1, '2', 3]) === false
+// Examples
+isEqual([1, 2, 3], [1, 2, 3]);      // true
+isEqual([1, 2, 3], [1, '2', 3]);    // false
 ~~~

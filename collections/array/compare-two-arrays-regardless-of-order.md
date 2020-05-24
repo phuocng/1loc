@@ -8,7 +8,8 @@ const isEqual = (a, b) => a.length === b.length && a.every((v) => b.includes(v))
 // Or
 const isEqual = (a, b) => a.length === b.length && (new Set(a.concat(b)).size === a.length);
 
-// isEqual([1, 2, 3], [1, 2, 3]) === true
-// isEqual([1, 2, 3], [1, 3, 2]) === true
-// isEqual([1, 2, 3], [1, '2', 3]) === false
+// Examples
+isEqual([1, 2, 3], [1, 2, 3]);      // true
+isEqual([1, 2, 3], [1, 3, 2]);      // true
+isEqual([1, 2, 3], [1, '2', 3]);    // false
 ~~~

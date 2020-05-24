@@ -4,5 +4,6 @@ const uppercaseWords = str => str.split(' ').map(w => `${w.charAt(0).toUpperCase
 // Or
 const uppercaseWords = str => str.replace(/^(.)|\s+(.)/g, c => c.toUpperCase());
 
-// uppercaseWords('hello world') === 'Hello World'
+// Example
+uppercaseWords('hello world');      // 'Hello World'
 ~~~
