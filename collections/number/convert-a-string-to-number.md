@@ -1,5 +1,6 @@
 ~~~ javascript
 const toNumber = str => +str;
 
-// toNumber('42') === 42
+// Example
+toNumber('42');     // 42
 ~~~

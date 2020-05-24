@@ -5,5 +5,6 @@ const replaceSpaces = str => str.replace(/\s\s+/g, ' ');
 // Only replace spaces
 const replaceOnlySpaces = str => str.replace(/  +/g, ' ');
 
-// replaceSpaces('this\n   is     \ta    \rmessage') === 'this is a message'
+// Example
+replaceSpaces('this\n   is     \ta    \rmessage');  // 'this is a message'
 ~~~

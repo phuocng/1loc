@@ -7,5 +7,6 @@ const prefixWithZeros = (number, length) => `${Array(length).join('0')}${number}
 // Or
 const prefixWithZeros = (number, length) => String(number).padStart(length, '0');
 
-// prefixWithZeros(42, 5) === '00042'
+// Example
+prefixWithZeros(42, 5);     // '00042'
 ~~~
