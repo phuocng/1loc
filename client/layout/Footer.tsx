@@ -8,7 +8,7 @@ const Footer: React.FC<{}> = () => {
             className='bg-repeat-x bg-cover'
             style={{ backgroundImage: 'url(/assets/wave.svg)' }}
         >
-            <div className='ml-auto mr-auto max-w-3xl px-2 lg:px-0 pt-32'>
+            <div className='ml-auto mr-auto max-w-4xl px-2 lg:px-0 pt-32'>
                 <SubscribeForm />
                 <div className='flex flex-wrap -ml-1 -mr-1'>
                     <div className='w-1/2 sm:w-1/3 px-1 mb-6'>
