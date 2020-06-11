@@ -38,23 +38,21 @@ const HomePage = () => {
                 </a>
             </div>
 
-            <div className='ml-auto mr-auto max-w-4xl'>
-                {
-                    snippets.map((item) => {
-                        return (
-                            <div key={item.category} className='mb-16'>
-                                <div className='mb-4'>
-                                    <Separator>{item.category.split('-').join(' ').toUpperCase()}</Separator>
-                                </div>
-                                {
-                                    item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)
-                                }
-                                <AddYourButton />
+            {
+                snippets.map((item) => {
+                    return (
+                        <div key={item.category} className='mb-16'>
+                            <div className='mb-4'>
+                                <Separator>{item.category.split('-').join(' ').toUpperCase()}</Separator>
                             </div>
-                        ); 
-                    })
-                }
-            </div>
+                            {
+                                item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)
+                            }
+                            <AddYourButton />
+                        </div>
+                    ); 
+                })
+            }
         </Layout>
     );
 };
