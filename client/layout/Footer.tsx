@@ -87,7 +87,7 @@ const Footer: React.FC<{}> = () => {
                                     target="_blank"
                                     title="1 LOC - favorite JavaScript utilities in single line of code"
                                 >
-                                    1 LOC
+                                    1 LOC (3k★)
                                 </a>
                             </li>
                             <li>
@@ -98,7 +98,7 @@ const Footer: React.FC<{}> = () => {
                                     target="_blank"
                                     title="CSS Layout - a collection of popular layouts and patterns made with CSS"
                                 >
-                                    CSS Layout
+                                    CSS Layout (2.4k★)
                                 </a>
                             </li>
                             <li>
@@ -109,7 +109,18 @@ const Footer: React.FC<{}> = () => {
                                     target="_blank"
                                     title="HTML DOM - Common tasks of managing HTML DOM with native API"
                                 >
-                                    HTML DOM
+                                    HTML DOM (2.9k★)
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className='text-white'
+                                    href="https://thisthat.dev"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    title="this vs that - What is the difference between ___ and ___ in the front-end development?"
+                                >
+                                    this VS that
                                 </a>
                             </li>
                         </ul>
