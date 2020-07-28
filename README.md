@@ -27,6 +27,32 @@ $ npm run dev-server
 
 Open http://localhost:1234 in your browser to see it in action.
 
+## Running in Windows Machine
+
+1. Install copyfiles package 
+
+~~~ console
+$ npm install --save-dev copyfiles to install copyfiles
+~~~
+
+2. Install rimrag package 
+
+~~~ console 
+$ npm install --save-dev rimraf
+~~~
+
+3. Modified the `copy` line in `package.json` to this 
+
+~~~ console 
+"copy": "rimraf dist && mkdir dist && npx copyfiles public/* dist"
+~~~
+
+4. Finally, run it on the local: 
+
+~~~ console
+$ npm run dev-server
+~~~
+
 ## Contributing
 
 Pull requests are welcomed. To submit your favorite JavaScript single line of code, please create a markdown file, and put it in 
