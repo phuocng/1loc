@@ -1,0 +1,2 @@
+// Merge multidimensional array
+const merge = value => value.toString().split(",").map(Number);
