@@ -1,25 +1,11 @@
 ~~~ javascript
-const isOddWithoutModulo = num => !(Number.isInteger(num/2))
-
-Examples...
-isOddWithoutModulo(9) //TRUE
-isOddWithoutModulo(99) //TRUE
-
-
-
-
-
-
-
-
-
-
-
-
 const isOdd = number => number % 2 !== 0;
 
-// or
+// Or
 const isOdd = number => !!(number & 1);
+
+// Or
+const isOdd = number => !Number.isInteger(number / 2);
 
 // Examples
 isOdd(1);   // true
