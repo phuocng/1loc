@@ -2,7 +2,7 @@
 const isEven = number => number % 2 === 0;
 
 // Or
-const isEven = number => number & 1 !== 0;
+const isEven = number => (number & 1) === 0;
 
 // Or
 const isEven = number => !(number & 1);
