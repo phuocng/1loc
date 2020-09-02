@@ -1,10 +1,10 @@
 ~~~ javascript
 const contains = (arr, criteria) => arr.some(v => criteria(v));
 
-//or
+//Or
 const contains = (arr, criteria) => arr.some(criteria);
 
-//or
+//Or
 const contains = (arr,criteria) => arr.filter(criteria).length > 0
 
 // Examples
