@@ -1,11 +1,11 @@
 ~~~ javascript
 const contains = (arr, criteria) => arr.some(v => criteria(v));
 
-//Or
+// Or
 const contains = (arr, criteria) => arr.some(criteria);
 
-//Or
-const contains = (arr,criteria) => arr.filter(criteria).length > 0
+// Or
+const contains = (arr,criteria) => arr.filter(criteria).length > 0;
 
 // Examples
 contains([10, 20, 30], v => v > 25 );               // true
