@@ -29,7 +29,7 @@
         "deploy": "npm run build && netlify deploy --dir=dist --prod"
     },
     "dependencies": {
-        "highlight.js": "^9.18.1",
+        "highlight.js": "^10.1.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-markdown": "^4.3.1",
