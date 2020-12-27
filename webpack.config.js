@@ -58,7 +58,7 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: ['ts-loader'],
+                use: ['babel-loader', 'ts-loader'],
             },
             {
                 enforce: "pre",
