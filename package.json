@@ -29,7 +29,6 @@
         "deploy": "npm run build && netlify deploy --dir=dist --prod"
     },
     "dependencies": {
-        "highlight.js": "^10.4.1",
         "prismjs": "^1.22.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
