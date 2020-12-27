@@ -1,6 +1,8 @@
 body {
     font-family: 'Inter', sans-serif;
 }
-.hljs, code {
-    font-family: 'Source Code Pro', monospace;
+pre {
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
 }

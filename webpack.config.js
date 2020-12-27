@@ -16,7 +16,6 @@ const plugins = [
 module.exports = {
     entry: {
         'vendor-styles': [
-            './vendors/highlight.js@9.12.0/theme.min.css',
             './vendors/tailwind@1.2.0/tailwind.css',
         ],
         // The CSS for client should come after `vendor-styles`
@@ -59,7 +58,7 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: ['ts-loader'],
+                use: ['babel-loader', 'ts-loader'],
             },
             {
                 enforce: "pre",

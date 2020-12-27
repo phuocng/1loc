@@ -36,10 +36,13 @@
         "react-router-dom": "^5.1.2"
     },
     "devDependencies": {
+        "@babel/core": "^7.12.10",
         "@types/prismjs": "^1.16.2",
         "@types/react": "^16.9.46",
         "@types/react-dom": "^16.9.8",
         "@types/react-router-dom": "^5.1.5",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-prismjs": "^2.0.1",
         "css-loader": "^4.2.1",
         "cssnano": "^4.1.10",
         "html-webpack-plugin": "^4.3.0",
