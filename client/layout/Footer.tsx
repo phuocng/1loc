@@ -182,7 +182,7 @@ const Footer: React.FC<{}> = () => {
                 </div>
 
                 <div className='text-center py-8' style={{ color: '#C2C2C2' }}>
-                    © 2020 Nguyen Huu Phuoc. All rights reserved
+                    © {new Date().getFullYear()} Nguyen Huu Phuoc. All rights reserved
                 </div>
             </div>
         </div>
