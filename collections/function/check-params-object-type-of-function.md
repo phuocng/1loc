@@ -14,7 +14,6 @@ getTypeOf(/[a-z]/g)                        // RegExp
 getTypeOf(new Date(2020))                  // Date
 getTypeOf(new Error())                     // Error
 getTypeOf(function(){})                    // Function
-getTypeOf(async ()=>{})                    // Function
-Type(async ()=>{})                         // AsyncFunction
+getTypeOf(async ()=>{})                    // AsyncFunction
 getTypeOf(document)                        // HTMLDocument
 ~~~
