@@ -28,7 +28,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://blur.page"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="BlurPage - a browser extension to hide sensitive element on page"
+                                    title="A browser extension to hide sensitive element on page"
                                 >
                                     Blur Page
                                 </a>
@@ -39,7 +39,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://checkbrowsers.support"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="Check Browsers Support - a browser extension to check browser compatibility without leaving your tab"
+                                    title="A browser extension to check browser compatibility without leaving your tab"
                                 >
                                     Check Browsers Support
                                 </a>
@@ -50,7 +50,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://fakenumbers.io"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="Fake Numbers - a JavaScript library to fake a number"
+                                    title="A JavaScript library to fake a number"
                                 >
                                     Fake Numbers
                                 </a>
@@ -61,7 +61,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://formvalidation.io"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="FormValidation - the best validation library for JavaScript"
+                                    title="The best validation library for JavaScript"
                                 >
                                     Form Validation
                                 </a>
@@ -72,7 +72,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://react-pdf-viewer.dev"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="React PDF Viewer - a PDF viewer made for React"
+                                    title="A PDF viewer made for React"
                                 >
                                     React PDF Viewer
                                 </a>
@@ -96,9 +96,9 @@ const Footer: React.FC<{}> = () => {
                                     href="https://1loc.dev"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="1 LOC - favorite JavaScript utilities in single line of code"
+                                    title="Favorite JavaScript utilities in single line of code"
                                 >
-                                    1 LOC (3.3k★)
+                                    1 LOC
                                 </a>
                             </li>
                             <li>
@@ -107,9 +107,9 @@ const Footer: React.FC<{}> = () => {
                                     href="https://csslayout.io"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="CSS Layout - a collection of popular layouts and patterns made with CSS"
+                                    title="A collection of popular layouts and patterns made with CSS"
                                 >
-                                    CSS Layout (2.7k★)
+                                    CSS Layout
                                 </a>
                             </li>
                             <li>
@@ -118,9 +118,20 @@ const Footer: React.FC<{}> = () => {
                                     href="https://htmldom.dev"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="HTML DOM - Common tasks of managing HTML DOM with native API"
+                                    title="Common tasks of managing HTML DOM with native API"
                                 >
-                                    HTML DOM (3.1k★)
+                                    HTML DOM
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className='text-white'
+                                    href="https://responsive.page"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    title="A collection of patterns to create a responsive web page"
+                                >
+                                    Responsive Design Patterns
                                 </a>
                             </li>
                             <li>
@@ -129,7 +140,7 @@ const Footer: React.FC<{}> = () => {
                                     href="https://thisthat.dev"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title="this vs that - What is the difference between ___ and ___ in the front-end development?"
+                                    title="What is the difference between ___ and ___ in the front-end development?"
                                 >
                                     this VS that
                                 </a>
