@@ -115,6 +115,17 @@ const Footer: React.FC<{}> = () => {
                             <li>
                                 <a
                                     className='text-white'
+                                    href="https://getfrontend.tips"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    title="Super tiny, quick tips, tricks and best practices of front-end development"
+                                >
+                                    Front-end Tips
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className='text-white'
                                     href="https://htmldom.dev"
                                     rel="noopener noreferrer"
                                     target="_blank"
