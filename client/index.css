@@ -22,6 +22,8 @@ pre {
 }
 code[class*="language-"], pre[class*="language-"] {
     font-size: 0.8rem;
+}
+pre[class*="language-"] {
     padding: 2rem 1rem;
 }
 
