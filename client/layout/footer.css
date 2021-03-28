@@ -11,7 +11,8 @@
     flex: 1;
 }
 .footer__social {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    color: var(--background);
 }
 .footer__grid {
     display: flex;

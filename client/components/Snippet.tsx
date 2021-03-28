@@ -47,7 +47,7 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
         <div className='snippet' id={id} ref={containerRef}>
             <h2 className='snippet__header'>
                 <div className='snippet__title' onClick={toggle}>{formatName(snippet.name)}</div>
-                <a href={`#${id}`}>#</a>
+                <a className='snippet__anchor' href={`#${id}`}>#</a>
             </h2>
             <div ref={contentRef} className='snippet__body snippet__body--hidden'>
                 <Markdown content={snippet.body} />
