@@ -1,0 +1,13 @@
+.add-your {
+  display: flex;
+  justify-content: center;
+}
+
+.add-your a {
+    background: var(--background);
+    border: 1px solid var(--background);
+    border-radius: 9999px;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}

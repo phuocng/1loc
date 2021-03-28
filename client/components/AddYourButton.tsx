@@ -1,16 +1,14 @@
-import React from 'react';
+import * as React from 'react';
+
+import './addYourButton.css';
 
 const AddYourButton: React.FC<{}> = () => {
     return (
-        <div className='flex items-center justify-center mt-3'>
+        <div className='add-your'>
             <a 
                 href="https://github.com/phuoc-ng/1loc#contributing"
                 rel="noopener noreferrer"
                 target="_blank"
-                className='p-2 text-2xl text-center text-white w-full rounded-full'
-                style={{
-                    backgroundColor: '#00B894',
-                }}
             >
                 Add yours ...
             </a>
