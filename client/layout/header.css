@@ -1,0 +1,45 @@
+.header {
+    background: var(--background);
+    color: #fff;
+    padding-bottom: 4rem;
+    position: relative;
+    text-align: center;
+}
+.header__logo {
+    height: auto;
+    margin: 0 auto;
+    width: 16rem;
+}
+.header__heading {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+.header__subheading {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.header__github {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+}
+.header__github a {
+    background: #fff;
+    border: 1px solid var(--background);
+    border-radius: 9999px;
+    color: var(--background);
+    padding: 1rem 2rem;
+}
+
+@media (min-width: 640px) {
+    .header__github a {
+        font-size: 1.5rem;
+    }
+    .header__heading {
+        font-size: 3rem;
+    }
+    .header__subheading {
+        font-size: 2rem;
+    }
+}

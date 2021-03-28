@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import * as React from 'react';
 
 import highlight from '../helpers/highlight';
+import './sampleCode.css';
 
 interface SampleCodeProps {
     code: string;
@@ -8,8 +9,8 @@ interface SampleCodeProps {
 }
 
 const SampleCode: React.FC<SampleCodeProps> = ({ code, lang }) => {
-    const codeRef = useRef<HTMLPreElement | null>(null);
-    const [copied, setCopied] = useState(false);
+    const codeRef = React.useRef<HTMLPreElement | null>(null);
+    const [copied, setCopied] = React.useState(false);
 
     const copy = () => {
         const codeEle = codeRef.current;
@@ -37,17 +38,11 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, lang }) => {
     return code === ''
             ? <></>
             : (
-                <div className='relative'>
-                    <button
-                        className='absolute border-transparent top-0 opacity-75 p-1 right-0'
-                        style={{
-                            transform: 'translateX(100%)',
-                        }}
-                        onClick={copy}
-                    >
+                <div className='sample-code'>
+                    <button className='sample-code__copy' onClick={copy}>
                         {copied ? 'Copied' : 'Copy'}
                     </button>
-                    <pre ref={codeRef} className={`lh-copy mh0 mv3 language-${lang}`} dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
+                    <pre ref={codeRef} className={`language-${lang}`} dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
                 </div>
             );
 };

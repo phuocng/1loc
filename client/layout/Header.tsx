@@ -1,16 +1,41 @@
-import React from 'react';
+import * as React from 'react';
 
-import Filter from '../components/Filter';
+import './header.css';
+import { SnippetList } from '../models/SnippetList';
 
-const Header = () => {
+const Header: React.FC<{}> = () => {
+    const [totalStars, setTotalStars] = React.useState("____");
+    const total = SnippetList.map(item => item.snippets.length).reduce((a, b) => a + b, 0);
+
+    React.useEffect(() => {
+        fetch('https://api.github.com/repos/phuoc-ng/1loc')
+            .then(res => res.json())
+            .then(data => setTotalStars(data.stargazers_count))
+            .catch(console.log);
+    }, []);
+
     return (
-        <div className='p-2 sticky top-0 z-10' style={{
-            backgroundColor: '#FDCB6E'
-        }}>
-            <div className='ml-auto mr-auto max-w-4xl'>
-                <Filter />
+        <header className="header">
+            <div className="container">
+                <div className="header__logo">
+                    <img src="/assets/logo.png" alt="1 LOC" />
+                </div>
+                <h1 className="header__heading">{total} Favorite JavaScript Utilities</h1>
+                <h3 className='header__subheading'>
+                    in single line of code! No more!
+                </h3>
             </div>
-        </div>
+
+            <div className="header__github">
+                <a
+                    href="https://github.com/phuoc-ng/1loc"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    GitHub ★ {totalStars}
+                </a>
+            </div>
+        </header>
     );
 };
 

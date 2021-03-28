@@ -1,0 +1,18 @@
+.sample-code {
+    position: relative;
+}
+.sample-code__copy {
+    background: var(--background);
+    border-bottom: none;
+    border-left: 1px solid #fff;
+    border-right: none;
+    border-top: 1px solid #FFF;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    width: 6rem;
+    z-index: 10;
+}
