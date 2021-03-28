@@ -44,10 +44,11 @@ code[class*="language-"], pre[class*="language-"] {
 }
 .header__heading {
     font-size: 3rem;
+    margin: 1.5rem 0;
 }
 .header__subheading {
     font-size: 2rem;
-    
+    margin: 1rem 0;
 }
 .header__github {
     bottom: 0;

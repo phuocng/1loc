@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import AddYourButton from './components/AddYourButton';
 import Snippet from './components/Snippet';
+import Footer from './layout/Footer';
 import snippets from './models/snippets';
 
 const HomePage = () => {
@@ -59,6 +60,9 @@ const HomePage = () => {
                 }
                 </div>
             </main>
+
+            {/* Footer */}
+            <Footer />
         </>
     );
 };
