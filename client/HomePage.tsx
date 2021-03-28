@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import AddYourButton from './components/AddYourButton';
-import SnippetItem from './components/SnippetItem';
+import Snippet from './components/Snippet';
 import snippets from './models/snippets';
 
 const HomePage = () => {
-    const [totalStars, setTotalStars] = useState(4000);
+    const [totalStars, setTotalStars] = useState("____");
     const total = snippets.map(item => item.snippets.length).reduce((a, b) => a + b, 0);
 
     // useEffect(() => {
@@ -50,7 +50,7 @@ const HomePage = () => {
                                     <div className="section__title">{item.category.split('-').join(' ').toUpperCase()}</div>
                                 </div>
                                 {
-                                    item.snippets.map((s) => <SnippetItem key={s.name} snippet={s} />)
+                                    item.snippets.map((s) => <Snippet key={s.name} snippet={s} />)
                                 }
                                 <AddYourButton />
                             </section>

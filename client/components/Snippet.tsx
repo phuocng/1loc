@@ -1,26 +1,28 @@
-import React, { useEffect, useRef } from 'react';
+import * as React from 'react';
 
 import anchor from '../helpers/anchor';
 import formatName from '../helpers/formatName';
 import { Snippet } from '../models/snippets';
 import Markdown from './Markdown';
 
+import './snippet.css';
+
 interface SnippetItemProps {
     snippet: Snippet;
 }
 
 const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
-    const containerRef = useRef<HTMLDivElement | null>(null);
-    const contentRef = useRef<HTMLDivElement | null>(null);
+    const containerRef = React.useRef<HTMLDivElement | null>(null);
+    const contentRef = React.useRef<HTMLDivElement | null>(null);
 
     const toggle = () => {
         const contentEle = contentRef.current;
-        contentEle && contentEle.classList.toggle('hidden');
+        contentEle && contentEle.classList.toggle('snippet__body--hidden');
     };
 
     const id = anchor(snippet.name);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const handleHashChange = () => {
             const hash = location.hash ? location.hash.substr(1) : '';
             if (hash === id) {
@@ -42,15 +44,13 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
     }, []);
 
     return (
-        <div className='pt-2 mb-2' id={id} ref={containerRef}>
-            <div className='border shadow' style={{ borderColor: '#C2C2C2' }}>
-                <h2 className='py-1 px-2 flex justify-between text-xl'>
-                    <div className='flex-1 cursor-pointer' onClick={toggle}>{formatName(snippet.name)}</div>
-                    <a href={`#${id}`}>#</a>
-                </h2>
-                <div ref={contentRef} className='hidden border-t border-gray-400 text-sm'>
-                    <Markdown content={snippet.body} />
-                </div>
+        <div className='snippet' id={id} ref={containerRef}>
+            <h2 className='snippet__header'>
+                <div className='snippet__title' onClick={toggle}>{formatName(snippet.name)}</div>
+                <a href={`#${id}`}>#</a>
+            </h2>
+            <div ref={contentRef} className='snippet__body snippet__body--hidden'>
+                <Markdown content={snippet.body} />
             </div>
         </div>
     );

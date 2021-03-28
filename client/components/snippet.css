@@ -1,0 +1,16 @@
+.snippet {
+    border: 1px solid var(--background);
+    margin: 1rem 0;
+}
+.snippet__header {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    padding: 0.5rem 1rem;
+}
+.snippet__title {
+    flex: 1;
+}
+.snippet__body--hidden {
+    display: none;
+}
