@@ -39,15 +39,6 @@ module.exports = {
                         },
                     },
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            ident: 'postcss',
-                            plugins: [
-                                require('cssnano'),
-                            ],
-                        },
-                    },
                 ],
             },
             {
