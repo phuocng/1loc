@@ -12,7 +12,6 @@ interface SnippetItemProps {
 }
 
 const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
-    const containerRef = React.useRef<HTMLDivElement | null>(null);
     const contentRef = React.useRef<HTMLDivElement | null>(null);
 
     const toggle = () => {
@@ -22,29 +21,8 @@ const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {
 
     const id = anchor(snippet.name);
 
-    React.useEffect(() => {
-        const handleHashChange = () => {
-            const hash = location.hash ? location.hash.substr(1) : '';
-            if (hash === id) {
-                const contentEle = containerRef.current;
-                if (!contentEle) {
-                    return;
-                }
-                // 60 is the height of the sticky header
-                const top = contentEle.getBoundingClientRect().top + window.pageYOffset - 60;
-                window.scrollTo(0, top);
-                // Auto expand
-                toggle();
-            }
-        };
-        handleHashChange();
-        window.addEventListener('hashchange', handleHashChange);
-
-        return () => window.removeEventListener('hashchange', handleHashChange);
-    }, []);
-
     return (
-        <div className='snippet' id={id} ref={containerRef}>
+        <div className='snippet' id={id}>
             <h2 className='snippet__header'>
                 <div className='snippet__title' onClick={toggle}>{formatName(snippet.name)}</div>
                 <a className='snippet__anchor' href={`#${id}`}>#</a>
