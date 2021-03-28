@@ -1,10 +1,11 @@
 import * as React from 'react';
 
-import AddYourButton from './components/AddYourButton';
+import Product from './components/Product';
 import Snippet from './components/Snippet';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
-import snippets from './models/snippets';
+import { ProductList } from './models/ProductList';
+import { SnippetList } from './models/SnippetList';
 
 const HomePage = () => {
     return (
@@ -13,7 +14,8 @@ const HomePage = () => {
             <main className="main">
                 <div className="container">
                 {
-                    snippets.map((item) => {
+                    SnippetList.map((item, index) => {
+                        const product = ProductList[index % ProductList.length];
                         return (
                             <section key={item.category} className="section">
                                 <div className="section__separator">
@@ -22,7 +24,7 @@ const HomePage = () => {
                                 {
                                     item.snippets.map((s) => <Snippet key={s.name} snippet={s} />)
                                 }
-                                <AddYourButton />
+                                <Product product={product} />
                             </section>
                         ); 
                     })

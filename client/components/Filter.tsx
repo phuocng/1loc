@@ -1,18 +1,18 @@
-import React, { useRef, useState } from 'react';
+import * as React from 'react';
 
 import anchor from '../helpers/anchor';
 import formatName from '../helpers/formatName';
-import snippets from '../models/snippets';
+import { SnippetList } from '../models/SnippetList';
 
 const Filter: React.FC<{}> = () => {
-    const [keyword, setKeyword] = useState('');
-    const searchBoxRef = useRef<HTMLInputElement>();
+    const [keyword, setKeyword] = React.useState('');
+    const searchBoxRef = React.useRef<HTMLInputElement>();
 
     const onClearSearch = () => setKeyword('');
     const onChangeSearchBox = (e: React.ChangeEvent<HTMLInputElement>) => setKeyword(e.target.value);
     const onClickTask = () => setKeyword('');
 
-    const allSnippets = snippets.map(s => s.snippets.map(item => formatName(item.name)).join('___')).join('___').split('___');
+    const allSnippets = SnippetList.map(s => s.snippets.map(item => formatName(item.name)).join('___')).join('___').split('___');
     const result = keyword
                 ? allSnippets.filter((v) => v.toLowerCase().includes(keyword.toLowerCase()))
                 : [];

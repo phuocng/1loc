@@ -1,0 +1,18 @@
+.product {
+    border-radius: 0.5rem;
+    color: #fff;
+    margin: 1rem 0;
+    text-align: center;
+}
+.product__link {
+    color: #fff;
+    display: block;
+    padding: 0rem 1rem;
+}
+.product__logo {
+    width: 12rem;
+}
+.product__description {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}

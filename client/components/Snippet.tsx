@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import anchor from '../helpers/anchor';
 import formatName from '../helpers/formatName';
-import { Snippet } from '../models/snippets';
+import { SnippetModel } from '../models/SnippetList';
 import Markdown from './Markdown';
 
 import './snippet.css';
 
 interface SnippetItemProps {
-    snippet: Snippet;
+    snippet: SnippetModel;
 }
 
 const SnippetItem: React.FC<SnippetItemProps> = ({ snippet }) => {

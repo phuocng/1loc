@@ -1,20 +1,18 @@
 import * as React from 'react';
 
-import * as React from 'react';
-
 import './header.css';
-import snippets from '../models/snippets';
+import { SnippetList } from '../models/SnippetList';
 
 const Header: React.FC<{}> = () => {
     const [totalStars, setTotalStars] = React.useState("____");
-    const total = snippets.map(item => item.snippets.length).reduce((a, b) => a + b, 0);
+    const total = SnippetList.map(item => item.snippets.length).reduce((a, b) => a + b, 0);
 
     React.useEffect(() => {
         fetch('https://api.github.com/repos/phuoc-ng/1loc')
             .then(res => res.json())
             .then(data => setTotalStars(data.stargazers_count))
             .catch(console.log);
-    });
+    }, []);
 
     return (
         <header className="header">
