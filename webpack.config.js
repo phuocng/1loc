@@ -15,10 +15,6 @@ const plugins = [
 
 module.exports = {
     entry: {
-        'vendor-styles': [
-            './vendors/tailwind@1.2.0/tailwind.css',
-        ],
-        // The CSS for client should come after `vendor-styles`
         client: './client/index.tsx',
     },
     output: {
@@ -48,7 +44,6 @@ module.exports = {
                         options: {
                             ident: 'postcss',
                             plugins: [
-                                require('tailwindcss')('./tailwind.config.js'),
                                 require('cssnano'),
                             ],
                         },

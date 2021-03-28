@@ -51,7 +51,6 @@
         "react-snap": "^1.23.0",
         "source-map-loader": "^1.0.2",
         "style-loader": "^1.2.1",
-        "tailwindcss": "^1.7.3",
         "ts-loader": "^8.0.3",
         "typescript": "^4.0.2",
         "webpack": "^4.44.1",
