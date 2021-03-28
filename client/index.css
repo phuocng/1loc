@@ -9,10 +9,19 @@ body {
 * {
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
 pre {
     border: none !important;
     border-radius: 0 !important;
     margin: 0 !important;
+}
+code[class*="language-"], pre[class*="language-"] {
+    font-size: 0.8rem;
 }
 
 .container {

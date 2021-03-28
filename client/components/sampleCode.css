@@ -1,0 +1,11 @@
+.sample-code {
+    position: relative;
+}
+.sample-code__copy {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+}
