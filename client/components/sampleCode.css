@@ -2,10 +2,17 @@
     position: relative;
 }
 .sample-code__copy {
-    background: none;
-    border: none;
+    background: var(--background);
+    border-bottom: none;
+    border-left: 1px solid #fff;
+    border-right: none;
+    border-top: 1px solid #FFF;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
     position: absolute;
     right: 0;
-    top: 0;
-    transform: translateX(100%);
+    width: 6rem;
+    z-index: 10;
 }

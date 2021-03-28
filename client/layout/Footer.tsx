@@ -8,7 +8,8 @@ const Footer: React.FC<{}> = () => {
             <div className="container">
                 <div className="footer__about">
                     <div className="footer__author">
-                        © 2020-{new Date().getFullYear()} Nguyen Huu Phuoc. All rights reserved
+                        <div>© 2020-{new Date().getFullYear()} Nguyen Huu Phuoc.</div>
+                        <div>All rights reserved</div>
                     </div>
                     <a className="footer__social" href="https://twitter.com/nghuuphuoc" rel="noopener noreferrer" target="_blank">
                         <svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">

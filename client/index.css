@@ -22,11 +22,13 @@ pre {
 }
 code[class*="language-"], pre[class*="language-"] {
     font-size: 0.8rem;
+    padding: 2rem 1rem;
 }
 
 .container {
     margin: 0 auto;
     max-width: 64rem;
+    padding: 0 1rem;
 }
 
 .main {

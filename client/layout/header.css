@@ -11,11 +11,11 @@
     width: 16rem;
 }
 .header__heading {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1.5rem 0;
 }
 .header__subheading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem 0;
 }
 .header__github {
@@ -29,6 +29,17 @@
     border: 1px solid var(--background);
     border-radius: 9999px;
     color: var(--background);
-    font-size: 1.5rem;
     padding: 1rem 2rem;
+}
+
+@media (min-width: 640px) {
+    .header__github a {
+        font-size: 1.5rem;
+    }
+    .header__heading {
+        font-size: 3rem;
+    }
+    .header__subheading {
+        font-size: 2rem;
+    }
 }
