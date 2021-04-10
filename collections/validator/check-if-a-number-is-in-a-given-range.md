@@ -1,5 +1,5 @@
 ~~~ javascript
-const inRange = (num, a, b) => (Math.min(a, b) <= num && num < Math.max(a, b));
+const inRange = (num, a, b, threshold = 0) => (Math.min(a, b) - threshold <= num && num <= Math.max(a, b) + threshold);
 
 // Example
 inRange(10, 5, 15);         // true
