@@ -3,4 +3,7 @@ const removeDuplicate = arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexO
 
 // Example
 removeDuplicate(['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']); //  ['h', 'e', 'w', 'r', 'd']
+
+// or
+const removeDuplicate = arr => Array.from(new Set(arr));
 ~~~
