@@ -1,6 +1,6 @@
 ~~~ javascript
 // `h` is an hour number between 0 and 23
-const suffixAmPm = h => Array(24).fill(0).map((_, i) => `${i % 12 === 0 ? 12 : i % 12}${i < 12 ? 'am': 'pm'}`)[h];
+const suffixAmPm = h => `${h % 12 === 0 ? 12 : h % 12}${h < 12 ? 'am' : 'pm'}`;
 
 // Examples
 suffixAmPm(0);      // '12am'
