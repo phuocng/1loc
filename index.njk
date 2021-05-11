@@ -39,11 +39,12 @@ layout: layouts/base.njk
             </div>
 
             {% for post in posts | reverse %}
-            <div class="snippet">
+            <div class="snippet" id="{{ post.fileSlug }}">
                 <h2 class="snippet__header">
                     <div class="snippet__title">{{ post.data.title }}</div>
+                    <a class="snippet__anchor" href="#{{ post.fileSlug }}">#</a>
                 </h2>
-                <div class="snippet__body">
+                <div class="snippet__body snippet__body--hidden">
                     <div class="sample-code">{{ post.templateContent | safe }}</div>
                 </div>
             </div>

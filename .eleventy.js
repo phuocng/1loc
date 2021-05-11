@@ -13,8 +13,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('robots.txt');
     eleventyConfig.addPassthroughCopy('css');
+    eleventyConfig.addPassthroughCopy('js');
 
     eleventyConfig.addWatchTarget('./css/');
+    eleventyConfig.addWatchTarget('./js/');
 
     let markdownLibrary = markdownIt({
         html: true,
