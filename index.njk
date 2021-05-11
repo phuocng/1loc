@@ -36,7 +36,7 @@ layout: layouts/base.njk
                 <div class="section__title">{{ category }}</div>
             </div>
 
-            {% for post in posts | reverse %}
+            {% for post in posts %}
             <div class="snippet" id="{{ post.fileSlug }}">
                 <h2 class="snippet__header">
                     <div class="snippet__title">{{ post.data.title }}</div>
