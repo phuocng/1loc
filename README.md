@@ -2,7 +2,7 @@
 
 What's your favorite JavaScript single LOC (line of code)? Let me know!
 
-![JavaScript single LOC](public/assets/screenshot.png)
+![JavaScript single LOC](assets/screenshot.png)
 
 ## Running it on local
 
