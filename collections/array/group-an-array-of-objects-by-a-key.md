@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Group an array of objects by a key
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const groupBy = (arr, key) => arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {});
 
 // Example
@@ -25,4 +33,4 @@ groupBy([
     ],
 }
 */
-~~~
+```

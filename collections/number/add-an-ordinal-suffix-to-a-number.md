@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Add an ordinal suffix to a number
+category: Number
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // `n` is a position number
 const addOrdinal = n => `${n}${['st', 'nd', 'rd'][((n + 90) % 100 - 10) % 10 - 1] || 'th'}`;
 
@@ -18,4 +26,4 @@ addOrdinal(3);      // '3rd'
 addOrdinal(11);     // '11th'
 addOrdinal(12);     // '13th'
 addOrdinal(13);     // '13th'
-~~~
+```

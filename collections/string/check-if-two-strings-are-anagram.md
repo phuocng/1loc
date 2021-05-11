@@ -1,8 +1,16 @@
-~~~ javascript
+---
+title: Check if two strings are anagram
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const areAnagram = (str1, str2) => str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
 
 // Examples
 areAnagram('listen', 'silent');         // true
 areAnagram('they see', 'the eyes');     // true
 areAnagram('node', 'deno');             // true
-~~~
+```

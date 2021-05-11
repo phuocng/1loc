@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Invert keys and values of an object
+category: Object
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const invert = obj => Object.keys(obj).reduce((res, k) => Object.assign(res, {[obj[k]]: k}), {});
 
 // Or
@@ -6,4 +14,4 @@ const invert = obj => Object.fromEntries(Object.entries(obj).map(([k, v]) => [v,
 
 // Example
 invert({ a: '1', b: '2', c: '3' });     // { 1: 'a', 2: 'b', 3: 'c' }
-~~~
+```

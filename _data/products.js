@@ -1,10 +1,8 @@
-import ProductModel from './ProductModel';
-
-const ProductList: ProductModel[] = [
+module.exports = [
     {
         name: 'Intersection Observer Examples',
         url: 'https://intersectionobserver.io',
-        description: 'Practical, real world examples of Intersection Observer',
+        description: 'Practical, real world examples of IntersectionObserver',
         themeColor: '#024ca9',
     },
     {
@@ -68,5 +66,3 @@ const ProductList: ProductModel[] = [
         themeColor: '#414293',
     },
 ];
-
-export { ProductList };

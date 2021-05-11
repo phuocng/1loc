@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Zip multiple arrays
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const zip = (...arr) => Array.from({ length: Math.max(...arr.map(a => a.length)) }, (_, i) => arr.map(a => a[i]));
 
 // Example
@@ -12,4 +20,4 @@ Does it look like a zipper?
       d     4
      e       5
 */
-~~~
+```

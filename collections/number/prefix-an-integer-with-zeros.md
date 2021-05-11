@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Prefix an integer with zeros
+category: Number
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const prefixWithZeros = (number, length) => (number / Math.pow(10, length)).toFixed(length).substr(2);
 
 // Or
@@ -9,4 +17,4 @@ const prefixWithZeros = (number, length) => String(number).padStart(length, '0')
 
 // Example
 prefixWithZeros(42, 5);     // '00042'
-~~~
+```

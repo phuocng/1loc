@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Logical xor operator
+category: Function
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // returns `true` if one of the arguments is truthy and the other is falsy
 
 const xor = (a, b) => (a && !b) || (!a && b);
@@ -14,4 +22,4 @@ xor(true, true);        // false
 xor(false, false);      // false
 xor(true, false);       // true
 xor(false, true);       // true
-~~~
+```

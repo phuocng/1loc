@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Convert an array of objects to a single object
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 
 // Example
@@ -17,4 +25,4 @@ toObject(
     '3': { id: '3', name: 'Charlie', gender: 'Female' },
 }
 */
-~~~
+```

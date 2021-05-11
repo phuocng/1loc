@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Convert seconds to hh:mm:ss format
+category: Date Time
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // `s` is number of seconds
 const formatSeconds = s => new Date(s * 1000).toISOString().substr(11, 8);
 
@@ -11,4 +19,4 @@ const formatSeconds = s => [parseInt(s / 60 / 60), parseInt(s / 60 % 60), parseI
 // Examples
 formatSeconds(200);     // 00:03:20
 formatSeconds(500);     // 00:08:20
-~~~
+```

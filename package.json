@@ -20,46 +20,18 @@
     },
     "license": "MIT",
     "scripts": {
-        "data": "node bin/generateData.js",
-        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
-        "dev": "npm run copy && npm run data && webpack --mode development",
-        "dev-server": "npm run copy && npm run data && webpack-dev-server",
-        "build": "npm run copy && npm run data && webpack --mode production && npm run export",
-        "export": "react-snap",
-        "deploy": "npm run build && netlify deploy --dir=dist --prod"
-    },
-    "dependencies": {
-        "prismjs": "^1.22.0",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-markdown": "^4.3.1",
-        "react-router-dom": "^5.1.2"
+        "build": "eleventy",
+        "serve": "eleventy --serve",
+        "deploy": "rm -rf _site && npm run build && netlify deploy --dir=_site --prod"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@types/prismjs": "^1.16.2",
-        "@types/react": "^16.9.46",
-        "@types/react-dom": "^16.9.8",
-        "@types/react-router-dom": "^5.1.5",
-        "babel-loader": "^8.2.2",
-        "babel-plugin-prismjs": "^2.0.1",
-        "css-loader": "^4.2.1",
-        "html-webpack-plugin": "^4.3.0",
-        "mini-css-extract-plugin": "^0.10.0",
-        "react-snap": "^1.23.0",
-        "source-map-loader": "^1.0.2",
-        "style-loader": "^1.2.1",
-        "ts-loader": "^8.0.3",
-        "typescript": "^4.0.2",
-        "webpack": "^4.44.1",
-        "webpack-cli": "^3.3.12",
-        "webpack-dev-server": "^3.11.0"
-    },
-    "reactSnap": {
-        "source": "dist",
-        "minifyHtml": {
-            "collapseWhitespace": false,
-            "removeComments": false
-        }
+        "@11ty/eleventy": "^0.11.1",
+        "@11ty/eleventy-navigation": "^0.1.6",
+        "@11ty/eleventy-plugin-rss": "^1.1.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
+        "html-minifier": "^4.0.0",
+        "luxon": "^1.26.0",
+        "markdown-it": "^12.0.4",
+        "node-fetch": "^2.6.1"
     }
 }

@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Truncate a number to a given number of decimal places without rounding
+category: Number
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const toFixed = (n, fixed) => `${n}`.match(new RegExp(`^-?\\d+(?:\.\\d{0,${fixed}})?`))[0];
 
 // Or
@@ -11,4 +19,4 @@ toFixed(25.198726354, 3);       // 25.198
 toFixed(25.198726354, 4);       // 25.1987
 toFixed(25.198726354, 5);       // 25.19872
 toFixed(25.198726354, 6);       // 25.198726
-~~~
+```

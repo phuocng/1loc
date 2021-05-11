@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Get the base URL without any parameters
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const baseUrl = url => url.indexOf('?') === -1 ? url : url.slice(0, url.indexOf('?'));
 
 // Or
@@ -7,4 +15,4 @@ const baseUrl = url => url.includes('?') ? url.slice(0, url.indexOf('?')) : url;
 
 // Example
 baseUrl('https://domain.com/path/sub/path?foo=bar&hello=world');    // 'https://domain.com/path/sub/path'
-~~~
+```

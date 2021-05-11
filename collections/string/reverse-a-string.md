@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Reverse a string
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const reverse = str => str.split('').reverse().join('');
 
 // Or
@@ -12,4 +20,4 @@ const reverse = str => (str === '') ? '' : `${reverse(str.substr(1))}${str.charA
 
 // Example
 reverse('hello world');     // 'dlrow olleh'
-~~~
+```

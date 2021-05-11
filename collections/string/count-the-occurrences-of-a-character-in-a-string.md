@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Count the occurrences of a character in a string
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const countOccurrences = (str, char) => [...str].reduce((a, v) => (v === char ? a + 1 : a), 0);
 
 // Or
@@ -12,4 +20,4 @@ const countOccurrences = (str, char) => str.split('').filter(item => item === ch
 
 // Examples
 countOccurrences('a.b.c.d.e', '.');     // 4
-~~~
+```

@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Check if a string is a hexadecimal number
+category: Validator
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const isHexadecimal = str => /^[A-F0-9]+$/i.test(str);
 
 // Or
@@ -8,4 +16,4 @@ const isHexadecimal = str => str.split('').every(c => '0123456789ABCDEFabcdef'.i
 isHexadecimal('123');       // true
 isHexadecimal('A1B2C3');    // true
 isHexadecimal('#123');      // false
-~~~
+```

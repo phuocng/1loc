@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Convert the name of an Excel column to number
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const getIndex = col => col.split('').reduce((prev, next) => prev * 26 + parseInt(next, 36) - 9, 0);
 
 // Examples
@@ -14,4 +22,4 @@ getIndex('AZ');     // 52
 
 getIndex('AAA');    // 703
 getIndex('AAB');    // 704
-~~~
+```

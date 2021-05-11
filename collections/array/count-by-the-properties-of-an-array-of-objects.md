@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Count by the properties of an array of objects
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const countBy = (arr, prop) => arr.reduce((prev, curr) => (prev[curr[prop]] = ++prev[curr[prop]] || 1, prev), {});
 
 // Example
@@ -11,4 +19,4 @@ countBy([
 ], 'branch');
 
 // { 'audi': 2, 'ford': 2, 'bmw': 1 }
-~~~
+```

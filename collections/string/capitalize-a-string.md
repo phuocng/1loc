@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Capitalize a string
+category: String
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 // Or
@@ -6,4 +14,4 @@ const capitalize = ([first, ...rest]) => `${first.toUpperCase()}${rest.join('')}
 
 // Example
 capitalize('hello world');      // 'Hello world'
-~~~
+```
