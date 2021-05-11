@@ -29,7 +29,7 @@ pre[class*="language-"] {
 
 .container {
     margin: 0 auto;
-    max-width: 64rem;
+    max-width: 96rem;
     padding: 0 1rem;
 }
 
@@ -175,6 +175,72 @@ pre[class*="language-"] {
 }
 .snippet__body--hidden {
     display: none;
+}
+
+/*
+Prism theme
+Credit to https://github.com/tailwindlabs/tailwindcss.com/blob/master/src/css/prism.css
+*/
+pre {
+    background: #27272A;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #FFF;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.function {
+    color: #E879F9;
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.operator,
+.token.pseudo-class,
+.token.important {
+    color: #22D3EE;
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.number,
+.token.unit,
+.token.color {
+    color: #BEF264;
+}
+
+.token.punctuation,
+.token.module,
+.token.property {
+    color: #BAE6FD;
+}
+
+.token.atapply .token:not(.rule):not(.important) {
+    color: inherit;
+}
+
+.language-shell .token:not(.comment) {
+    color: inherit;
+}
+
+.language-css .token.function {
+    color: inherit;
+}
+
+.token.comment {
+    color: #A1A1AA;
 }
 
 /* Responsive */

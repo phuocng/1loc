@@ -43,6 +43,9 @@ layout: layouts/base.njk
                 <h2 class="snippet__header">
                     <div class="snippet__title">{{ post.data.title }}</div>
                 </h2>
+                <div class="snippet__body">
+                    <div class="sample-code">{{ post.templateContent | safe }}</div>
+                </div>
             </div>
             {% endfor %}
 
