@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Swap the rows and columns of a matrix
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const transpose = matrix => matrix[0].map((col, i) => matrix.map(row => row[i]));
 
 // Or
@@ -13,4 +21,4 @@ transpose([             // [
     [4, 5, 6],          //      [2, 5, 8],
     [7, 8, 9],          //      [3, 6, 9],
 ]);                     //  ]
-~~~
+```

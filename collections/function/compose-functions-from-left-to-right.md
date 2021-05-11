@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Compose functions from left to right
+category: Function
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // Compose functions from left to right
 const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
 
@@ -11,4 +19,4 @@ const fn = pipe(lowercase, capitalize, reverse);
 
 // We will execute `lowercase`, `capitalize` and `reverse` in order
 fn('Hello World') === 'dlrow olleH';
-~~~
+```

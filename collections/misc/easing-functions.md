@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Easing functions
+category: Misc
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // Some easing functions
 // See https://gist.github.com/gre/1650294 and https://easings.net
 
@@ -27,4 +35,4 @@ const easeInOutSine = t => (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2;
 const easeInElastic = t => (.04 - .04 / t) * Math.sin(25 * t) + 1;
 const easeOutElastic = t => .04 * t / (--t) * Math.sin(25 * t);
 const easeInOutElastic = t => (t -= .5) < 0 ? (.02 + .01 / t) * Math.sin(50 * t) : (.02 - .01 / t) * Math.sin(50 * t) + 1;
-~~~
+```

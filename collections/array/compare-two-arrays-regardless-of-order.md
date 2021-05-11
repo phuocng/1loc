@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Compare two arrays regardless of order
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // `a` and `b` are arrays
 const isEqual = (a, b) => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 
@@ -6,4 +14,4 @@ const isEqual = (a, b) => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 isEqual([1, 2, 3], [1, 2, 3]);      // true
 isEqual([1, 2, 3], [1, 3, 2]);      // true
 isEqual([1, 2, 3], [1, '2', 3]);    // false
-~~~
+```

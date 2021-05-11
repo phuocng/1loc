@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Memoize a function
+category: Function
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const memoize = fn => ((cache = {}) => arg => cache[arg] || (cache[arg] = fn(arg)))();
 
 // Example
@@ -11,4 +19,4 @@ fibo(3);    // 2
 fibo(4);    // 3
 fibo(5);    // 5
 fibo(6);    // 8
-~~~
+```

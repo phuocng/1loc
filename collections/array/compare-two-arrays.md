@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Compare two arrays
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 // `a` and `b` are arrays
 const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
@@ -8,4 +16,4 @@ const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i])
 // Examples
 isEqual([1, 2, 3], [1, 2, 3]);      // true
 isEqual([1, 2, 3], [1, '2', 3]);    // false
-~~~
+```

@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Create an array of numbers in the given range
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const range = (min, max) => [...Array(max - min + 1).keys()].map(i => i + min);
 
 // Or
@@ -9,4 +17,4 @@ const range = (min, max) => Array.from({ length: max - min + 1 }, (_, i) => min 
 
 // Example
 range(5, 10);   // [5, 6, 7, 8, 9, 10]
-~~~
+```

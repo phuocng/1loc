@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Curry a function
+category: Function
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const curry = (fn, ...args) => fn.length <= args.length ? fn(...args) : curry.bind(null, fn, ...args);
 
 // Example
@@ -9,4 +17,4 @@ curry(sum, 1)(2, 3);    // 6
 curry(sum, 1)(2)(3);    // 6
 curry(sum, 1, 2)(3);    // 6
 curry(sum, 1, 2, 3);    // 6
-~~~
+```

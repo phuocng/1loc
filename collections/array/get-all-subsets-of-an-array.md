@@ -1,7 +1,15 @@
-~~~ javascript
+---
+title: Get all subsets of an array
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const getSubsets = arr => arr.reduce((prev, curr) => prev.concat(prev.map(k => k.concat(curr))), [[]]);
 
 // Examples
 getSubsets([1, 2]);     // [[], [1], [2], [1, 2]]
 getSubsets([1, 2, 3]);  // [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
-~~~
+```

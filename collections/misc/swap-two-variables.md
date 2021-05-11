@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Swap two variables
+category: Misc
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 [a, b] = [b, a];
 
 // Or
@@ -12,4 +20,4 @@ a = (x => x)(b, b = a);
 a = b + (b = a, 0);
 
 a = b * (b = a, 1);
-~~~
+```

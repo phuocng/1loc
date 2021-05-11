@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Get type of a variable in string
+category: Misc
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const getTypeOf = obj => Object.prototype.toString.call(obj).match(/\[object (.*)\]/)[1];
 
 // Examples
@@ -18,4 +26,4 @@ getTypeOf(function() {});           // Function
 getTypeOf((a, b) => a + b);         // Function
 getTypeOf(async () => {});          // AsyncFunction
 getTypeOf(document);                // HTMLDocument
-~~~
+```

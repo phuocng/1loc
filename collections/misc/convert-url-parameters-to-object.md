@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Convert URL parameters to object
+category: Misc
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const getUrlParams = query => Array.from(new URLSearchParams(query)).reduce((p, [k, v]) => Object.assign({}, p, { [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v}), {});
 
 // Examples
@@ -8,4 +16,4 @@ getUrlParams('foo=Foo&bar=Bar');            // { foo: "Foo", bar: "Bar" }
 
 // Duplicate key
 getUrlParams('foo=Foo&foo=Fuzz&bar=Bar');   // { foo: ["Foo", "Fuzz"], bar: "Bar" }
-~~~
+```

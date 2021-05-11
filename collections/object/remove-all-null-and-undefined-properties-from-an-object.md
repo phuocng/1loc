@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Remove all null and undefined properties from an object
+category: Object
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const removeNullUndefined = obj => Object.entries(obj).reduce((a, [k, v]) => (v == null ? a : (a[k] = v, a)), {});
 
 // Or
@@ -13,4 +21,4 @@ removeNullUndefined({
     bar: undefined,
     fuzz: 42,
 });                         // { fuzz: 42 }
-~~~
+```

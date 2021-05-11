@@ -1,4 +1,12 @@
-~~~ javascript
+---
+title: Convert rgb color to hex
+category: Misc
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
+```js
 const rgbToHex = (red, green, blue) => `#${((1 << 24) + (red << 16) + (green << 8) + blue).toString(16).slice(1)}`;
 
 // Or
@@ -6,4 +14,4 @@ const rgbToHex = (red, green, blue) => `#${[red, green, blue].map(v => v.toStrin
 
 // Example
 rgbToHex(0, 255, 255);      // '#00ffff' 
-~~~
+```
