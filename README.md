@@ -8,7 +8,7 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 
 1. Clone the project:
 
-```console
+```shell
 $ git clone https://github.com/phuoc-ng/1loc
 ```
 
@@ -22,10 +22,10 @@ $ npm install
 3. Run it on the local:
 
 ```console
-$ npm run dev-server
+$ npm run serve
 ```
 
-Open http://localhost:1234 in your browser to see it in action.
+Look at the console to see the _Local URL_. Open it in your browser to see it in action.
 
 ## Contributing
 
@@ -50,7 +50,7 @@ _Products_
 * [Check Browsers Support - A browser extension to check browser compatibility without leaving your tab](https://checkbrowsers.support)
 * [Fake Numbers - Generate fake and valid numbers](https://fakenumbers.io)
 * [Form Validation - The best validation library for JavaScript](https://formvalidation.io)
-* [Intersection Observer Examples - Practical, real world examples of Intersection Observer](https://intersectionobserver.io)
+* [IntersectionObserver Examples - Practical, real world examples of IntersectionObserver](https://intersectionobserver.io)
 * [React PDF Viewer - A React component to view a PDF document](https://react-pdf-viewer.dev)
 
 _Resources_

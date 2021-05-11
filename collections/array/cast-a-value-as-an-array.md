@@ -1,3 +1,11 @@
+---
+title: Cast a value as an array
+category: Array
+tags:
+  - posts
+layout: layouts/post.njk
+---
+
 ~~~ javascript
 const castArray = value => Array.isArray(value) ? value : [value];
 

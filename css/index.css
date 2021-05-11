@@ -1,0 +1,191 @@
+:root {
+    --background: #000200;
+}
+
+body {
+    font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+pre {
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+code[class*="language-"], pre[class*="language-"] {
+    font-size: 0.8rem;
+}
+pre[class*="language-"] {
+    padding: 2rem 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 0 1rem;
+}
+
+.main {
+    margin: 4rem 0;
+}
+.section {
+    margin: 4rem 0;
+}
+.section__separator {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.section__title {
+    background-color: var(--background);
+    border-radius: 64% 32% 72% 24%;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+/* Header */
+.header {
+    background: var(--background);
+    color: #fff;
+    padding-bottom: 4rem;
+    position: relative;
+    text-align: center;
+}
+.header__logo {
+    height: auto;
+    margin: 0 auto;
+    width: 16rem;
+}
+.header__heading {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+.header__subheading {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.header__github {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+}
+.header__github a {
+    background: #fff;
+    border: 1px solid var(--background);
+    border-radius: 9999px;
+    color: var(--background);
+    padding: 1rem 2rem;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0 4rem 0;
+}
+.footer__about {
+    border-bottom: 1px solid var(--background);
+    display: flex;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.footer__author {
+    flex: 1;
+}
+.footer__social {
+    margin-left: 0.5rem;
+    color: var(--background);
+}
+.footer__grid {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.footer__col {
+    flex: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.footer__products {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer__product {
+    margin: 0.25rem 0;
+}
+.footer__product a {
+    color: var(--background);
+}
+
+/* Product */
+.product {
+    border-radius: 0.5rem;
+    color: #fff;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.product__link {
+    color: #fff;
+    display: block;
+    padding: 1rem;
+}
+
+.product__logo {
+    width: 6rem;
+}
+
+.product__name {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.product__description {
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* Snippet */
+.snippet {
+    border: 1px solid var(--background);
+    margin: 1rem 0;
+}
+.snippet__header {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+.snippet__title {
+    flex: 1;
+}
+.snippet__anchor {
+    color: var(--background);
+}
+.snippet__body--hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .header__github a {
+        font-size: 1.5rem;
+    }
+    .header__heading {
+        font-size: 3rem;
+    }
+    .header__subheading {
+        font-size: 2rem;
+    }
+}
