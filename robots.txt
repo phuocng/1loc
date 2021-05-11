@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://1loc.dev/sitemap.xml
