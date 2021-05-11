@@ -12,9 +12,6 @@ body {
 a {
     text-decoration: none;
 }
-img {
-    width: 100%;
-}
 pre {
     border: none !important;
     border-radius: 0 !important;
@@ -29,7 +26,7 @@ pre[class*="language-"] {
 
 .container {
     margin: 0 auto;
-    max-width: 96rem;
+    max-width: 80rem;
     padding: 0 1rem;
 }
 
@@ -138,10 +135,6 @@ pre[class*="language-"] {
     color: #fff;
     display: block;
     padding: 1rem;
-}
-
-.product__logo {
-    width: 6rem;
 }
 
 .product__name {
