@@ -13,7 +13,7 @@ const sortLines = str => str.split(/\r?\n/).sort().join('\n');
 const reverseSortedLines = str => str.split(/\r?\n/).sort().reverse().join('\n');
 
 // Example
-const text = `
+sortLines(`
 Thaddeus Mullen
 Kareem Marshall
 Ferdinand Valentine
@@ -24,7 +24,7 @@ Kasimir Fletcher
 Colton Sharp
 Adrian Rosales
 Theodore Rogers
-`;
+`);
 
 /* Output */
 /*
