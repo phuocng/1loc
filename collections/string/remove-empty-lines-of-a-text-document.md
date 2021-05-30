@@ -10,14 +10,12 @@ layout: layouts/post.njk
 const removeEmptyLines = str => str.split(/\r?\n/).filter(line => line.trim() !== '').join('\n');
 
 // Example
-removeEmptyLines(`
-red
+removeEmptyLines(`red
 
 green
 blue
 
-yellow
-`);
+yellow`);
 
 /* Output */
 /*

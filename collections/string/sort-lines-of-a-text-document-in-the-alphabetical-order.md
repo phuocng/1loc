@@ -13,8 +13,7 @@ const sortLines = str => str.split(/\r?\n/).sort().join('\n');
 const reverseSortedLines = str => str.split(/\r?\n/).sort().reverse().join('\n');
 
 // Example
-sortLines(`
-Thaddeus Mullen
+sortLines(`Thaddeus Mullen
 Kareem Marshall
 Ferdinand Valentine
 Hasad Lindsay
@@ -23,8 +22,7 @@ Knox Tyson
 Kasimir Fletcher
 Colton Sharp
 Adrian Rosales
-Theodore Rogers
-`);
+Theodore Rogers`);
 
 /* Output */
 /*
