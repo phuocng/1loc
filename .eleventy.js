@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addCollection('postsByCategory', (collection) => {
-        const posts = collection.getFilteredByTag('posts').sort();
+        const posts = collection.getFilteredByTag('posts').sort((a, b) => a.data.title.localeCompare(b.data.title));
         const groups = posts.reduce((acc, item) => ((acc[item.data.category] = [...(acc[item.data.category] || []), item]), acc), {});
         return Object.keys(groups).sort().reduce((p, c) => (p[c] = groups[c], p), {});
     });
