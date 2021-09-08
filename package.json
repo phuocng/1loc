@@ -20,44 +20,17 @@
     },
     "license": "MIT",
     "scripts": {
-        "data": "node bin/generateData.js",
-        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
-        "dev": "npm run copy && npm run data && webpack --mode development",
-        "dev-server": "npm run copy && npm run data && webpack-dev-server",
-        "build": "npm run copy && npm run data && webpack --mode production && npm run export",
-        "export": "react-snap",
-        "deploy": "npm run build && netlify deploy --dir=dist --prod"
+        "build": "eleventy",
+        "serve": "eleventy --serve",
+        "deploy": "rm -rf _site && npm run build && rm -rf _site/collections && netlify deploy --dir=_site --prod"
     },
-    "dependencies": {
-        "highlight.js": "^9.18.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-markdown": "^4.3.1",
-        "react-router-dom": "^5.1.2"    },
     "devDependencies": {
-        "@types/react": "^16.9.34",
-        "@types/react-dom": "^16.9.6",
-        "@types/react-router-dom": "^5.1.4",
-        "css-loader": "^3.5.2",
-        "cssnano": "^4.1.10",
-        "html-webpack-plugin": "^4.2.0",
-        "mini-css-extract-plugin": "^0.9.0",
-        "postcss-loader": "^3.0.0",
-        "react-snap": "^1.23.0",
-        "source-map-loader": "^0.2.4",
-        "style-loader": "^1.1.4",
-        "tailwindcss": "^1.2.0",
-        "ts-loader": "^7.0.0",
-        "typescript": "^3.8.3",
-        "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11",
-        "webpack-dev-server": "^3.10.3"
-    },
-    "reactSnap": {
-        "source": "dist",
-        "minifyHtml": {
-            "collapseWhitespace": false,
-            "removeComments": false
-        }
+        "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy-navigation": "^0.2.0",
+        "@11ty/eleventy-plugin-rss": "^1.1.1",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+        "html-minifier": "^4.0.0",
+        "markdown-it": "^12.0.6",
+        "node-fetch": "^2.6.1"
     }
 }
