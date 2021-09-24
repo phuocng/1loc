@@ -1,5 +1,6 @@
 .DS_Store
-.netlify/
-_site/
-node_modules/
+.netlify
+.next
+node_modules
+out
 package-lock.json

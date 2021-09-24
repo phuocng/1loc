@@ -9,20 +9,20 @@ What's your favorite JavaScript single LOC (line of code)? Let me know!
 1. Clone the project:
 
 ```shell
-$ git clone https://github.com/phuoc-ng/1loc
+$ git clone git@github.com:1milligram/1loc.git
 ```
 
 2. Install the dependencies:
 
-```console
+```shell
 $ cd 1loc
 $ npm install
 ```
 
 3. Run it on the local:
 
-```console
-$ npm run serve
+```shell
+$ npm run dev
 ```
 
 Look at the console to see the _Local URL_. Open it in your browser to see it in action.
@@ -40,23 +40,3 @@ Be my friend on
 * [Twitter](https://twitter.com/nghuuphuoc)
 * [dev.to](https://dev.to/phuocng)
 * [Github](https://github.com/phuoc-ng)
-
-## Products
-
-You might be interested in my products:
-
-_Products_
-* [Blur Page - A browser extension to hide sensitive information on a web page](https://blur.page)
-* [Check Browsers Support - A browser extension to check browser compatibility without leaving your tab](https://checkbrowsers.support)
-* [Fake Numbers - Generate fake and valid numbers](https://fakenumbers.io)
-* [Form Validation - The best validation library for JavaScript](https://formvalidation.io)
-* [IntersectionObserver Examples - Practical, real world examples of IntersectionObserver](https://intersectionobserver.io)
-* [React PDF Viewer - A React component to view a PDF document](https://react-pdf-viewer.dev)
-
-_Resources_
-* [1LOC - Favorite JavaScript utilities in single line of code](https://1loc.dev)
-* [CSS Layout - A collection of popular layouts and patterns made with CSS](https://csslayout.io)
-* [HTML DOM - How to manage HTML DOM with vanilla JavaScript](https://htmldom.dev)
-* [Responsive Design Patterns - A collection of patterns to create a responsive web page](https://responsive.page)
-* [Super tiny, quick tips, tricks and best practices of front-end development](https://getfrontend.tips)
-* [this VS that - The differences between ___ and ___ in the front-end development](https://thisthat.dev)

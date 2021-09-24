@@ -13,24 +13,33 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/phuoc-ng/1loc"
+        "url": "https://github.com/1milligram/1loc"
     },
     "bugs": {
-        "url": "https://github.com/phuoc-ng/1loc/issues"
+        "url": "https://github.com/1milligram/1loc/issues"
     },
     "license": "MIT",
     "scripts": {
-        "build": "eleventy",
-        "serve": "eleventy --serve",
-        "deploy": "rm -rf _site && npm run build && rm -rf _site/collections && netlify deploy --dir=_site --prod"
+        "build": "next build",
+        "dev": "next dev",
+        "format": "prettier --write \"**/*.+(css|html|json|js|jsx|mdx|scss|ts|tsx)\"",
+        "preexport": "npm run build",
+        "export": "next export",
+        "deploy": "npm run export && netlify deploy --prod --dir=out"
+    },
+    "dependencies": {
+        "next": "^11.1.2",
+        "prism-react-renderer": "^1.2.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "@11ty/eleventy": "^0.12.1",
-        "@11ty/eleventy-navigation": "^0.2.0",
-        "@11ty/eleventy-plugin-rss": "^1.1.1",
-        "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
-        "html-minifier": "^4.0.0",
-        "markdown-it": "^12.0.6",
-        "node-fetch": "^2.6.1"
+        "@1milligram/design": "^0.4.0",
+        "@types/react": "^17.0.20",
+        "@types/react-dom": "^17.0.9",
+        "prettier": "^2.4.0",
+        "sass": "^1.39.2",
+        "serve": "^12.0.1",
+        "typescript": "^4.4.3"
     }
 }
