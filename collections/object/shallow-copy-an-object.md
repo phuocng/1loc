@@ -1,9 +1,6 @@
 ---
 title: Shallow copy an object
 category: Object
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

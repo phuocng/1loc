@@ -1,20 +1,20 @@
 ---
 title: Flip the arguments of a function
 category: Function
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 // Reverse the order of arguments
-const flip = fn => (...args) => fn(...args.reverse());
+const flip =
+    (fn) =>
+    (...args) =>
+        fn(...args.reverse());
 
 // For binary functions
-const flip = fn => (b, a) => fn(a, b);
+const flip = (fn) => (b, a) => fn(a, b);
 
 // Or for curried functions
-const flip = fn => b => a => fn(a)(b);
+const flip = (fn) => (b) => (a) => fn(a)(b);
 
 // Example
 const isParent = (parent, child) => parent.children.includes(child);

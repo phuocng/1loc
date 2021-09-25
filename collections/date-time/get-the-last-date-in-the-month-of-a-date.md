@@ -1,9 +1,6 @@
 ---
 title: Get the last date in the month of a date
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

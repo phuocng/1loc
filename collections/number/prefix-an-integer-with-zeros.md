@@ -1,9 +1,6 @@
 ---
 title: Prefix an integer with zeros
 category: Number
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
@@ -16,5 +13,5 @@ const prefixWithZeros = (number, length) => `${Array(length).join('0')}${number}
 const prefixWithZeros = (number, length) => String(number).padStart(length, '0');
 
 // Example
-prefixWithZeros(42, 5);     // '00042'
+prefixWithZeros(42, 5); // '00042'
 ```

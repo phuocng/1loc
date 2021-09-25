@@ -1,9 +1,6 @@
 ---
 title: Check if a date occurs in the current year
 category: Validator
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

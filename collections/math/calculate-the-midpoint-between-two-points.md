@@ -1,9 +1,6 @@
 ---
 title: Calculate the midpoint between two points
 category: Math
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

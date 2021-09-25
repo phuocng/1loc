@@ -1,17 +1,18 @@
 ---
 title: Create an object from the pairs of key and value
 category: Object
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const toObj = arr => Object.fromEntries(arr)
+const toObj = (arr) => Object.fromEntries(arr);
 
 // Or
-const toObj = arr => arr.reduce((a, c) => ((a[c[0]] = c[1]), a), {});
+const toObj = (arr) => arr.reduce((a, c) => ((a[c[0]] = c[1]), a), {});
 
 // Example
-toObj([['a', 1], ['b', 2], ['c', 3]]);      // { a: 1, b: 2, c: 3 }
+toObj([
+    ['a', 1],
+    ['b', 2],
+    ['c', 3],
+]); // { a: 1, b: 2, c: 3 }
 ```

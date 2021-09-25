@@ -1,9 +1,6 @@
 ---
 title: Logical xor operator
 category: Function
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
@@ -18,8 +15,8 @@ const xor = (a, b) => !(!a && !b) && !(a && b);
 const xor = (a, b) => Boolean(!a ^ !b);
 
 // Examples
-xor(true, true);        // false
-xor(false, false);      // false
-xor(true, false);       // true
-xor(false, true);       // true
+xor(true, true); // false
+xor(false, false); // false
+xor(true, false); // true
+xor(false, true); // true
 ```

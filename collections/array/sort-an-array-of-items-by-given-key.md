@@ -1,13 +1,10 @@
 ---
 title: Sort an array of items by given key
 category: Array
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const sortBy = (arr, k) => arr.concat().sort((a, b) => (a[k] > b[k]) ? 1 : ((a[k] < b[k]) ? -1 : 0));
+const sortBy = (arr, k) => arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0));
 
 // Example
 const people = [

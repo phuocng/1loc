@@ -1,9 +1,6 @@
 ---
 title: Check if a date is a weekend
 category: Validator
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

@@ -1,9 +1,6 @@
 ---
 title: Repeat a string
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

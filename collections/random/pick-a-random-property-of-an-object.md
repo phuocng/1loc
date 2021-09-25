@@ -1,13 +1,10 @@
 ---
 title: Pick a random property of an object
 category: Random
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const randomProp = obj => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
+const randomProp = (obj) => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
 
 // Example
 const colors = {
@@ -55,5 +52,5 @@ const colors = {
     white: '#ffffff',
     yellow: '#ffff00',
 };
-randomProp(colors);     // 'red'
+randomProp(colors); // 'red'
 ```

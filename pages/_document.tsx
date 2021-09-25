@@ -8,7 +8,7 @@ class MyDocument extends Document {
                     <link href="/favicon.png" rel="icon" />
                     <meta charSet="utf-8" />
                     <meta content="Favorite JavaScript utilities in single line of code" name="description" />
-                    <meta content="JavaScript helpers, JavaScript utils" name="keywords" />
+                    <meta content="JavaScript helpers, JavaScript snippets, JavaScript utils" name="keywords" />
                     <meta content="Nguyen Huu Phuoc" name="author" />
 
                     <meta content="@nghuuphuoc" name="twitter:site" />

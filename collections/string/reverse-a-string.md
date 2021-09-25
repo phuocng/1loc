@@ -1,23 +1,20 @@
 ---
 title: Reverse a string
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const reverse = str => str.split('').reverse().join('');
+const reverse = (str) => str.split('').reverse().join('');
 
 // Or
-const reverse = str => [...str].reverse().join('');
+const reverse = (str) => [...str].reverse().join('');
 
 // Or
-const reverse = str => str.split('').reduce((rev, char)=> `${char}${rev}`, '');
+const reverse = (str) => str.split('').reduce((rev, char) => `${char}${rev}`, '');
 
 // Or
-const reverse = str => (str === '') ? '' : `${reverse(str.substr(1))}${str.charAt(0)}`;
+const reverse = (str) => (str === '' ? '' : `${reverse(str.substr(1))}${str.charAt(0)}`);
 
 // Example
-reverse('hello world');     // 'dlrow olleh'
+reverse('hello world'); // 'dlrow olleh'
 ```

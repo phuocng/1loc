@@ -1,9 +1,6 @@
 ---
 title: Check if the code is running in NodeJS
 category: Misc
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

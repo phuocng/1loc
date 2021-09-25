@@ -1,14 +1,11 @@
 ---
 title: Run Promises in sequence
 category: Misc
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 // `promises` is an array of `Promise`
-const run = promises => promises.reduce((p, c) => p.then(rp => c.then(rc => [...rp, rc])), Promise.resolve([]));
+const run = (promises) => promises.reduce((p, c) => p.then((rp) => c.then((rc) => [...rp, rc])), Promise.resolve([]));
 
 // Example
 run(promises).then((results) => {

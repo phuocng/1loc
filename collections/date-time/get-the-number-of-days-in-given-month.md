@@ -1,9 +1,6 @@
 ---
 title: Get the number of days in given month
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

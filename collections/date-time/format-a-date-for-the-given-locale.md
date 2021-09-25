@@ -1,9 +1,6 @@
 ---
 title: Format a date for the given locale
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
@@ -12,5 +9,5 @@ layout: layouts/post.njk
 const format = (date, locale) => new Intl.DateTimeFormat(locale).format(date);
 
 // Example
-format(new Date(), 'pt-BR');    // 06/05/2020
+format(new Date(), 'pt-BR'); // 06/05/2020
 ```

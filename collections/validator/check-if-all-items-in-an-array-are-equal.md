@@ -1,18 +1,15 @@
 ---
 title: Check if all items in an array are equal
 category: Validator
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const areEqual = arr => arr.length > 0 && arr.every(item => item === arr[0]);
+const areEqual = (arr) => arr.length > 0 && arr.every((item) => item === arr[0]);
 
 // Or
-const areEqual = arr => new Set(arr).size === 1;
+const areEqual = (arr) => new Set(arr).size === 1;
 
 // Examples
-areEqual([1, 2, 3, 4]);                 // false
-areEqual(['hello', 'hello', 'hello']);  // true
+areEqual([1, 2, 3, 4]); // false
+areEqual(['hello', 'hello', 'hello']); // true
 ```

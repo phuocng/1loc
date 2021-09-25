@@ -1,18 +1,15 @@
 ---
 title: Replace multiple spaces with a single space
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 // Replace spaces, tabs and new line characters
-const replaceSpaces = str => str.replace(/\s\s+/g, ' ');
+const replaceSpaces = (str) => str.replace(/\s\s+/g, ' ');
 
 // Only replace spaces
-const replaceOnlySpaces = str => str.replace(/  +/g, ' ');
+const replaceOnlySpaces = (str) => str.replace(/  +/g, ' ');
 
 // Example
-replaceSpaces('this\n   is     \ta    \rmessage');  // 'this is a message'
+replaceSpaces('this\n   is     \ta    \rmessage'); // 'this is a message'
 ```

@@ -1,9 +1,6 @@
 ---
 title: Detect dark mode
 category: Misc
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

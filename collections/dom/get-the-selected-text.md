@@ -1,9 +1,6 @@
 ---
 title: Get the selected text
 category: DOM
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

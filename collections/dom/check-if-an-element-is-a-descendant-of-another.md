@@ -1,9 +1,6 @@
 ---
 title: Check if an element is a descendant of another
 category: DOM
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

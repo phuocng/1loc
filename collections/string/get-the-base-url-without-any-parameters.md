@@ -1,17 +1,14 @@
 ---
 title: Get the base URL without any parameters
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const baseUrl = url => url.indexOf('?') === -1 ? url : url.slice(0, url.indexOf('?'));
+const baseUrl = (url) => (url.indexOf('?') === -1 ? url : url.slice(0, url.indexOf('?')));
 
 // Or
 // Note that `includes` isn't supported in IE 11
-const baseUrl = url => url.includes('?') ? url.slice(0, url.indexOf('?')) : url;
+const baseUrl = (url) => (url.includes('?') ? url.slice(0, url.indexOf('?')) : url);
 
 // Or
 const baseUrl = url => url.split("?")[0]

@@ -27,7 +27,7 @@ Look at the console to see the _Local URL_. Open it in your browser to see it in
 
 ## Contributing
 
-Pull requests are welcomed. To submit your favorite JavaScript single line of code, please create a markdown file, and put it in 
+Pull requests are welcomed. To submit your favorite JavaScript single line of code, please create a markdown file, and put it in
 a particular category of the [collections](collections) folder.
 
 ## About
@@ -35,6 +35,7 @@ a particular category of the [collections](collections) folder.
 This project is developed by _Nguyen Huu Phuoc_. I love building products and sharing knowledge.
 
 Be my friend on
-* [Twitter](https://twitter.com/nghuuphuoc)
-* [dev.to](https://dev.to/phuocng)
-* [Github](https://github.com/phuoc-ng)
+
+-   [Twitter](https://twitter.com/nghuuphuoc)
+-   [dev.to](https://dev.to/phuocng)
+-   [Github](https://github.com/phuoc-ng)

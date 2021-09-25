@@ -1,14 +1,14 @@
 ---
 title: Omit a subset of properties from an object
 category: Object
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const omit = (obj, keys) => Object.keys(obj).filter(k => !keys.includes(k)).reduce((res, k) => Object.assign(res, {[k]: obj[k]}), {});
+const omit = (obj, keys) =>
+    Object.keys(obj)
+        .filter((k) => !keys.includes(k))
+        .reduce((res, k) => Object.assign(res, { [k]: obj[k] }), {});
 
 // Example
-omit({a: '1', b: '2', c: '3'}, ['a', 'b']);     // { c: '3' }
+omit({ a: '1', b: '2', c: '3' }, ['a', 'b']); // { c: '3' }
 ```

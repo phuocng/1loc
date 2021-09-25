@@ -22,7 +22,7 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev",
-        "format": "prettier --write \"**/*.+(css|html|json|js|jsx|mdx|scss|ts|tsx)\"",
+        "format": "prettier --write \"**/*.+(css|html|json|js|jsx|md|mdx|scss|ts|tsx)\"",
         "preexport": "npm run build",
         "export": "next export",
         "deploy": "npm run export && netlify deploy --prod --dir=out"
