@@ -1,22 +1,23 @@
 ---
 title: Group an array of objects by a key
 category: Array
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const groupBy = (arr, key) => arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {});
+const groupBy = (arr, key) =>
+    arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {});
 
 // Example
-groupBy([
-    { branch: 'audi', model: 'q8', year: '2019' },
-    { branch: 'audi', model: 'rs7', year: '2020' },
-    { branch: 'ford', model: 'mustang', year: '2019' },
-    { branch: 'ford', model: 'explorer', year: '2020' },
-    { branch: 'bmw', model: 'x7', year: '2020' },
-], 'branch');
+groupBy(
+    [
+        { branch: 'audi', model: 'q8', year: '2019' },
+        { branch: 'audi', model: 'rs7', year: '2020' },
+        { branch: 'ford', model: 'mustang', year: '2019' },
+        { branch: 'ford', model: 'explorer', year: '2020' },
+        { branch: 'bmw', model: 'x7', year: '2020' },
+    ],
+    'branch'
+);
 
 /*
 {

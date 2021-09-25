@@ -1,9 +1,6 @@
 ---
 title: Check if a date is today
 category: Validator
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

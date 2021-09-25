@@ -1,9 +1,6 @@
 ---
 title: Get the current quarter of a date
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

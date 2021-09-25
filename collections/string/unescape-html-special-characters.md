@@ -1,11 +1,14 @@
 ---
 title: Unescape HTML special characters
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const unescape = str => str.replace(/&amp;/g , '&').replace(/&lt;/g  , '<').replace(/&gt;/g  , '>').replace(/&#0*39;/g , "'").replace(/&quot;/g, '"');
+const unescape = (str) =>
+    str
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#0*39;/g, "'")
+        .replace(/&quot;/g, '"');
 ```

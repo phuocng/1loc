@@ -1,9 +1,6 @@
 ---
 title: Replace all tab characters with spaces
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

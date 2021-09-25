@@ -1,9 +1,6 @@
 ---
 title: Generate a random floating point number in given range
 category: Random
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

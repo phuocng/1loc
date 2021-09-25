@@ -1,16 +1,13 @@
 ---
 title: Convert an array of objects to a single object
 category: Array
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 
 // Or
-const toObject = (arr, key) => Object.fromEntries(arr.map(it => [it[key], it]));
+const toObject = (arr, key) => Object.fromEntries(arr.map((it) => [it[key], it]));
 
 // Example
 toObject(

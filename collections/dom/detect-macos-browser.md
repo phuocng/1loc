@@ -1,9 +1,6 @@
 ---
 title: Detect macOS browser
 category: DOM
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

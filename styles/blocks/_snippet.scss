@@ -1,0 +1,44 @@
+.block-snippet {
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    overflow: hidden;
+
+    &:hover {
+        background: #e5e5e5;
+    }
+}
+
+.block-snippet__head {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+}
+
+.block-snippet__index {
+    color: #808080;
+    margin-right: 0.25rem;
+}
+
+.block-snippet__title {
+    flex: 1;
+}
+
+.block-snippet__body {
+    display: none;
+
+    &--opened {
+        display: block;
+    }
+}
+
+.block-snippet__body pre {
+    font-family: 'Source Code Pro';
+    font-size: 0.875rem;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding: 1rem;
+}

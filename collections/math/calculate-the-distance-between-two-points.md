@@ -1,9 +1,6 @@
 ---
 title: Calculate the distance between two points
 category: Math
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

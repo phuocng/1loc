@@ -1,0 +1,24 @@
+.block-header {
+    background: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    height: 3rem;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.block-header__inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.block-header__cta {
+    align-items: center;
+    background-color: var(--mgd-color-primary);
+    border-radius: 9999px;
+    color: #fff;
+    display: flex;
+    font-weight: 700;
+    height: 2rem;
+    padding: 0 1.5rem;
+}

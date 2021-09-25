@@ -1,9 +1,6 @@
 ---
 title: Initialize the current date but set time to midnight
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

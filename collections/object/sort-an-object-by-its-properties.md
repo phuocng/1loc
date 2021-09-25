@@ -1,13 +1,13 @@
 ---
 title: Sort an object by its properties
 category: Object
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const sort = obj => Object.keys(obj).sort().reduce((p, c) => (p[c] = obj[c], p), {});
+const sort = (obj) =>
+    Object.keys(obj)
+        .sort()
+        .reduce((p, c) => ((p[c] = obj[c]), p), {});
 
 // Example
 const colors = {

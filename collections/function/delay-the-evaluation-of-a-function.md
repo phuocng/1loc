@@ -1,19 +1,18 @@
 ---
 title: Delay the evaluation of a function
 category: Function
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 // returns a new version of `fn` that returns values as lazy evaluable
-const thunkfy = fn => (...args) => () => fn(...args);
+const thunkfy =
+    (fn) =>
+    (...args) =>
+    () =>
+        fn(...args);
 
 // Example
-const heavyComputation = x => doStuff(x);
-const unnecessarySlow = manyThings.map(heavyComputation)
-    .find(result => result.criteria);
-const probablyFaster = manyThings.map(thunkfy(heavyComputation))
-    .find(thunk => thunk().criteria);
+const heavyComputation = (x) => doStuff(x);
+const unnecessarySlow = manyThings.map(heavyComputation).find((result) => result.criteria);
+const probablyFaster = manyThings.map(thunkfy(heavyComputation)).find((thunk) => thunk().criteria);
 ```

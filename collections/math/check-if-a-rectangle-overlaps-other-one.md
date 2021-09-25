@@ -1,9 +1,6 @@
 ---
 title: Check if a rectangle overlaps other one
 category: Math
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

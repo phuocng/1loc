@@ -1,9 +1,6 @@
 ---
 title: Create an empty function
 category: Function
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

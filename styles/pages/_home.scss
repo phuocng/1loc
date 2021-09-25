@@ -1,0 +1,22 @@
+.block-home__hero {
+    text-align: center;
+}
+
+.block-home__category {
+    background: #fff;
+    color: #808080;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 1rem;
+    margin: 2rem 0;
+    position: sticky;
+    text-align: center;
+    top: 3rem;
+}
+
+.block-home__category::before,
+.block-home__category::after {
+    align-self: center;
+    border-top: 1px solid #e6e6e6;
+    content: '';
+}

@@ -1,9 +1,6 @@
 ---
 title: Compare two arrays regardless of order
 category: Array
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
@@ -11,7 +8,7 @@ layout: layouts/post.njk
 const isEqual = (a, b) => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 
 // Examples
-isEqual([1, 2, 3], [1, 2, 3]);      // true
-isEqual([1, 2, 3], [1, 3, 2]);      // true
-isEqual([1, 2, 3], [1, '2', 3]);    // false
+isEqual([1, 2, 3], [1, 2, 3]); // true
+isEqual([1, 2, 3], [1, 3, 2]); // true
+isEqual([1, 2, 3], [1, '2', 3]); // false
 ```

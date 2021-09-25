@@ -1,9 +1,6 @@
 ---
 title: Get the current timestamp in seconds
 category: Date Time
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

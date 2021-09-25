@@ -1,17 +1,14 @@
 ---
 title: Check if a path is relative
 category: String
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const isRelative = path => !/^([a-z]+:)?[\\/]/i.test(path);
+const isRelative = (path) => !/^([a-z]+:)?[\\/]/i.test(path);
 
 // Examples
-isRelative('/foo/bar/baz');         // false
-isRelative('C:\\foo\\bar\\baz');    // false
-isRelative('foo/bar/baz.txt');      // true
-isRelative('foo.md');               // true
+isRelative('/foo/bar/baz'); // false
+isRelative('C:\\foo\\bar\\baz'); // false
+isRelative('foo/bar/baz.txt'); // true
+isRelative('foo.md'); // true
 ```

@@ -1,9 +1,6 @@
 ---
 title: Calculate the linear interpolation between two numbers
 category: Math
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

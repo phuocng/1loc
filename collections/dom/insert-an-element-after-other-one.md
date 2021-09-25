@@ -1,9 +1,6 @@
 ---
 title: Insert an element after other one
 category: DOM
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js

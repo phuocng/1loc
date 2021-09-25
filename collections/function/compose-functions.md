@@ -1,19 +1,19 @@
 ---
 title: Compose functions
 category: Function
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
 // Compose functions from right to left
-const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
+const compose =
+    (...fns) =>
+    (x) =>
+        fns.reduceRight((y, f) => f(y), x);
 
 // Example
-const lowercase = str => str.toLowerCase();
-const capitalize = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-const reverse = str => str.split('').reverse().join('');
+const lowercase = (str) => str.toLowerCase();
+const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+const reverse = (str) => str.split('').reverse().join('');
 
 const fn = compose(reverse, capitalize, lowercase);
 

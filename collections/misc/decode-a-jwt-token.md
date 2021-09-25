@@ -1,13 +1,16 @@
 ---
 title: Decode a JWT token
 category: Misc
-tags:
-  - posts
-layout: layouts/post.njk
 ---
 
 ```js
-const decode = token => decodeURIComponent(atob(token.split('.')[1].replace('-', '+').replace('_', '/')).split('').map(c => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`).join(''));
+const decode = (token) =>
+    decodeURIComponent(
+        atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
+            .split('')
+            .map((c) => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`)
+            .join('')
+    );
 
 // Example
 decode(`
