@@ -11,13 +11,15 @@ const normalizeCode = (code: string) => {
 };
 
 export const SnippetItem: React.FC<{
-    snippet: Snippet
-}> = ({ snippet }) => {
+    index: number;
+    snippet: Snippet;
+}> = ({ index, snippet }) => {
     const [opened, setOpened] = React.useState(false);
 
     return (
         <div className="block-snippet" id={snippet.slug}>
             <div className="block-snippet__head">
+                <div className="block-snippet__index">{index}.</div>
                 <div className="block-snippet__title" onClick={() => setOpened(v => !v)}>{snippet.title}</div>
                 <a className="block-snippet__anchor" href={`#${snippet.slug}`}>#</a>
             </div>

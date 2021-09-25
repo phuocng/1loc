@@ -8,15 +8,21 @@ import Layout from '../layouts/Layout';
 
 const groupByCategory = (snippets: Snippet[]) => snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
 
+const uid = (() => {
+    let id = 1;
+    return () => id++;
+})();
+
 const HomePage: React.FC<{
     snippets: Snippet[];
 }> = ({ snippets }) => {
     const categories = groupByCategory(snippets);
+    let id = 0;
 
     return (
         <Layout>
             <div className="block-container">
-                <div className="block-home-hero">
+                <div className="block-home__hero">
                     <Spacer size="extraLarge" />
                     <Heading level={1}>Favorite JavaScript Utilities</Heading>
                     <Heading level={4}>in single line of code! No more!</Heading>
@@ -25,16 +31,19 @@ const HomePage: React.FC<{
                 {
                     Object.keys(categories).map(category => (
                         <div key={category}>
-                            <Heading level={3}>{category}</Heading>
+                            <div className="block-home__category">
+                                <Heading level={3}>{category}</Heading>
+                            </div>
                             {
                                 categories[category].map((snippet: Snippet) => (
-                                    <SnippetItem key={snippet.title} snippet={snippet} />
+                                    <SnippetItem key={snippet.title} index={uid()} snippet={snippet} />
                                 ))
                             }
                         </div>
                     ))
                 }
             </div>
+            <Spacer size="large" />
         </Layout>
     );
 };
