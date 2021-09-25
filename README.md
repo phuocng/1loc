@@ -2,8 +2,6 @@
 
 What's your favorite JavaScript single LOC (line of code)? Let me know!
 
-![JavaScript single LOC](assets/screenshot.png)
-
 ## Running it on local
 
 1. Clone the project:
