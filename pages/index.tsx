@@ -14,6 +14,7 @@ const HomePage: React.FC<{
     snippets: Snippet[];
 }> = ({ snippets }) => {
     const categories = groupByCategory(snippets);
+    const id = uid();
 
     return (
         <Layout>
@@ -30,7 +31,7 @@ const HomePage: React.FC<{
                             <Heading level={3}>{category}</Heading>
                         </div>
                         {categories[category].map((snippet: Snippet) => (
-                            <SnippetItem key={snippet.title} index={uid()} snippet={snippet} />
+                            <SnippetItem key={snippet.title} index={id.increase()} snippet={snippet} />
                         ))}
                     </div>
                 ))}

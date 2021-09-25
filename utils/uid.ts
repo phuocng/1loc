@@ -1,4 +1,6 @@
-export const uid = (() => {
+export const uid = () => {
     let id = 1;
-    return () => id++;
-})();
+    return {
+        increase: () => id++,
+    };
+};
