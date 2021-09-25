@@ -6,7 +6,8 @@ import { loadSnippets } from '../models/loadSnippets';
 import type { Snippet } from '../models/Snippet';
 import Layout from '../layouts/Layout';
 
-const groupByCategory = (snippets: Snippet[]) => snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
+const groupByCategory = (snippets: Snippet[]) =>
+    snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
 
 const uid = (() => {
     let id = 1;
@@ -28,20 +29,16 @@ const HomePage: React.FC<{
                     <Heading level={4}>in single line of code! No more!</Heading>
                     <Spacer size="large" />
                 </div>
-                {
-                    Object.keys(categories).map(category => (
-                        <div key={category}>
-                            <div className="block-home__category">
-                                <Heading level={3}>{category}</Heading>
-                            </div>
-                            {
-                                categories[category].map((snippet: Snippet) => (
-                                    <SnippetItem key={snippet.title} index={uid()} snippet={snippet} />
-                                ))
-                            }
+                {Object.keys(categories).map((category) => (
+                    <div key={category}>
+                        <div className="block-home__category">
+                            <Heading level={3}>{category}</Heading>
                         </div>
-                    ))
-                }
+                        {categories[category].map((snippet: Snippet) => (
+                            <SnippetItem key={snippet.title} index={uid()} snippet={snippet} />
+                        ))}
+                    </div>
+                ))}
             </div>
             <Spacer size="large" />
         </Layout>
@@ -55,6 +52,6 @@ export async function getStaticProps() {
             snippets,
         },
     };
-};
+}
 
 export default HomePage;

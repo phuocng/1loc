@@ -18,7 +18,7 @@ class MyDocument extends Document {
                     <meta content="/images/logo.png" name="twitter:image" />
 
                     <meta property="og:title" content="Favorite JavaScript utilities in single line of code - 1 LOC" />
-                    <meta property="og:description" content="Favorite JavaScript utilities in single line of code" />                    
+                    <meta property="og:description" content="Favorite JavaScript utilities in single line of code" />
                     <meta name="description" content="Favorite JavaScript utilities in single line of code" />
 
                     <meta content="article" property="og:type" />

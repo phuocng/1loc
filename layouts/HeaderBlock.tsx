@@ -17,7 +17,7 @@ const HeaderBlock = () => {
                 <div className="block-header__inner">
                     <Link href="/" passHref>
                         <HeaderLogo />
-                    </Link>                    
+                    </Link>
                     <Link href="https://github.com/1milligram/1loc">
                         <a className="block-header__cta">GitHub</a>
                     </Link>

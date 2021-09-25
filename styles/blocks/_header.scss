@@ -1,36 +1,24 @@
 .block-header {
     background: #fff;
     border-bottom: 1px solid #e4e4e4;
+    height: 3rem;
     padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 .block-header__inner {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
-.block-header__menu {
-    align-items: center;
-    display: flex;
-}
-.block-header__nav {
-    margin-right: 2rem;
-}
-.block-header__link {
-    align-items: center;
-    border-bottom: 2px solid transparent;
-    color: #333;
-    display: flex;
-    font-weight: 700;
-    height: 4rem;
-    margin-bottom: -2px;
-}
-.block-header__link--active {
-    border-bottom-color: var(--mgd-color-primary);
-}
 .block-header__cta {
+    align-items: center;
     background-color: var(--mgd-color-primary);
     border-radius: 9999px;
     color: #fff;
+    display: flex;
     font-weight: 700;
-    padding: 0.5rem 1.5rem;
+    height: 2rem;
+    padding: 0 1.5rem;
 }

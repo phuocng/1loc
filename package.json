@@ -27,7 +27,7 @@
         "export": "next export",
         "deploy": "npm run export && netlify deploy --prod --dir=out"
     },
-    "dependencies": {        
+    "dependencies": {
         "next": "^11.1.2",
         "prism-react-renderer": "^1.2.1",
         "react": "^17.0.2",

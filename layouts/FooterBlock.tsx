@@ -4,7 +4,7 @@ import { Footer, FooterGroup, FooterLink } from '@1milligram/design';
 const FooterBlock = () => (
     <footer className="block-footer">
         <div className="block-container">
-            <Footer>                
+            <Footer>
                 <FooterGroup title="Products">
                     <FooterLink href="https://blur.page">Blur Page</FooterLink>
                     <FooterLink href="https://formvalidation.io">Form Validation</FooterLink>
