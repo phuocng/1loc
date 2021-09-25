@@ -4,21 +4,16 @@ import * as React from 'react';
 import { SnippetItem } from '../components/SnippetItem';
 import { loadSnippets } from '../models/loadSnippets';
 import type { Snippet } from '../models/Snippet';
-import Layout from '../layouts/Layout';
+import { Layout } from '../layouts/Layout';
+import { uid } from '../utils/uid';
 
 const groupByCategory = (snippets: Snippet[]) =>
     snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
-
-const uid = (() => {
-    let id = 1;
-    return () => id++;
-})();
 
 const HomePage: React.FC<{
     snippets: Snippet[];
 }> = ({ snippets }) => {
     const categories = groupByCategory(snippets);
-    let id = 0;
 
     return (
         <Layout>

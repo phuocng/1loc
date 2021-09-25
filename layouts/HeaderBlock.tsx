@@ -2,7 +2,16 @@ import * as React from 'react';
 import Link from 'next/link';
 import { Logo } from '@1milligram/design';
 
-const HeaderBlock = () => {
+export const HeaderBlock = () => {
+    const [totalStars, setTotalStars] = React.useState(0);
+
+    React.useEffect(() => {
+        fetch('https://api.github.com/repos/1milligram/1loc')
+            .then((res) => res.json())
+            .then((data) => setTotalStars(data.stargazers_count))
+            .catch(console.log);
+    }, []);
+
     const HeaderLogo = React.forwardRef<HTMLAnchorElement, React.LinkHTMLAttributes<HTMLAnchorElement>>(
         (props, ref) => (
             <a href={props.href} onClick={props.onClick} ref={ref}>
@@ -19,12 +28,10 @@ const HeaderBlock = () => {
                         <HeaderLogo />
                     </Link>
                     <Link href="https://github.com/1milligram/1loc">
-                        <a className="block-header__cta">GitHub</a>
+                        <a className="block-header__cta">GitHub {totalStars}★</a>
                     </Link>
                 </div>
             </div>
         </header>
     );
 };
-
-export default HeaderBlock;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Footer, FooterGroup, FooterLink } from '@1milligram/design';
 
-const FooterBlock = () => (
+export const FooterBlock = () => (
     <footer className="block-footer">
         <div className="block-container">
             <Footer>
@@ -30,5 +30,3 @@ const FooterBlock = () => (
         </div>
     </footer>
 );
-
-export default FooterBlock;

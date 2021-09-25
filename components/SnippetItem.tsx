@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import { Code } from './Code';
-import { classNames } from './utils/classNames';
 import type { Snippet } from '../models/Snippet';
+import { classNames } from '../utils/classNames';
 
 const normalizeCode = (code: string) => {
     const trim = code.trim();
