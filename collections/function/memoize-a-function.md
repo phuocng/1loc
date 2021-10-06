@@ -6,7 +6,7 @@ category: Function
 ```js
 const memoize = (fn) =>
     (
-        (cache = {}) =>
+        (cache = Object.create(null)) =>
         (arg) =>
             cache[arg] || (cache[arg] = fn(arg))
     )();
