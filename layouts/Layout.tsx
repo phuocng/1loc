@@ -3,10 +3,12 @@ import * as React from 'react';
 import { FooterBlock } from './FooterBlock';
 import { HeaderBlock } from './HeaderBlock';
 
-export const Layout: React.FC<{}> = ({ children }) => (
+export const Layout: React.FC<{
+    title?: string;
+}> = ({ children, title = 'Favorite JavaScript utilities in single line of code' }) => (
     <>
         <Head>
-            <title>Favorite JavaScript utilities in single line of code - 1 LOC</title>
+            <title>{title} - 1 LOC</title>
         </Head>
         <HeaderBlock />
         {children}

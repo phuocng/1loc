@@ -1,8 +1,12 @@
-.block-home__hero {
-    text-align: center;
+.page-home__heading {
+    background: linear-gradient(102.66deg, #0465eb, #6ccef8);
+    font-size: 3.5rem;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.block-home__category {
+.page-home__category {
     background: #fff;
     color: #808080;
     display: grid;
@@ -14,8 +18,8 @@
     top: 3rem;
 }
 
-.block-home__category::before,
-.block-home__category::after {
+.page-home__category::before,
+.page-home__category::after {
     align-self: center;
     border-top: 1px solid #e6e6e6;
     content: '';

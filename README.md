@@ -28,7 +28,7 @@ Look at the console to see the _Local URL_. Open it in your browser to see it in
 ## Contributing
 
 Pull requests are welcomed. To submit your favorite JavaScript single line of code, please create a markdown file, and put it in
-a particular category of the [collections](collections) folder.
+a particular category of the [snippets](snippets) folder.
 
 ## About
 

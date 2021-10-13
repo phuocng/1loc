@@ -1,14 +1,13 @@
 import { Heading, Spacer } from '@1milligram/design';
 import * as React from 'react';
 
-import { SnippetItem } from '../components/SnippetItem';
+import { SnippetList } from '../components/SnippetList';
 import { loadSnippets } from '../models/loadSnippets';
-import type { Snippet } from '../models/Snippet';
+import { groupByCategory } from '../models/groupByCategory';
 import { Layout } from '../layouts/Layout';
 import { uid } from '../utils/uid';
 
-const groupByCategory = (snippets: Snippet[]) =>
-    snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
+import type { Snippet } from '../models/Snippet';
 
 const HomePage: React.FC<{
     snippets: Snippet[];
@@ -19,20 +18,18 @@ const HomePage: React.FC<{
     return (
         <Layout>
             <div className="block-container">
-                <div className="block-home__hero">
+                <div className="block-hero">
                     <Spacer size="extraLarge" />
-                    <Heading level={1}>Favorite JavaScript Utilities</Heading>
+                    <h1 className="page-home__heading">Favorite JavaScript Utilities</h1>
                     <Heading level={4}>in single line of code! No more!</Heading>
                     <Spacer size="large" />
                 </div>
                 {Object.keys(categories).map((category) => (
                     <div key={category}>
-                        <div className="block-home__category">
+                        <div className="page-home__category">
                             <Heading level={3}>{category}</Heading>
                         </div>
-                        {categories[category].map((snippet: Snippet) => (
-                            <SnippetItem key={snippet.title} index={id.increase()} snippet={snippet} />
-                        ))}
+                        <SnippetList snippets={categories[category]} />
                     </div>
                 ))}
             </div>

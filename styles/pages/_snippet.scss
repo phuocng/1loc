@@ -1,0 +1,13 @@
+.page-snippet__container {
+    display: flex;
+}
+
+.page-snippet__sidebar {
+    flex: 0 0 15rem;
+    margin-right: 1rem;
+}
+
+.page-snippet__content {
+    flex: 1;
+    overflow-x: hidden;
+}

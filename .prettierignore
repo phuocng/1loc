@@ -1,3 +1,5 @@
 .netlify
 .next
+snippets
 node_modules
+out
