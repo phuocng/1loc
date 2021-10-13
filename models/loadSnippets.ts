@@ -4,7 +4,7 @@ import path from 'path';
 
 import type { Snippet } from './Snippet';
 
-const SNIPPETS_DIR = 'collections';
+const SNIPPETS_DIR = 'snippets';
 
 export const loadSnippets = () => {
     const folders = fs.readdirSync(path.join(SNIPPETS_DIR));
@@ -13,10 +13,9 @@ export const loadSnippets = () => {
     folders.forEach((folder) => {
         fs.readdirSync(path.join(SNIPPETS_DIR, folder)).forEach((file) => {
             const markdown = fs.readFileSync(path.join(SNIPPETS_DIR, folder, file), 'utf-8');
-            const { data: frontMatter, content } = matter(markdown);
+            const { data: frontMatter } = matter(markdown);
             posts.push({
                 category: frontMatter.category,
-                content: content,
                 slug: file.replace('.md', ''),
                 title: frontMatter.title,
             });

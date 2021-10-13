@@ -1,13 +1,13 @@
 import { Heading, Spacer } from '@1milligram/design';
+import Link from 'next/link';
 import * as React from 'react';
 
-import { SnippetItem } from '../components/SnippetItem';
 import { loadSnippets } from '../models/loadSnippets';
+import { groupByCategory } from '../models/groupByCategory';
 import type { Snippet } from '../models/Snippet';
 import { Layout } from '../layouts/Layout';
+import { slugifyCategory } from '../utils/slugifyCategory';
 import { uid } from '../utils/uid';
-
-const groupByCategory = (snippets: Snippet[]) => snippets.reduce((acc, item) => ((acc[item.category] = [...(acc[item.category] || []), item]), acc), {});
 
 const HomePage: React.FC<{
     snippets: Snippet[];
@@ -30,7 +30,12 @@ const HomePage: React.FC<{
                             <Heading level={3}>{category}</Heading>
                         </div>
                         {categories[category].map((snippet: Snippet) => (
-                            <SnippetItem key={snippet.title} index={id.increase()} snippet={snippet} />
+                            <Link href={`/${slugifyCategory(snippet.category)}/${snippet.slug}`} key={snippet.title}>
+                                <a className="block-home__snippet">
+                                    <div className="block-home__snippet-index">{id.increase()}.</div>
+                                    <div className="block-home__snippet-title">{snippet.title}</div>
+                                </a>
+                            </Link>
                         ))}
                     </div>
                 ))}

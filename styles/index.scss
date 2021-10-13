@@ -2,6 +2,7 @@
 @import 'reset';
 
 // Blocks
+@import './blocks/ad';
 @import './blocks/footer';
 @import './blocks/header';
 @import './blocks/layout';
@@ -10,3 +11,4 @@
 
 // Pages
 @import './pages/home';
+@import './pages/snippet';

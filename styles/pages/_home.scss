@@ -20,3 +20,28 @@
     border-top: 1px solid #e6e6e6;
     content: '';
 }
+
+.block-home__snippet {
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.25rem;
+    padding: 0.25rem 1rem;
+
+    &:hover {
+        background: #e5e5e5;
+    }
+}
+
+.block-home__snippet-index {
+    color: #808080;
+    margin-right: 0.25rem;
+}
+
+.block-home__snippet__title {
+    flex: 1;
+}

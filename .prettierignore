@@ -1,5 +1,5 @@
 .netlify
 .next
-collections
+snippets
 node_modules
 out
