@@ -27,15 +27,11 @@ const SNIPPETS_DIR = 'snippets';
 
 const SnippetPage: React.FC<SnippetPageProps> = ({ categories, content, frontMatter, prevSnippet, nextSnippet, snippet }) => {
     return (
-        <SnippetLayout categories={categories} keywords={frontMatter ? frontMatter.keywords : ''} snippet={snippet}>
+        <SnippetLayout categories={categories} keywords={frontMatter ? frontMatter.keywords : ''} title={snippet.title}>
             <Markdown>{content}</Markdown>
             <Spacer size="medium" />
-            <Pagination>
-                {prevSnippet && <PrevPagination href={`/${slugifyCategory(prevSnippet.category)}/${prevSnippet.slug}`}>{prevSnippet.title}</PrevPagination>}
-            </Pagination>
-            <Pagination>
-                {nextSnippet && <NextPagination href={`/${slugifyCategory(nextSnippet.category)}/${nextSnippet.slug}`}>{nextSnippet.title}</NextPagination>}
-            </Pagination>
+            <Pagination>{prevSnippet && <PrevPagination href={`/${slugifyCategory(prevSnippet.category)}/${prevSnippet.slug}`}>{prevSnippet.title}</PrevPagination>}</Pagination>
+            <Pagination>{nextSnippet && <NextPagination href={`/${slugifyCategory(nextSnippet.category)}/${nextSnippet.slug}`}>{nextSnippet.title}</NextPagination>}</Pagination>
         </SnippetLayout>
     );
 };
@@ -57,7 +53,7 @@ export const getStaticProps = async ({ params }: { params: SnippetPageParams }) 
     return {
         props: {
             categories,
-            content,            
+            content,
             frontMatter,
             prevSnippet,
             nextSnippet,

@@ -1,8 +1,12 @@
-.block-home__hero {
-    text-align: center;
+.page-home__heading {
+    background: linear-gradient(102.66deg,#0465eb,#6ccef8);
+    font-size: 3.5rem;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.block-home__category {
+.page-home__category {
     background: #fff;
     color: #808080;
     display: grid;
@@ -14,34 +18,9 @@
     top: 3rem;
 }
 
-.block-home__category::before,
-.block-home__category::after {
+.page-home__category::before,
+.page-home__category::after {
     align-self: center;
     border-top: 1px solid #e6e6e6;
     content: '';
-}
-
-.block-home__snippet {
-    align-items: center;
-    border: 1px solid #e6e6e6;
-    border-radius: 0.25rem;
-    margin: 1rem 0;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.25rem;
-    padding: 0.25rem 1rem;
-
-    &:hover {
-        background: #e5e5e5;
-    }
-}
-
-.block-home__snippet-index {
-    color: #808080;
-    margin-right: 0.25rem;
-}
-
-.block-home__snippet__title {
-    flex: 1;
 }

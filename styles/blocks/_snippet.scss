@@ -1,16 +1,12 @@
 .block-snippet {
+    align-items: center;
     border: 1px solid #e6e6e6;
     border-radius: 0.25rem;
     margin: 1rem 0;
-    overflow: hidden;
-}
-
-.block-snippet__head {
-    align-items: center;
+    color: #333;
     cursor: pointer;
     display: flex;
     font-size: 1.25rem;
-    justify-content: space-between;
     padding: 0.25rem 1rem;
 
     &:hover {
@@ -18,21 +14,6 @@
     }
 }
 
-.block-snippet__index {
-    color: #808080;
-    margin-right: 0.25rem;
-}
-
 .block-snippet__title {
     flex: 1;
-}
-
-.block-snippet__body {
-    display: none;
-    padding: 1rem;
-
-    &--opened {
-        border-top: 1px solid #e6e6e6;
-        display: block;
-    }
 }

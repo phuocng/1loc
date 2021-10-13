@@ -4,21 +4,21 @@ import * as React from 'react';
 
 import { Layout } from './Layout';
 import { Ad } from '../components/Ad';
-import { Snippet } from '../models/Snippet';
 import { slugifyCategory } from '../utils/slugifyCategory';
+import { unslugifyCategory } from '../utils/unslugifyCategory';
 
 export const SnippetLayout: React.FC<{
     categories: string[];
     keywords?: string;
-    snippet: Snippet;    
-}> = ({ categories, children, keywords, snippet }) => (
-    <Layout title={snippet.title}>
+    title: string;
+}> = ({ categories, children, keywords, title }) => (
+    <Layout title={title}>
         <Head>
-            <meta name="description" content={snippet.title} />
-            <meta name="twitter:title" content={`${snippet.title} - 1 LOC`} />
-            <meta name="twitter:description" content={snippet.title} />
-            <meta property="og:title" content={`${snippet.title} - 1 LOC`} />
-            <meta property="og:description" content={snippet.title} />
+            <meta name="description" content={title} />
+            <meta name="twitter:title" content={`${title} - 1 LOC`} />
+            <meta name="twitter:description" content={title} />
+            <meta property="og:title" content={`${title} - 1 LOC`} />
+            <meta property="og:description" content={title} />
             {keywords && keywords.length && <meta property="keywords" content={keywords} />}
         </Head>
         <div className="block-container">
@@ -26,29 +26,29 @@ export const SnippetLayout: React.FC<{
                 <div className="page-snippet__sidebar">
                     <Sidebar>
                         <SidebarGroup title="Categories">
-                        {
-                            categories.map(category => (
-                                <SidebarLink href={`/${slugifyCategory(category)}`} key={category}>{category}</SidebarLink>
-                            ))
-                        }
+                            {categories.map((category) => (
+                                <SidebarLink href={`/${slugifyCategory(category)}`} key={category}>
+                                    {unslugifyCategory(category)}
+                                </SidebarLink>
+                            ))}
                         </SidebarGroup>
                         <SidebarGroup title="Ad">
                             <div className="block-ad">
                                 <Ad />
                             </div>
                         </SidebarGroup>
-                    </Sidebar>                    
+                    </Sidebar>
                 </div>
                 <div className="page-snippet__content">
-                    <div className="block-home__hero">
+                    <div className="block-hero">
                         <Spacer size="extraLarge" />
-                        <Heading level={1}>{snippet.title}</Heading>
-                        <Spacer size="large" />                        
+                        <Heading level={1}>{title}</Heading>
+                        <Spacer size="large" />
                     </div>
                     {children}
                     <Spacer size="large" />
                 </div>
-            </div>            
+            </div>
         </div>
     </Layout>
 );
