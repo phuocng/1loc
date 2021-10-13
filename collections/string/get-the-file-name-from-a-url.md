@@ -3,9 +3,20 @@ title: Get the file name from a URL
 category: String
 ---
 
-```js
-const fileName = (url) => url.substring(url.lastIndexOf('/') + 1);
+**JavaScript version**
 
-// Example
+```js
+const fileName = (url: string): string => url.substring(url.lastIndexOf('/') + 1);
+```
+
+**TypeScript version**
+
+```js
+const fileName = (url: string): string => url.substring(url.lastIndexOf('/') + 1);
+```
+
+**Examples**
+
+```js
 fileName('http://domain.com/path/to/document.pdf'); // 'document.pdf'
 ```

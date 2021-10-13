@@ -3,6 +3,8 @@ title: Merge two arrays
 category: Array
 ---
 
+**JavaScript version**
+
 ```js
 // Merge but don't remove the duplications
 const merge = (a, b) => a.concat(b);
@@ -10,7 +12,21 @@ const merge = (a, b) => a.concat(b);
 const merge = (a, b) => [...a, ...b];
 
 // Merge and remove the duplications
-const merge = [...new Set(a.concat(b))];
+const merge = (a, b) => [...new Set(a.concat(b))];
 // Or
-const merge = [...new Set([...a, ...b])];
+const merge = (a, b) => [...new Set([...a, ...b])];
+```
+
+**TypeScript version**
+
+```js
+// Merge but don't remove the duplications
+const merge = <T,>(a: T[], b: T[]): T[] => a.concat(b);
+// Or
+const merge = <T,>(a: T[], b: T[]): T[] => [...a, ...b];
+
+// Merge and remove the duplications
+const merge = <T,>(a: T[], b: T[]): T[] => [...new Set(a.concat(b))];
+// Or
+const merge = <T,>(a: T[], b: T[]): T[] => [...new Set([...a, ...b])];
 ```

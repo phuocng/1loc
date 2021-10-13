@@ -3,6 +3,8 @@ title: Swap two variables
 category: Misc
 ---
 
+**JavaScript version**
+
 ```js
 [a, b] = [b, a];
 

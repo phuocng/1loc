@@ -3,10 +3,21 @@ title: Get type of a variable in string
 category: Misc
 ---
 
+**JavaScript version**
+
 ```js
 const getTypeOf = (obj) => Object.prototype.toString.call(obj).match(/\[object (.*)\]/)[1];
+```
 
-// Examples
+**TypeScript version**
+
+```js
+const getTypeOf = (obj: any): string => (Object.prototype.toString.call(obj).match(/\[object (.*)\]/) as string[])[1];
+```
+
+**Examples**
+
+```js
 getTypeOf('hello world'); // String
 getTypeOf(1000); // Number
 getTypeOf(Infinity); // Number

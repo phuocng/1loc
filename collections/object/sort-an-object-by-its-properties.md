@@ -3,13 +3,18 @@ title: Sort an object by its properties
 category: Object
 ---
 
+**JavaScript version**
+
 ```js
 const sort = (obj) =>
     Object.keys(obj)
         .sort()
         .reduce((p, c) => ((p[c] = obj[c]), p), {});
+```
 
-// Example
+**Examples**
+
+```js
 const colors = {
     white: '#ffffff',
     black: '#000000',

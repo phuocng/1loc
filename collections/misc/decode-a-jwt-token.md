@@ -3,6 +3,8 @@ title: Decode a JWT token
 category: Misc
 ---
 
+**JavaScript version**
+
 ```js
 const decode = (token) =>
     decodeURIComponent(
@@ -11,8 +13,23 @@ const decode = (token) =>
             .map((c) => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`)
             .join('')
     );
+```
 
-// Example
+**TypeScript version**
+
+```js
+const decode = (token: string): string =>
+    decodeURIComponent(
+        atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
+            .split('')
+            .map((c) => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`)
+            .join('')
+    );
+```
+
+**Examples**
+
+```js
 decode(`
     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
     eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0I

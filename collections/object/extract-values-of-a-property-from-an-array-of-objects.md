@@ -3,10 +3,15 @@ title: Extract values of a property from an array of objects
 category: Object
 ---
 
+**JavaScript version**
+
 ```js
 const pluck = (objs, property) => objs.map((obj) => obj[property]);
+```
 
-// Example
+**Examples**
+
+```js
 pluck(
     [
         { name: 'John', age: 20 },

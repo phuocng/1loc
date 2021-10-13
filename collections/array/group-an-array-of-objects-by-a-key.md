@@ -3,11 +3,23 @@ title: Group an array of objects by a key
 category: Array
 ---
 
-```js
-const groupBy = (arr, key) =>
-    arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {});
+**JavaScript version**
 
-// Example
+```js
+const groupBy = (arr, key) => arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {});
+```
+
+**TypeScript version**
+
+```js
+const groupBy = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: K): Record<string, T[]> => (
+    arr.reduce((acc, item) => ((acc[item[key]] = [...(acc[item[key]] || []), item]), acc), {} as Record<string, T[]>)
+);
+```
+
+**Example**
+
+```js
 groupBy(
     [
         { branch: 'audi', model: 'q8', year: '2019' },

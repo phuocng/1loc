@@ -3,6 +3,8 @@ title: Execute a function once
 category: Function
 ---
 
+**JavaScript version**
+
 ```js
 const once = (fn) =>
     (
@@ -10,8 +12,11 @@ const once = (fn) =>
         () =>
             ran ? fn : ((ran = !ran), (fn = fn()))
     )();
+```
 
-// Example
+**Examples**
+
+```js
 let n = 0;
 const incOnce = once(() => ++n);
 incOnce(); // n = 1

@@ -7,7 +7,7 @@ export const FooterBlock = () => (
             <Footer>
                 <FooterGroup title="Products">
                     <FooterLink href="https://blur.page">Blur Page</FooterLink>
-                    <FooterLink href="https://checkbrowsers.support">Check Browsers Support</FooterLink>                    
+                    <FooterLink href="https://checkbrowsers.support">Check Browsers Support</FooterLink>
                     <FooterLink href="https://formvalidation.io">Form Validation</FooterLink>
                     <FooterLink href="https://intersectionobserver.io">IntersectionObserver Examples</FooterLink>
                     <FooterLink href="https://react-pdf-viewer.dev">React PDF Viewer</FooterLink>
@@ -25,9 +25,7 @@ export const FooterBlock = () => (
                 </FooterGroup>
             </Footer>
 
-            <div className="block-footer__copyright">
-                © 2020 — {new Date().getFullYear()}, 1 milligram. All rights reserved.
-            </div>
+            <div className="block-footer__copyright">© 2020 — {new Date().getFullYear()}, 1 milligram. All rights reserved.</div>
         </div>
     </footer>
 );

@@ -3,6 +3,8 @@ title: Memoize a function
 category: Function
 ---
 
+**JavaScript version**
+
 ```js
 const memoize = (fn) =>
     (
@@ -10,8 +12,11 @@ const memoize = (fn) =>
         (arg) =>
             cache[arg] || (cache[arg] = fn(arg))
     )();
+```
 
-// Example
+**Examples**
+
+```js
 // Calculate Fibonacci numbers
 const fibo = memoize((n) => (n <= 2 ? 1 : fibo(n - 1) + fibo(n - 2)));
 

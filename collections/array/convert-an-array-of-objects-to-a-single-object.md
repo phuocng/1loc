@@ -3,13 +3,30 @@ title: Convert an array of objects to a single object
 category: Array
 ---
 
+**JavaScript version**
+
 ```js
 const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 
 // Or
 const toObject = (arr, key) => Object.fromEntries(arr.map((it) => [it[key], it]));
+```
 
-// Example
+**TypeScript version**
+
+```js
+const toObject = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: K): Record<string, T> => (
+    arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {})
+);
+
+const toObject = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: K): Record<string, T> => (
+    Object.fromEntries(arr.map((it) => [it[key], it]))
+);
+```
+
+**Example**
+
+```js
 toObject(
     [
         { id: '1', name: 'Alpha', gender: 'Male' },

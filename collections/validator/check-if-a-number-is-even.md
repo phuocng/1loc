@@ -3,19 +3,39 @@ title: Check if a number is even
 category: Validator
 ---
 
+**JavaScript version**
+
 ```js
-const isEven = (number) => number % 2 === 0;
+const isEven = (n) => n % 2 === 0;
 
 // Or
-const isEven = (number) => (number & 1) === 0;
+const isEven = (n) => (n & 1) === 0;
 
 // Or
-const isEven = (number) => !(number & 1);
+const isEven = (n) => !(n & 1);
 
 // Or
-const isEven = (number) => Number.isInteger(number / 2);
+const isEven = (n) => Number.isInteger(n / 2);
+```
 
-// Examples
+**TypeScript version**
+
+```js
+const isEven = (n: number): boolean => n % 2 === 0;
+
+// Or
+const isEven = (n: number): boolean => (n & 1) === 0;
+
+// Or
+const isEven = (n: number): boolean => !(n & 1);
+
+// Or
+const isEven = (n: number): boolean => Number.isInteger(n / 2);
+```
+
+**Examples**
+
+```js
 isEven(1); // false
 isEven(2); // true
 ```

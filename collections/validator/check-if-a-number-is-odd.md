@@ -3,16 +3,33 @@ title: Check if a number is odd
 category: Validator
 ---
 
+**JavaScript version**
+
 ```js
-const isOdd = (number) => number % 2 !== 0;
+const isOdd = (n) => n % 2 !== 0;
 
 // Or
-const isOdd = (number) => !!(number & 1);
+const isOdd = (n) => !!(n & 1);
 
 // Or
-const isOdd = (number) => !Number.isInteger(number / 2);
+const isOdd = (n) => !Number.isInteger(n / 2);
+```
 
-// Examples
+**TypeScript version**
+
+```js
+const isOdd = (n: number): boolean => n % 2 !== 0;
+
+// Or
+const isOdd = (n: number): boolean => !!(n & 1);
+
+// Or
+const isOdd = (n: number): boolean => !Number.isInteger(n / 2);
+```
+
+**Examples**
+
+```js
 isOdd(1); // true
 isOdd(2); // false
 ```

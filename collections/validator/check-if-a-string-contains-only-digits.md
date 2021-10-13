@@ -3,10 +3,21 @@ title: Check if a string contains only digits
 category: Validator
 ---
 
+**JavaScript version**
+
 ```js
 const isNumeric = (str) => !/[^0-9]/.test(str);
+```
 
-// Examples
+**TypeScript version**
+
+```js
+const isNumeric = (str: string): boolean => !/[^0-9]/.test(str);
+```
+
+**Examples**
+
+```js
 isNumeric(2); // true
 isNumeric('23'); // true
 isNumeric('00123'); // true

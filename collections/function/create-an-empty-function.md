@@ -3,6 +3,8 @@ title: Create an empty function
 category: Function
 ---
 
+**JavaScript version**
+
 ```js
 const noop = () => {};
 

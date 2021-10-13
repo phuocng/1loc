@@ -3,10 +3,21 @@ title: Pick a random property of an object
 category: Random
 ---
 
+**JavaScript version**
+
 ```js
 const randomProp = (obj) => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
+```
 
-// Example
+**TypeScript version**
+
+```js
+const randomProp = (obj: object): any => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
+```
+
+**Examples**
+
+```js
 const colors = {
     aqua: '#00ffff',
     azure: '#f0ffff',

@@ -3,10 +3,16 @@ title: Box handler
 category: Function
 ---
 
+**JavaScript version**
+
 ```js
 const boxHandler = (x) => ({ next: (f) => boxHandler(f(x)), done: (f) => f(x) });
+```
 
-// Example 1
+**Examples**
+
+```js
+// First example
 const getPercentNumber = (str) =>
     boxHandler(str)
         .next((str) => str.replace(/\%/, ''))
@@ -15,7 +21,7 @@ const getPercentNumber = (str) =>
 
 getPercentNumber('50%'); // 0.5
 
-// Example 2
+// Second example
 const getMoney = (price) => Number.parseFloat(price.replace(/\$/, ''));
 const getPercent = (percent) => Number.parseFloat(percent.replace(/\%/)) * 0.01;
 

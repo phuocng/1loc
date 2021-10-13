@@ -3,13 +3,18 @@ title: Create an object from the pairs of key and value
 category: Object
 ---
 
+**JavaScript version**
+
 ```js
 const toObj = (arr) => Object.fromEntries(arr);
 
 // Or
 const toObj = (arr) => arr.reduce((a, c) => ((a[c[0]] = c[1]), a), {});
+```
 
-// Example
+**Examples**
+
+```js
 toObj([
     ['a', 1],
     ['b', 2],

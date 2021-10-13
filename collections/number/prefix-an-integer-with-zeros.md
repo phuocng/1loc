@@ -3,15 +3,32 @@ title: Prefix an integer with zeros
 category: Number
 ---
 
+**JavaScript version**
+
 ```js
-const prefixWithZeros = (number, length) => (number / Math.pow(10, length)).toFixed(length).substr(2);
+const prefixWithZeros = (n, length) => (n / Math.pow(10, length)).toFixed(length).substr(2);
 
 // Or
-const prefixWithZeros = (number, length) => `${Array(length).join('0')}${number}`.slice(-length);
+const prefixWithZeros = (n, length) => `${Array(length).join('0')}${n}`.slice(-length);
 
 // Or
-const prefixWithZeros = (number, length) => String(number).padStart(length, '0');
+const prefixWithZeros = (n, length) => String(n).padStart(length, '0');
+```
 
-// Example
+**TypeScript version**
+
+```js
+const prefixWithZeros = (n: number, length: number): string => (n / Math.pow(10, length)).toFixed(length).substr(2);
+
+// Or
+const prefixWithZeros = (n: number, length: number): string => `${Array(length).join('0')}${n}`.slice(-length);
+
+// Or
+const prefixWithZeros = (n: number, length: number): string => String(n).padStart(length, '0');
+```
+
+**Examples**
+
+```js
 prefixWithZeros(42, 5); // '00042'
 ```

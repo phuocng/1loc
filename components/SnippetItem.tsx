@@ -1,14 +1,8 @@
 import * as React from 'react';
 
-import { Code } from './Code';
+import { Markdown } from './Markdown';
 import type { Snippet } from '../models/Snippet';
 import { classNames } from '../utils/classNames';
-
-const normalizeCode = (code: string) => {
-    const trim = code.trim();
-    const content = trim.substring(5, trim.length - 3);
-    return content;
-};
 
 export const SnippetItem: React.FC<{
     index: number;
@@ -50,7 +44,7 @@ export const SnippetItem: React.FC<{
                     'block-snippet__body--opened': opened,
                 })}
             >
-                <Code className="js">{normalizeCode(snippet.content)}</Code>
+                <Markdown>{snippet.content}</Markdown>
             </div>
         </div>
     );

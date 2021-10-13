@@ -3,13 +3,27 @@ title: Sort lines of a text document in the alphabetical order
 category: String
 ---
 
+**JavaScript version**
+
 ```js
 const sortLines = (str) => str.split(/\r?\n/).sort().join('\n');
 
 // Reverse the order
 const reverseSortedLines = (str) => str.split(/\r?\n/).sort().reverse().join('\n');
+```
 
-// Example
+**TypeScript version**
+
+```js
+const sortLines = (str: string): string => str.split(/\r?\n/).sort().join('\n');
+
+// Reverse the order
+const reverseSortedLines = (str: string): string => str.split(/\r?\n/).sort().reverse().join('\n');
+```
+
+**Examples**
+
+```js
 sortLines(`Thaddeus Mullen
 Kareem Marshall
 Ferdinand Valentine

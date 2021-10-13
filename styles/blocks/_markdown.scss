@@ -1,0 +1,61 @@
+/* Markdown content */
+.block-markdown__blockquote {
+    border: 1px solid #e6e6e6;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+}
+.block-markdown__code {
+    color: var(--mgd-color-primary);
+    font-family: 'Source Code Pro';
+    overflow-wrap: break-word;
+}
+.block-markdown__div {
+    margin: 0.5rem 0;
+}
+.block-markdown__figure {
+    text-align: center;
+}
+.block-markdown__figcaption {
+    font-style: italic;
+}
+.block-markdown__link {
+    color: var(--mgd-color-primary);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.block-markdown__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &--ordered {
+        list-style-type: none;
+    }
+
+    li {
+        line-height: 1.75;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    li::before {
+        content: '-';
+        color: #333;
+
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+.block-markdown__pre {
+    border-radius: 0.5em;
+    font-size: 0.875rem;
+    font-family: 'Source code pro';
+    height: auto;
+    margin: 1rem 0;
+    overflow: auto;
+    padding: 1em;
+}

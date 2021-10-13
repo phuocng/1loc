@@ -3,13 +3,27 @@ title: Check if a number is negative
 category: Validator
 ---
 
+**JavaScript version**
+
 ```js
-const isNegative = (number) => Math.sign(number) === -1;
+const isNegative = (n) => Math.sign(n) === -1;
 
 // Or
-const isNegative = (number) => number < 0;
+const isNegative = (n) => n < 0;
+```
 
-// Examples
+**TypeScript version**
+
+```js
+const isNegative = (n: number): boolean => Math.sign(n) === -1;
+
+// Or
+const isNegative = (n: number): boolean => n < 0;
+```
+
+**Examples**
+
+```js
 isNegative(-3); // true
 isNegative(8); // false
 ```

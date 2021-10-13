@@ -3,14 +3,19 @@ title: Unzip an array of arrays
 category: Array
 ---
 
+**JavaScript version**
+
 ```js
 const unzip = (arr) =>
     arr.reduce(
         (acc, c) => (c.forEach((v, i) => acc[i].push(v)), acc),
         Array.from({ length: Math.max(...arr.map((a) => a.length)) }, (_) => [])
     );
+```
 
-// Example
+**Example**
+
+```js
 unzip([
     ['a', 1],
     ['b', 2],

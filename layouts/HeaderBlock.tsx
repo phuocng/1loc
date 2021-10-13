@@ -12,13 +12,11 @@ export const HeaderBlock = () => {
             .catch(console.log);
     }, []);
 
-    const HeaderLogo = React.forwardRef<HTMLAnchorElement, React.LinkHTMLAttributes<HTMLAnchorElement>>(
-        (props, ref) => (
-            <a href={props.href} onClick={props.onClick} ref={ref}>
-                <Logo brand="1 LOC" />
-            </a>
-        )
-    );
+    const HeaderLogo = React.forwardRef<HTMLAnchorElement, React.LinkHTMLAttributes<HTMLAnchorElement>>((props, ref) => (
+        <a href={props.href} onClick={props.onClick} ref={ref}>
+            <Logo brand="1 LOC" />
+        </a>
+    ));
 
     return (
         <header className="block-header">

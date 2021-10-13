@@ -3,6 +3,8 @@ title: Shallow copy an object
 category: Object
 ---
 
+**JavaScript version**
+
 ```js
 const shallowCopy = obj => Object.assign({}, obj);
 
