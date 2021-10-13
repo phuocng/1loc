@@ -1,8 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import remarkDirective from 'remark-directive';
-import { visit } from 'unist-util-visit';
 
 import { MarkdownLink, Blockquote, Code, Heading2, Heading3, Image, InlineCode, List, OrderedList, Paragraph, Table, TableBody, TableHead, ThematicBreak } from './markdown/index';
 
