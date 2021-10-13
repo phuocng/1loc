@@ -11,13 +11,13 @@ export const loadSnippets = () => {
     const snippets: Snippet[] = [];
 
     folders.forEach((folder) => {
-        loadSnippetsOfCategory(folder).forEach(s => snippets.push(s));
+        loadSnippetsOfCategory(folder).forEach((s) => snippets.push(s));
     });
 
     return snippets;
 };
 
-export const loadSnippetsOfCategory = (category: string): Snippet[] => (
+export const loadSnippetsOfCategory = (category: string): Snippet[] =>
     fs.readdirSync(path.join(SNIPPETS_DIR, category)).map((file) => {
         const markdown = fs.readFileSync(path.join(SNIPPETS_DIR, category, file), 'utf-8');
         const { data: frontMatter } = matter(markdown);
@@ -26,5 +26,4 @@ export const loadSnippetsOfCategory = (category: string): Snippet[] => (
             slug: file.replace('.md', ''),
             title: frontMatter.title,
         };
-    })
-);
+    });

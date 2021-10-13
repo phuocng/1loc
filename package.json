@@ -25,7 +25,8 @@
         "format": "prettier --write \"**/*.+(css|html|json|js|jsx|md|mdx|scss|ts|tsx)\"",
         "preexport": "npm run build",
         "export": "next export",
-        "deploy": "npm run export && netlify deploy --prod --dir=out"
+        "deploy": "npm run export && netlify deploy --prod --dir=out",
+        "sitemap": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node bin/generateSitemap.ts"
     },
     "dependencies": {
         "next": "^11.1.2",
@@ -43,6 +44,7 @@
         "prettier": "^2.4.0",
         "sass": "^1.39.2",
         "serve": "^12.0.1",
+        "ts-node": "^10.3.0",
         "typescript": "^4.4.3"
     }
 }
