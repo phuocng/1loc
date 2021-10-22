@@ -12,7 +12,7 @@ const hasDuplicateValues = (arr) => new Set(arr).size !== arr.length;
 **TypeScript version**
 
 ```js
-const hasDuplicateValues = <T,>(arr: T[]): boolean => new Set(arr).size !== arr.length;
+const hasDuplicateValues = <T,_>(arr: T[]): boolean => new Set(arr).size !== arr.length;
 ```
 
 **Examples**

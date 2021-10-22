@@ -16,10 +16,10 @@ const isSubset = (a, b) => b.join('|').includes(a.join('|'));
 **TypeScript version**
 
 ```js
-const isSubset = <T,>(a: T[], b: T[]): boolean => new Set(b).size === new Set(b.concat(a)).size;
+const isSubset = <T,_>(a: T[], b: T[]): boolean => new Set(b).size === new Set(b.concat(a)).size;
 
 // Or
-const isSubset = <T,>(a: T[], b: T[]): boolean => b.join('|').includes(a.join('|'));
+const isSubset = <T,_>(a: T[], b: T[]): boolean => b.join('|').includes(a.join('|'));
 ```
 
 **Examples**

@@ -29,20 +29,20 @@ const clone = (arr) => arr.concat([]);
 
 ```js
 // `arr` is an array
-const clone = <T,>(arr: T[]): T[] => arr.slice(0);
+const clone = <T,_>(arr: T[]): T[] => arr.slice(0);
 
 // Or
-const clone = <T,>(arr: T[]): T[] => [...arr];
+const clone = <T,_>(arr: T[]): T[] => [...arr];
 
 // Or
-const clone = <T,>(arr: T[]): T[] => Array.from(arr);
+const clone = <T,_>(arr: T[]): T[] => Array.from(arr);
 
 // Or
-const clone = <T,>(arr: T[]): T[] => arr.map((x) => x);
+const clone = <T,_>(arr: T[]): T[] => arr.map((x) => x);
 
 // Or
-const clone = <T,>(arr: T[]): T[] => JSON.parse(JSON.stringify(arr));
+const clone = <T,_>(arr: T[]): T[] => JSON.parse(JSON.stringify(arr));
 
 // Or
-const clone = <T,>(arr: T[]): T[] => arr.concat([]);
+const clone = <T,_>(arr: T[]): T[] => arr.concat([]);
 ```

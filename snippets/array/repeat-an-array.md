@@ -25,19 +25,19 @@ const repeat = (arr, n) => Array.from({ length: arr.length * n }, (_, i) => arr[
 **TypeScript version**
 
 ```js
-const repeat = <T,>(arr: T[], n: number): T[] => [].concat(...Array(n).fill(arr));
+const repeat = <T,_>(arr: T[], n: number): T[] => [].concat(...Array(n).fill(arr));
 
 // Or
-const repeat = <T,>(arr: T[], n: number): T[] => Array(n).fill(arr).flat();
+const repeat = <T,_>(arr: T[], n: number): T[] => Array(n).fill(arr).flat();
 
 // Or
-const repeat = <T,>(arr: T[], n: number): T[] =>
+const repeat = <T,_>(arr: T[], n: number): T[] =>
     Array(arr.length * n)
         .fill(0)
         .map((_, i) => arr[i % arr.length]);
 
 // Or
-const repeat = <T,>(arr: T[], n: number): T[] => Array.from({ length: arr.length * n }, (_, i) => arr[i % arr.length]);
+const repeat = <T,_>(arr: T[], n: number): T[] => Array.from({ length: arr.length * n }, (_, i) => arr[i % arr.length]);
 ```
 
 **Example**

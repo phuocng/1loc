@@ -12,7 +12,7 @@ const partition = (arr, criteria) => arr.reduce((acc, i) => (acc[criteria(i) ? 0
 **TypeScript version**
 
 ```js
-const partition = <T,>(arr: T[], criteria: (a: T) => boolean): T[][] => arr.reduce((acc, i) => (acc[criteria(i) ? 0 : 1].push(i), acc), [[], []]);
+const partition = <T,_>(arr: T[], criteria: (a: T) => boolean): T[][] => arr.reduce((acc, i) => (acc[criteria(i) ? 0 : 1].push(i), acc), [[], []]);
 ```
 
 **Example**

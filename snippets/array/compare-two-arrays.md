@@ -16,10 +16,10 @@ const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i])
 **TypeScript version**
 
 ```js
-const isEqual = <T,>(a: T[], b: T[]): boolean => JSON.stringify(a) === JSON.stringify(b);
+const isEqual = <T,_>(a: T[], b: T[]): boolean => JSON.stringify(a) === JSON.stringify(b);
 
 // Or
-const isEqual = <T,>(a: T[], b: T[]): boolean => a.length === b.length && a.every((v, i) => v === b[i]);
+const isEqual = <T,_>(a: T[], b: T[]): boolean => a.length === b.length && a.every((v, i) => v === b[i]);
 ```
 
 **Examples**

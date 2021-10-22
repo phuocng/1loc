@@ -12,7 +12,7 @@ const removeFalsy = (arr) => arr.filter(Boolean);
 **TypeScript version**
 
 ```js
-const removeFalsy = <T,>(arr: T[]): T[] => arr.filter(Boolean);
+const removeFalsy = <T,_>(arr: T[]): T[] => arr.filter(Boolean);
 ```
 
 **Example**

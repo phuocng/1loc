@@ -12,7 +12,7 @@ const castArray = (value) => (Array.isArray(value) ? value : [value]);
 **TypeScript version**
 
 ```js
-const castArray = <T,>(value: T | T[]): T[] => (Array.isArray(value) ? value : [value]);
+const castArray = <T,_>(value: T | T[]): T[] => (Array.isArray(value) ? value : [value]);
 ```
 
 **Examples**

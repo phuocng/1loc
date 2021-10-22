@@ -13,7 +13,7 @@ const swapItems = (a, i, j) => (a[i] && a[j] && [...a.slice(0, i), a[j], ...a.sl
 **TypeScript version**
 
 ```js
-const swapItems = <T,>(a: T[], i: number, j: number): T[] => (a[i] && a[j] && [...a.slice(0, i), a[j], ...a.slice(i + 1, j), a[i], ...a.slice(j + 1)]) || a;
+const swapItems = <T,_>(a: T[], i: number, j: number): T[] => (a[i] && a[j] && [...a.slice(0, i), a[j], ...a.slice(i + 1, j), a[i], ...a.slice(j + 1)]) || a;
 ```
 
 **Example**

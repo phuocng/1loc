@@ -15,10 +15,10 @@ const countOccurrences = (arr, val) => arr.filter((item) => item === val).length
 **TypeScript version**
 
 ```js
-const countOccurrences = <T,>(arr: T[], val: T): number => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+const countOccurrences = <T,_>(arr: T[], val: T): number => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
 // Or
-const countOccurrences = <T,>(arr: T[], val: T): number => arr.filter((item) => item === val).length;
+const countOccurrences = <T,_>(arr: T[], val: T): number => arr.filter((item) => item === val).length;
 ```
 
 **Examples**

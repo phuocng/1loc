@@ -12,7 +12,7 @@ const removeDuplicate = (arr) => arr.filter((i) => arr.indexOf(i) === arr.lastIn
 **TypeScript version**
 
 ```js
-const removeDuplicate = <T,>(arr: T[]): T[] => arr.filter((i) => arr.indexOf(i) === arr.lastIndexOf(i));
+const removeDuplicate = <T,_>(arr: T[]): T[] => arr.filter((i) => arr.indexOf(i) === arr.lastIndexOf(i));
 ```
 
 **Example**

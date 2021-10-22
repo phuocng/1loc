@@ -15,7 +15,7 @@ arr = [];
 **TypeScript version**
 
 ```js
-const empty = <T,>(arr: T[]) => (arr.length = 0);
+const empty = <T,_>(arr: T[]) => (arr.length = 0);
 
 // Or
 arr = [];
