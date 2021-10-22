@@ -13,7 +13,7 @@ const isEmpty = (arr) => !Array.isArray(arr) || arr.length === 0;
 **TypeScript version**
 
 ```js
-const isEmpty = <T,>(arr: T[]): boolean => !Array.isArray(arr) || arr.length === 0;
+const isEmpty = <T,_>(arr: T[]): boolean => !Array.isArray(arr) || arr.length === 0;
 ```
 
 **Examples**

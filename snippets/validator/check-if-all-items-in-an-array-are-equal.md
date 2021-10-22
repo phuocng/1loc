@@ -15,10 +15,10 @@ const areEqual = (arr) => new Set(arr).size === 1;
 **TypeScript version**
 
 ```js
-const areEqual = <T,>(arr: T[]): boolean => arr.length > 0 && arr.every((item) => item === arr[0]);
+const areEqual = <T,_>(arr: T[]): boolean => arr.length > 0 && arr.every((item) => item === arr[0]);
 
 // Or
-const areEqual = <T,>(arr: T[]): boolean => new Set(arr).size === 1;
+const areEqual = <T,_>(arr: T[]): boolean => new Set(arr).size === 1;
 ```
 
 **Examples**

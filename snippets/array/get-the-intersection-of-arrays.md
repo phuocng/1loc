@@ -12,7 +12,7 @@ const getIntersection = (a, ...arr) => [...new Set(a)].filter((v) => arr.every((
 **TypeScript version**
 
 ```js
-const getIntersection = <T,>(a: T[], ...arr: T[][]): T[] => [...new Set(a)].filter((v) => arr.every((b) => b.includes(v)));
+const getIntersection = <T,_>(a: T[], ...arr: T[][]): T[] => [...new Set(a)].filter((v) => arr.every((b) => b.includes(v)));
 ```
 
 **Examples**

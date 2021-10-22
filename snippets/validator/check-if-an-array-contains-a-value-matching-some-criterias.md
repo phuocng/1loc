@@ -18,13 +18,13 @@ const contains = (arr, criteria) => arr.filter(criteria).length > 0;
 **TypeScript version**
 
 ```js
-const contains = <T,>(arr: T[], criteria: (a: T) => boolean): boolean => arr.some((v) => criteria(v));
+const contains = <T,_>(arr: T[], criteria: (a: T) => boolean): boolean => arr.some((v) => criteria(v));
 
 // Or
-const contains = <T,>(arr: T[], criteria: (a: T) => boolean): boolean => arr.some(criteria);
+const contains = <T,_>(arr: T[], criteria: (a: T) => boolean): boolean => arr.some(criteria);
 
 // Or
-const contains = <T,>(arr: T[], criteria: (a: T) => boolean): boolean => arr.filter(criteria).length > 0;
+const contains = <T,_>(arr: T[], criteria: (a: T) => boolean): boolean => arr.filter(criteria).length > 0;
 ```
 
 **Examples**

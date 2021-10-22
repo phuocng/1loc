@@ -15,10 +15,10 @@ const lastIndex = (arr, predicate) => arr.map((item) => predicate(item)).lastInd
 **TypeScript version**
 
 ```js
-const lastIndex = <T,>(arr: T[], predicate: (a: T) => boolean): number => arr.reduce((prev, curr, index) => (predicate(curr) ? index : prev), -1);
+const lastIndex = <T,_>(arr: T[], predicate: (a: T) => boolean): number => arr.reduce((prev, curr, index) => (predicate(curr) ? index : prev), -1);
 
 // Or
-const lastIndex = <T,>(arr: T[], predicate: (a: T) => boolean): number => arr.map((item) => predicate(item)).lastIndexOf(true);
+const lastIndex = <T,_>(arr: T[], predicate: (a: T) => boolean): number => arr.map((item) => predicate(item)).lastIndexOf(true);
 ```
 
 **Examples**

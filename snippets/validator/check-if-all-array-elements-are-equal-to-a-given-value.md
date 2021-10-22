@@ -16,10 +16,10 @@ const isEqual = (arr, value) => !arr.some((item) => item !== value);
 **TypeScript version**
 
 ```js
-const isEqual = <T,>(arr: T[], value: T): boolean => arr.every((item) => item === value);
+const isEqual = <T,_>(arr: T[], value: T): boolean => arr.every((item) => item === value);
 
 // Or
-const isEqual = <T,>(arr: T[], value: T): boolean => !arr.some((item) => item !== value);
+const isEqual = <T,_>(arr: T[], value: T): boolean => !arr.some((item) => item !== value);
 ```
 
 **Examples**

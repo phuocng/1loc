@@ -13,7 +13,7 @@ const isEqual = (a, b) => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 **TypeScript version**
 
 ```js
-const isEqual = <T,>(a: T[], b: T[]): boolean => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
+const isEqual = <T,_>(a: T[], b: T[]): boolean => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 ```
 
 **Examples**

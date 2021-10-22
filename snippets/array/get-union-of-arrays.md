@@ -12,7 +12,7 @@ const union = (...arr) => [...new Set(arr.flat())];
 **TypeScript version**
 
 ```js
-const union = <T,>(...arr: T[][]): T[] => [...new Set(arr.flat())];
+const union = <T,_>(...arr: T[][]): T[] => [...new Set(arr.flat())];
 ```
 
 **Example**
