@@ -32,3 +32,7 @@ const uint8ToBase64 = (arr: Uint8Array): string =>
 // For Node.js
 const uint8ToBase64 = (arr: Uint8Array): string => Buffer.from(arr).toString('base64');
 ```
+
+**See also**
+
+-   [Convert a base64 encoded string to an uint8 array](/string/convert-a-base64-encoded-string-to-an-uint8-array)
