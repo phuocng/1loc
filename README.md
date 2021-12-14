@@ -32,10 +32,10 @@ Open http://localhost:1234 in your browser to see it in action.
 1. Install copyfiles package 
 
 ~~~ console
-$ npm install --save-dev copyfiles to install copyfiles
+$ npm install --save-dev copyfiles
 ~~~
 
-2. Install rimrag package 
+2. Install rimraf package 
 
 ~~~ console 
 $ npm install --save-dev rimraf
