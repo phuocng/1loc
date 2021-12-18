@@ -25,3 +25,7 @@ wrap(24, 10, 25); // 24
 wrap(25, 10, 25); // 25
 wrap(26, 10, 25); // 10
 ```
+
+**See also**
+
+-   [Clamp a number between two values](/number/clamp-a-number-between-two-values)
