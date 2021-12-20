@@ -7,13 +7,13 @@ category: Array
 
 ```js
 // `arr` is an array
-const isEmpty = (arr) => !Array.isArray(arr) || arr.length === 0;
+const isEmpty = (arr) => Array.isArray(arr) && !arr.length;
 ```
 
 **TypeScript version**
 
 ```js
-const isEmpty = <T,_>(arr: T[]): boolean => !Array.isArray(arr) || arr.length === 0;
+const isEmpty = <T,_>(arr: T[]): boolean => Array.isArray(arr) && !arr.length;
 ```
 
 **Examples**
