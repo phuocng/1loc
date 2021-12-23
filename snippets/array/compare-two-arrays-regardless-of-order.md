@@ -7,13 +7,13 @@ category: Array
 
 ```js
 // `a` and `b` are arrays
-const isEqual = (a, b) => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
+const isEqual = (a, b) => JSON.stringify([...(new Set(a))].sort()) === JSON.stringify([...(new Set(b))].sort());
 ```
 
 **TypeScript version**
 
 ```js
-const isEqual = <T,_>(a: T[], b: T[]): boolean => JSON.stringify(a.sort()) === JSON.stringify(b.sort());
+const isEqual = <T,_>(a: T[], b: T[]): boolean => JSON.stringify([...(new Set(a))].sort()) === JSON.stringify([...(new Set(b))].sort());
 ```
 
 **Examples**
