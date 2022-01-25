@@ -7,7 +7,7 @@ category: Array
 
 ```js
 // `a` and `b` are arrays
-const isEqual = (a, b) => JSON.stringify([...(new Set(a))].sort()) === JSON.stringify([...(new Set(b))].sort());
+const isEqual = (a, b) => JSON.stringify([...new Set(a)].sort()) === JSON.stringify([...new Set(b)].sort());
 ```
 
 **TypeScript version**
