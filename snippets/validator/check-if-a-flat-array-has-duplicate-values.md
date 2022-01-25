@@ -7,12 +7,18 @@ category: Validator
 
 ```js
 const hasDuplicateValues = (arr) => new Set(arr).size !== arr.length;
+
+// Or
+const hasDuplicateValues = (arr) => arr.some((item, index, arr) => arr.indexOf(item) !== index);
 ```
 
 **TypeScript version**
 
 ```js
 const hasDuplicateValues = <T,_>(arr: T[]): boolean => new Set(arr).size !== arr.length;
+
+// Or
+const hasDuplicateValues = <T,_>(arr: T[]): boolean => arr.some((item, index, arr) => arr.indexOf(item) !== index);
 ```
 
 **Examples**
