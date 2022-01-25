@@ -11,6 +11,9 @@ const shuffle = (arr) =>
         .map((a) => ({ sort: Math.random(), value: a }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value);
+        
+ // Or
+ const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
 ```
 
 **TypeScript version**
@@ -21,6 +24,9 @@ const shuffle = <T,_>(arr: T[]): T[] =>
         .map((a) => ({ sort: Math.random(), value: a }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value);
+        
+ // Or
+ const shuffle = <T,_>(arr: T[]): T[] => arr.sort(() => 0.5 - Math.random());
 ```
 
 **Example**
