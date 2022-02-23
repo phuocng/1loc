@@ -23,6 +23,7 @@ const capitalize = (str: string): string => `${str.charAt(0).toUpperCase()}${str
 // Or
 const capitalize = ([first, ...rest]: string): string => `${first.toUpperCase()}${rest.join('')}`;
 
+// Or
 const capitalize = (str: string): string => str.replace(/^([a-z])/, (first) => first.toUpperCase());
 ```
 
