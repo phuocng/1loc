@@ -2,6 +2,12 @@
     display: flex;
 }
 
+@media screen and (max-width: 480px) {
+  .page-snippet__container {
+    flex-direction: column;
+  }
+}
+
 .page-snippet__sidebar {
     flex: 0 0 15rem;
     margin-right: 1rem;
