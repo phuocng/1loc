@@ -23,6 +23,9 @@ const clone = (arr) => JSON.parse(JSON.stringify(arr));
 
 // Or
 const clone = (arr) => arr.concat([]);
+
+// Or
+const clone = (arr) => structuredClone(arr);
 ```
 
 **TypeScript version**
@@ -45,4 +48,7 @@ const clone = <T,_>(arr: T[]): T[] => JSON.parse(JSON.stringify(arr));
 
 // Or
 const clone = <T,_>(arr: T[]): T[] => arr.concat([]);
+
+// Or
+const clone = <T,_>(arr: T[]): T[] => structuredClone(arr);
 ```
