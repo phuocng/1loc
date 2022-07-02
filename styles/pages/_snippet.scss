@@ -11,3 +11,25 @@
     flex: 1;
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 767px) {
+    .page-snippet__container {
+        position: relative;
+    }
+
+    .page-snippet__sidebar {
+        position: fixed;
+        top: 0;
+        background-color: whitesmoke;
+        margin-top: 48px;
+        padding-top: 10px;
+    }
+
+    .page-snippet__sidebar--shown {
+        display: flex;
+    }
+    
+    .page-snippet__sidebar--hidden {
+        display: none;
+    }
+}

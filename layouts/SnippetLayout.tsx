@@ -23,7 +23,7 @@ export const SnippetLayout: React.FC<{
         </Head>
         <div className="block-container">
             <div className="page-snippet__container">
-                <div className="page-snippet__sidebar">
+                <div className="page-snippet__sidebar page-snippet__sidebar--hidden">
                     <Sidebar>
                         <SidebarGroup title="Categories">
                             {categories.map((category) => (
