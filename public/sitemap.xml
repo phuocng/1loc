@@ -67,6 +67,7 @@
 <url><loc><![CDATA[https://1loc.dev/date-time/compare-two-dates]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/date-time/convert-a-date-to-yyyy-mm-dd-format]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/date-time/convert-seconds-to-hh-mm-ss-format]]></loc></url>
+<url><loc><![CDATA[https://1loc.dev/date-time/determine-one-year-from-now]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/date-time/extract-year-month-day-hour-minute-second-and-millisecond-from-a-date]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/date-time/format-a-date-for-the-given-locale]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/date-time/get-the-current-quarter-of-a-date]]></loc></url>
@@ -227,6 +228,7 @@
 <url><loc><![CDATA[https://1loc.dev/string/count-the-number-of-words-in-a-string]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/string/count-the-occurrences-of-a-character-in-a-string]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/string/decapitalize-a-string]]></loc></url>
+<url><loc><![CDATA[https://1loc.dev/string/decode-html-entities]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/string/escape-html-special-characters]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/string/format-a-string]]></loc></url>
 <url><loc><![CDATA[https://1loc.dev/string/generate-a-hash-of-a-string]]></loc></url>
