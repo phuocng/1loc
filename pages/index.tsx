@@ -2,10 +2,9 @@ import { Heading, Spacer } from '@1milligram/design';
 import * as React from 'react';
 
 import { SnippetList } from '../components/SnippetList';
-import { loadSnippets } from '../models/loadSnippets';
-import { groupByCategory } from '../models/groupByCategory';
 import { Layout } from '../layouts/Layout';
-import { uid } from '../utils/uid';
+import { groupByCategory } from '../models/groupByCategory';
+import { loadSnippets } from '../models/loadSnippets';
 
 import type { Snippet } from '../models/Snippet';
 
@@ -13,7 +12,6 @@ const HomePage: React.FC<{
     snippets: Snippet[];
 }> = ({ snippets }) => {
     const categories = groupByCategory(snippets);
-    const id = uid();
 
     return (
         <Layout>

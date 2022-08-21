@@ -25,7 +25,7 @@ export const FooterBlock = () => (
                 </FooterGroup>
             </Footer>
 
-            <div className="block-footer__copyright">© 2020 — {new Date().getFullYear()}, 1 milligram. All rights reserved.</div>
+            <div className="block-footer__copyright">© 2020 — {new Date().getFullYear()}, Nguyen Huu Phuoc. All rights reserved.</div>
         </div>
     </footer>
 );
