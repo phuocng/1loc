@@ -19,8 +19,8 @@ export const FooterBlock = () => (
                     <FooterLink href="https://htmldom.dev">HTML DOM</FooterLink>
                     <FooterLink href="https://thisthat.dev">this VS that</FooterLink>
                 </FooterGroup>
-                <FooterGroup title="Follow us">
-                    <FooterLink href="https://github.com/1milligram">GitHub</FooterLink>
+                <FooterGroup title="Follow me">
+                    <FooterLink href="https://github.com/phuocng">GitHub</FooterLink>
                     <FooterLink href="https://twitter.com/nghuuphuoc">Twitter</FooterLink>
                 </FooterGroup>
             </Footer>
