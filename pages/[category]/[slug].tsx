@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { NextPagination, Pagination, PrevPagination, Spacer } from '@1milligram/design';
 
 import { Markdown } from '../../components/Markdown';
+import { Follow } from '../../components/Follow';
 import { SnippetLayout } from '../../layouts/SnippetLayout';
 import { loadSnippets } from '../../models/loadSnippets';
 import { groupByCategory } from '../../models/groupByCategory';
@@ -29,6 +30,8 @@ const SnippetPage: React.FC<SnippetPageProps> = ({ categories, content, frontMat
     return (
         <SnippetLayout categories={categories} keywords={frontMatter ? frontMatter.keywords : ''} title={snippet.title}>
             <Markdown>{content}</Markdown>
+            <Spacer size="medium" />
+            <Follow />
             <Spacer size="medium" />
             <Pagination>{prevSnippet && <PrevPagination href={`/${slugifyCategory(prevSnippet.category)}/${prevSnippet.slug}`}>{prevSnippet.title}</PrevPagination>}</Pagination>
             <Pagination>{nextSnippet && <NextPagination href={`/${slugifyCategory(nextSnippet.category)}/${nextSnippet.slug}`}>{nextSnippet.title}</NextPagination>}</Pagination>
