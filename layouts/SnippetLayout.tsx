@@ -32,11 +32,6 @@ export const SnippetLayout: React.FC<{
                                 </SidebarLink>
                             ))}
                         </SidebarGroup>
-                        <SidebarGroup title="Ad">
-                            <div className="block-ad">
-                                <Ad />
-                            </div>
-                        </SidebarGroup>
                     </Sidebar>
                 </div>
                 <div className="page-snippet__content">
