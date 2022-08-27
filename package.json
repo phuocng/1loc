@@ -29,7 +29,7 @@
         "sitemap": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node bin/generateSitemap.ts"
     },
     "dependencies": {
-        "next": "^11.1.2",
+        "next": "^12.2.5",
         "prism-react-renderer": "^1.2.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
