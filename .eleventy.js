@@ -15,6 +15,14 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.setLibrary('md', markdownLibrary);
 
+    // Get the first `n` elements of a collection.
+    eleventyConfig.addFilter("head", (array, n) => {
+        if (!Array.isArray(array) || array.length === 0) {
+            return [];
+        }
+        return (n < 0) ? array.slice(n) : array.slice(0, n);
+    });
+
     eleventyConfig.addCollection('sortByTitle', function(collectionApi) {
         return collectionApi.getAll()
             .filter(function(item) {
