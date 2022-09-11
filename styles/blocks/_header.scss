@@ -4,6 +4,11 @@
     justify-content: space-between;
     padding: 1rem 0;
 }
+.header__breadcrumb {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .header__link {
     align-items: center;
     color: #222;
