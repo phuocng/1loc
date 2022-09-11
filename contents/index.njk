@@ -10,10 +10,17 @@ eleventyExcludeFromCollections: true
         <a class="hero__button" href="https://github.com/phuocng/1loc">Star me on GitHub · {{ github.stargazers }}★</a>
     </div>
 
-    {%- for post in collections.sortByTitle -%}
-        <div class="card__item">
-            <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
+    {%- for cat in collections.categories -%}
+    <div class="category">
+        <h2 class="category__name">{{ cat }}</h2>
+        <div class="category__posts">
+            {%- for post in collections.groupByCategories[cat] -%}
+            <div class="card__item">
+                <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
+            </div>
+            {%- endfor -%}
         </div>
+    </div>
     {%- endfor -%}
 
     {% include "follow.njk" %}

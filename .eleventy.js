@@ -26,6 +26,41 @@ module.exports = function(eleventyConfig) {
             });
     });
 
+    eleventyConfig.addCollection('categories', function(collectionApi) {
+        const categories = [];
+        collectionApi.getAll()
+            .filter(function(item) {
+                let extension = item.inputPath.split('.').pop();
+                return extension === 'md';
+            })
+            .forEach((item) => {
+                const category = item.data.category;
+                if (category && !categories.includes(category)) {
+                    categories.push(category);
+                }
+            });
+        return categories.sort();
+    });
+
+    eleventyConfig.addCollection('groupByCategories', function(collectionApi) {
+        const categories = {};
+        collectionApi.getAll()
+            .filter(function(item) {
+                let extension = item.inputPath.split('.').pop();
+                return extension === 'md';
+            })
+            .forEach((item) => {
+                const category = item.data.category;
+                if (!category) {
+                    return;
+                }
+                Array.isArray(categories[category])
+                    ? categories[category].push(item)
+                    : categories[category] = [item];
+            });
+        return categories;
+    });
+
     eleventyConfig.addTransform('minify-html', function(content) {
         if (this.outputPath && this.outputPath.endsWith('.html')) {
             return htmlmin.minify(content, {
