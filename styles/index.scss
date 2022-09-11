@@ -1,16 +1,12 @@
-// Reset
-@import 'reset';
+@import './common';
 
-// Blocks
-@import './blocks/ad';
+@import './blocks/card';
+@import './blocks/hero';
 @import './blocks/follow';
 @import './blocks/footer';
 @import './blocks/header';
-@import './blocks/hero';
-@import './blocks/layout';
-@import './blocks/markdown';
-@import './blocks/snippet';
+@import './blocks/nav';
+@import './blocks/post';
 
-// Pages
-@import './pages/home';
-@import './pages/snippet';
+// Themes
+@import './themes/dracula.scss';

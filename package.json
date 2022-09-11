@@ -13,38 +13,31 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/1milligram/1loc"
+        "url": "https://github.com/phuocng/1loc"
     },
     "bugs": {
-        "url": "https://github.com/1milligram/1loc/issues"
+        "url": "https://github.com/phuocng/1loc/issues"
     },
     "license": "MIT",
     "scripts": {
-        "build": "next build",
-        "dev": "next dev",
-        "format": "prettier --write \"**/*.+(css|html|json|js|jsx|md|mdx|scss|ts|tsx)\"",
-        "preexport": "npm run build",
-        "export": "next export",
-        "deploy": "npm run export && netlify deploy --prod --dir=out",
-        "sitemap": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node bin/generateSitemap.ts"
-    },
-    "dependencies": {
-        "next": "^11.1.2",
-        "prism-react-renderer": "^1.2.1",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-markdown": "^7.0.1",
-        "remark-gfm": "^3.0.0"
+        "build": "npm run build:eleventy && npm run build:sass",
+        "build:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed",
+        "build:eleventy": "npx @11ty/eleventy",
+        "deploy": "npm run build && netlify deploy --prod --dir=_site",
+        "format": "prettier --write \"**/*.+(json|md|scss)\"",
+        "start": "npm run watch:eleventy & npm run watch:sass",
+        "watch:eleventy": "npx @11ty/eleventy --serve --port=8081",
+        "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch"
     },
     "devDependencies": {
-        "@1milligram/design": "^0.4.0",
-        "@types/react": "^17.0.20",
-        "@types/react-dom": "^17.0.9",
-        "gray-matter": "^4.0.3",
-        "prettier": "^2.4.0",
-        "sass": "^1.39.2",
-        "serve": "^12.0.1",
-        "ts-node": "^10.3.0",
-        "typescript": "^4.4.3"
+        "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+        "html-minifier": "^4.0.0",
+        "node-fetch": "^2.6.7",
+        "prettier": "^2.7.1",
+        "sass": "^1.54.8"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^1.0.2",
+        "markdown-it": "^13.0.1"
     }
 }
