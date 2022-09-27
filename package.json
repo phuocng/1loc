@@ -32,12 +32,12 @@
     "devDependencies": {
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
         "html-minifier": "^4.0.0",
-        "node-fetch": "^2.6.7",
         "prettier": "^2.7.1",
         "sass": "^1.54.8"
     },
     "dependencies": {
         "@11ty/eleventy": "^1.0.2",
+        "@11ty/eleventy-fetch": "^3.0.0",
         "markdown-it": "^13.0.1"
     }
 }
