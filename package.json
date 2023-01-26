@@ -25,7 +25,7 @@
         "build:eleventy": "npx @11ty/eleventy",
         "deploy": "npm run build && netlify deploy --prod --dir=_site",
         "format": "prettier --write \"**/*.+(json|md|scss)\"",
-        "start": "npm run watch:eleventy & npm run watch:sass",
+        "start": "npm run watch:eleventy | npm run watch:sass",
         "watch:eleventy": "npx @11ty/eleventy --serve --port=8081",
         "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch"
     },
