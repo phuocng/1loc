@@ -1,0 +1,24 @@
+---
+category: Number
+created: '2020-05-05'
+title: Multiply arguments
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const mul = (...args) => args.reduce((a, b) => a * b);
+```
+
+**TypeScript version**
+
+```js
+const mul = (...args: number[]): number => args.reduce((a, b) => a * b);
+```
+
+**Examples**
+
+```js
+mul(1, 2, 3, 4); // 24
+```

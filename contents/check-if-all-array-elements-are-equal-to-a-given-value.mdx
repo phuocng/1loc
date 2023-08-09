@@ -1,0 +1,36 @@
+---
+category: Validator
+contributors:
+    - contributorpw
+    - tugsanunlu
+created: '2020-05-08'
+title: Check if all array elements are equal to a given value
+updated: '2021-10-22'
+---
+
+**JavaScript version**
+
+```js
+const isEqual = (arr, value) => arr.every((item) => item === value);
+
+// Or
+// Ends earlier for false arrays
+const isEqual = (arr, value) => !arr.some((item) => item !== value);
+```
+
+**TypeScript version**
+
+```js
+const isEqual = <T,_>(arr: T[], value: T): boolean => arr.every((item) => item === value);
+
+// Or
+const isEqual = <T,_>(arr: T[], value: T): boolean => !arr.some((item) => item !== value);
+```
+
+**Examples**
+
+```js
+isEqual(['foo', 'foo'], 'foo'); // true
+isEqual(['foo', 'bar'], 'foo'); // false
+isEqual(['bar', 'bar'], 'foo'); // false
+```

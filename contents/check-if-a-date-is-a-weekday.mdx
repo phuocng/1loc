@@ -1,0 +1,19 @@
+---
+category: Validator
+created: '2021-02-25'
+title: Check if a date is a weekday
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+// `date` is a Date object
+const isWeekday = (date = new Date()) => date.getDay() % 6 !== 0;
+```
+
+**TypeScript version**
+
+```js
+const isWeekday = (date = new Date()): boolean => date.getDay() % 6 !== 0;
+```

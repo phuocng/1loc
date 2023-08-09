@@ -1,0 +1,32 @@
+---
+category: String
+created: '2021-02-20'
+title: Swap case of characters in a string
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const swapCase = (str) =>
+    str
+        .split('')
+        .map((c) => (c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()))
+        .join('');
+```
+
+**TypeScript version**
+
+```js
+const swapCase = (str: string): string =>
+    str
+        .split('')
+        .map((c) => (c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()))
+        .join('');
+```
+
+**Examples**
+
+```js
+swapCase('Hello World'); // 'hELLO wORLD'
+```

@@ -1,0 +1,25 @@
+---
+category: Validator
+created: '2021-04-10'
+title: Check if a string is a MongoDB ObjectId
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isMongoId = (str) => str.length === 24 && /^[A-F0-9]+$/i.test(str);
+
+// Or
+const isMongoId = (str) => str.length === 24 && str.split('').every((c) => '0123456789ABCDEFabcdef'.indexOf(c) !== -1);
+```
+
+**TypeScript version**
+
+```js
+const isMongoId = (str: string): boolean => str.length === 24 && /^[A-F0-9]+$/i.test(str);
+
+// Or
+const isMongoId = (str: string): boolean =>
+    str.length === 24 && str.split('').every((c) => '0123456789ABCDEFabcdef'.indexOf(c) !== -1);
+```

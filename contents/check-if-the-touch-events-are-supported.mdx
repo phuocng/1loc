@@ -1,0 +1,21 @@
+---
+category: DOM
+created: '2020-04-25'
+title: Check if the touch events are supported
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const touchSupported = () =>
+    'ontouchstart' in window || (window.DocumentTouch && document instanceof window.DocumentTouch);
+```
+
+**TypeScript version**
+
+```js
+const touchSupported = (): boolean => (
+    'ontouchstart' in window || (window as any)['DocumentTouch'] && document instanceof (window as any)['DocumentTouch']
+);
+```

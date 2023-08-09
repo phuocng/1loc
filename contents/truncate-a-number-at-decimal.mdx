@@ -1,0 +1,27 @@
+---
+category: Number
+contributors:
+    - onelifemedia
+created: '2020-08-05'
+title: Truncate a number at decimal
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const truncate = (n) => ~~n;
+```
+
+**TypeScript version**
+
+```js
+const truncate = (n: number): number => ~~n;
+```
+
+**Examples**
+
+```js
+truncate(25.198726354); // 25
+truncate(-25.198726354); // -25
+```

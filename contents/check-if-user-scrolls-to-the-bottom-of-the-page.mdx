@@ -1,0 +1,20 @@
+---
+category: DOM
+created: '2021-04-10'
+title: Check if user scrolls to the bottom of the page
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isAtBottom = () =>
+    document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight;
+```
+
+**TypeScript version**
+
+```js
+const isAtBottom = (): boolean =>
+    document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight;
+```

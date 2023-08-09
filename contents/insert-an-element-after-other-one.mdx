@@ -1,0 +1,26 @@
+---
+category: DOM
+created: '2020-04-19'
+title: Insert an element after other one
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const insertAfter = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele, anotherEle.nextSibling);
+
+// Or
+const insertAfter = (ele, anotherEle) => anotherEle.insertAdjacentElement('afterend', ele);
+```
+
+**TypeScript version**
+
+```js
+const insertAfter = (ele: Element, anotherEle: Element): Element | null =>
+    anotherEle.parentNode ? anotherEle.parentNode.insertBefore(ele, anotherEle.nextSibling) : null;
+
+// Or
+const insertAfter = (ele: Element, anotherEle: Element): Element | null =>
+    anotherEle.insertAdjacentElement('afterend', ele);
+```

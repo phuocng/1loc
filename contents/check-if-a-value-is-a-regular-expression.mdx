@@ -1,0 +1,18 @@
+---
+category: Validator
+created: '2020-05-14'
+title: Check if a value is a regular expression
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isRegExp = (value) => Object.prototype.toString.call(value) === '[object RegExp]';
+```
+
+**TypeScript version**
+
+```js
+const isRegExp = (value: any): boolean => Object.prototype.toString.call(value) === '[object RegExp]';
+```

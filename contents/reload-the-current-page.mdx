@@ -1,0 +1,24 @@
+---
+category: DOM
+created: '2020-04-19'
+title: Reload the current page
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const reload = () => location.reload();
+
+// Or
+const reload = () => (location.href = location.href);
+```
+
+**TypeScript version**
+
+```js
+const reload = (): void => location.reload();
+
+// Or
+const reload = (): string => (location.href = location.href);
+```

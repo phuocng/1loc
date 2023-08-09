@@ -1,0 +1,30 @@
+---
+category: Number
+created: '2020-05-16'
+title: Get the arrays of digits from a number
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const digitize = (n) => `${n}`.split('').map((v) => parseInt(v, 10));
+
+// Or
+const digitize = (n) => [...`${n}`].map((v) => parseInt(v, 10));
+```
+
+**TypeScript version**
+
+```js
+const digitize = (n: number): number[] => `${n}`.split('').map((v) => parseInt(v, 10));
+
+// Or
+const digitize = (n: number): number[] => [...`${n}`].map((v) => parseInt(v, 10));
+```
+
+**Examples**
+
+```js
+digitize(123); // [1, 2, 3]
+```

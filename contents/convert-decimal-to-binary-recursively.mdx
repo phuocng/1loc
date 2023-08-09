@@ -1,0 +1,26 @@
+---
+category: Number
+contributors:
+    - philosophercode
+created: '2020-12-11'
+title: Convert decimal to binary recursively
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const decToBi = (num) => (num === 0 ? 0 : (num % 2) + 10 * decToBi(~~(num / 2)));
+```
+
+**TypeScript version**
+
+```js
+const decToBi = (num: number): number => (num === 0 ? 0 : (num % 2) + 10 * decToBi(~~(num / 2)));
+```
+
+**Examples**
+
+```js
+decToBi(10); //1010
+```

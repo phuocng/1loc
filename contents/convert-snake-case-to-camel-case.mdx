@@ -1,0 +1,24 @@
+---
+category: String
+created: '2020-05-12'
+title: 'Convert snake_case to camelCase'
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const snakeToCamel = (str) => str.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substr(1));
+```
+
+**TypeScript version**
+
+```js
+const snakeToCamel = (str: string): string => str.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substr(1));
+```
+
+**Examples**
+
+```js
+snakeToCamel('HELLO_world'); // 'helloWorld'
+```

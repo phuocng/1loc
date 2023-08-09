@@ -1,0 +1,27 @@
+---
+category: String
+created: '2020-05-15'
+title: Check if a URL is absolute
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isAbsoluteUrl = (url) => /^[a-z][a-z0-9+.-]*:/.test(url);
+```
+
+**TypeScript version**
+
+```js
+const isAbsoluteUrl = (url: string): boolean => /^[a-z][a-z0-9+.-]*:/.test(url);
+```
+
+**Examples**
+
+```js
+isAbsoluteUrl('https://1loc.dev'); // true
+isAbsoluteUrl('https://1loc.dev/foo/bar'); // true
+isAbsoluteUrl('1loc.dev'); // false
+isAbsoluteUrl('//1loc.dev'); // false
+```

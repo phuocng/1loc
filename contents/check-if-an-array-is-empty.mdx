@@ -1,0 +1,29 @@
+---
+category: Array
+contributors:
+    - inoyakaigor
+    - elkarouani
+created: '2020-06-23'
+title: Check if an array is empty
+updated: '2021-12-21'
+---
+
+**JavaScript version**
+
+```js
+// `arr` is an array
+const isEmpty = (arr) => Array.isArray(arr) && !arr.length;
+```
+
+**TypeScript version**
+
+```js
+const isEmpty = <T,_>(arr: T[]): boolean => Array.isArray(arr) && !arr.length;
+```
+
+**Examples**
+
+```js
+isEmpty([]); // true
+isEmpty([1, 2, 3]); // false
+```

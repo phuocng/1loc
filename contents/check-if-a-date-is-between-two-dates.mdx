@@ -1,0 +1,20 @@
+---
+category: Validator
+created: '2020-04-19'
+title: Check if a date is between two dates
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+// `min`, `max` and `date` are `Date` instances
+const isBetween = (date, min, max) => date.getTime() >= min.getTime() && date.getTime() <= max.getTime();
+```
+
+**TypeScript version**
+
+```js
+const isBetween = (date: Date, min: Date, max: Date): boolean =>
+    date.getTime() >= min.getTime() && date.getTime() <= max.getTime();
+```

@@ -1,0 +1,26 @@
+---
+category: Random
+created: '2020-04-23'
+title: Generate a random string with given length
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const generateString = (length) =>
+    Array(length)
+        .fill('')
+        .map((v) => Math.random().toString(36).charAt(2))
+        .join('');
+```
+
+**TypeScript version**
+
+```js
+const generateString = (length: number): string =>
+    Array(length)
+        .fill('')
+        .map((v) => Math.random().toString(36).charAt(2))
+        .join('');
+```

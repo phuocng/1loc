@@ -1,0 +1,24 @@
+---
+category: Number
+created: '2020-05-05'
+title: Calculate the average of arguments
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+```
+
+**TypeScript version**
+
+```js
+const average = (...args: number[]): number => args.reduce((a, b) => a + b) / args.length;
+```
+
+**Examples**
+
+```js
+average(1, 2, 3, 4); // 2.5
+```

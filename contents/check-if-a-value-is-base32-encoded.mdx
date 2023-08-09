@@ -1,0 +1,18 @@
+---
+category: Validator
+created: '2021-04-10'
+title: Check if a value is base32 encoded
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isBase32 = (value) => value.length % 8 === 0 && /^[A-Z2-7]+=*$/.test(value);
+```
+
+**TypeScript version**
+
+```js
+const isBase32 = (value: string): boolean => value.length % 8 === 0 && /^[A-Z2-7]+=*$/.test(value);
+```

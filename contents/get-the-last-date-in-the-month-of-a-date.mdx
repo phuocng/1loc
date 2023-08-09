@@ -1,0 +1,18 @@
+---
+category: Date Time
+created: '2021-02-25'
+title: Get the last date in the month of a date
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const getLastDate = (d = new Date()) => new Date(d.getFullYear(), d.getMonth() + 1, 0);
+```
+
+**TypeScript version**
+
+```js
+const getLastDate = (d = new Date()): Date => new Date(d.getFullYear(), d.getMonth() + 1, 0);
+```

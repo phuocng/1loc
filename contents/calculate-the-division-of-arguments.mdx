@@ -1,0 +1,24 @@
+---
+category: Number
+created: '2020-05-05'
+title: Calculate the division of arguments
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const division = (...args) => args.reduce((a, b) => a / b);
+```
+
+**TypeScript version**
+
+```js
+const division = (...args: number): number => args.reduce((a, b) => a / b);
+```
+
+**Examples**
+
+```js
+division(1, 2, 3, 4); // 0.04166666666666666
+```

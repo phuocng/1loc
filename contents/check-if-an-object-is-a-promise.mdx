@@ -1,0 +1,22 @@
+---
+category: Validator
+contributors:
+    - quantumsheep
+created: '2020-05-06'
+title: Check if an object is a Promise
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isPromise = (obj) =>
+    !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+```
+
+**TypeScript version**
+
+```js
+const isPromise = (obj: any): boolean =>
+    !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+```

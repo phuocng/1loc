@@ -1,0 +1,24 @@
+---
+category: Date Time
+created: '2021-02-25'
+title: Get the timezone string
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const getTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
+```
+
+**TypeScript version**
+
+```js
+const getTimezone = (): string => Intl.DateTimeFormat().resolvedOptions().timeZone;
+```
+
+**Example**
+
+```js
+getTimezone(); // 'Asia/Saigon'
+```

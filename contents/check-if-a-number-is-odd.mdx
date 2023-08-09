@@ -1,0 +1,41 @@
+---
+category: Validator
+contributors:
+    - ietienam
+    - Namysh
+    - marcobiedermann
+created: '2020-05-06'
+title: Check if a number is odd
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isOdd = (n) => n % 2 !== 0;
+
+// Or
+const isOdd = (n) => !!(n & 1);
+
+// Or
+const isOdd = (n) => !Number.isInteger(n / 2);
+```
+
+**TypeScript version**
+
+```js
+const isOdd = (n: number): boolean => n % 2 !== 0;
+
+// Or
+const isOdd = (n: number): boolean => !!(n & 1);
+
+// Or
+const isOdd = (n: number): boolean => !Number.isInteger(n / 2);
+```
+
+**Examples**
+
+```js
+isOdd(1); // true
+isOdd(2); // false
+```

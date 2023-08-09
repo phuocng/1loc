@@ -1,0 +1,22 @@
+---
+category: Function
+created: '2020-05-15'
+title: Check if a value is a function
+---
+
+**JavaScript version**
+
+```js
+const isFunction = (v) =>
+    ['[object Function]', '[object GeneratorFunction]', '[object AsyncFunction]', '[object Promise]'].includes(
+        Object.prototype.toString.call(v)
+    );
+```
+
+**Examples**
+
+```js
+isFunction(function () {}); // true
+isFunction(function* () {}); // true
+isFunction(async function () {}); // true
+```

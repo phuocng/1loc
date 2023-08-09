@@ -1,0 +1,19 @@
+---
+category: Validator
+created: '2021-04-10'
+title: Check if a value is base58 encoded
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+// It doesn't accept the I, O, l characters
+const isBase58 = (value) => /^[A-HJ-NP-Za-km-z1-9]*$/.test(value);
+```
+
+**TypeScript version**
+
+```js
+const isBase58 = (value: string): boolean => /^[A-HJ-NP-Za-km-z1-9]*$/.test(value);
+```

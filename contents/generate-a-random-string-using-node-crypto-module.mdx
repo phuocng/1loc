@@ -1,0 +1,18 @@
+---
+category: Random
+created: '2020-07-28'
+title: Generate a random string using Node crypto module
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const randomStr = () => require('crypto').randomBytes(32).toString('hex');
+```
+
+**TypeScript version**
+
+```js
+const randomStr = (): string => require('crypto').randomBytes(32).toString('hex');
+```
