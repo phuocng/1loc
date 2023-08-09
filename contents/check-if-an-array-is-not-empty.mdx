@@ -1,0 +1,28 @@
+---
+category: Validator
+contributors:
+    - fenilgandhi
+    - marcobiedermann
+created: '2020-05-06'
+title: Check if an array is not empty
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
+```
+
+**TypeScript version**
+
+```js
+const isNotEmpty = (arr: any): boolean => Array.isArray(arr) && Object.keys(arr).length > 0;
+```
+
+**Examples**
+
+```js
+isNotEmpty([]); // false
+isNotEmpty([1, 2, 3]); // true
+```

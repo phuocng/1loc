@@ -1,0 +1,24 @@
+---
+category: Number
+created: '2020-05-05'
+title: Calculate the remainder of division of arguments
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const remainder = (...args) => args.reduce((a, b) => a % b);
+```
+
+**TypeScript version**
+
+```js
+const remainder = (...args: number[]): number => args.reduce((a, b) => a % b);
+```
+
+**Examples**
+
+```js
+remainder(1, 2, 3, 4); // 1
+```

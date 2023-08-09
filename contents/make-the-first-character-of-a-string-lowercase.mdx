@@ -1,0 +1,24 @@
+---
+category: String
+created: '2020-05-03'
+title: Make the first character of a string lowercase
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const lowercaseFirst = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
+```
+
+**TypeScript version**
+
+```js
+const lowercaseFirst = (str: string): string => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
+```
+
+**Examples**
+
+```js
+lowercaseFirst('Hello World'); // 'hello World'
+```

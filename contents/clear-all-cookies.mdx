@@ -1,0 +1,38 @@
+---
+category: Misc
+contributors:
+    - iamandrewluca
+created: '2021-04-20'
+title: Clear all cookies
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const clearCookies = () =>
+    document.cookie
+        .split(';')
+        .forEach(
+            (c) =>
+                (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`))
+        );
+```
+
+**TypeScript version**
+
+```js
+const clearCookies = (): void =>
+    document.cookie
+        .split(';')
+        .forEach(
+            (c) =>
+                (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`))
+        );
+```
+
+**Examples**
+
+```js
+clearCookies();
+```

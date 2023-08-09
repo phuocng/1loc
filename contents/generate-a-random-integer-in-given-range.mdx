@@ -1,0 +1,18 @@
+---
+category: Random
+created: '2020-05-05'
+title: Generate a random integer in given range
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+```
+
+**TypeScript version**
+
+```js
+const randomInteger = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;
+```

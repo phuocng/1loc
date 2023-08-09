@@ -1,0 +1,26 @@
+---
+category: DOM
+contributors:
+    - islamozbek
+created: '2020-04-19'
+title: Toggle an element
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const toggle = (ele) => (ele.style.display = ele.style.display === 'none' ? 'block' : 'none');
+
+// Or
+const toggle = (ele) => (ele.hidden = !ele.hidden);
+```
+
+**TypeScript version**
+
+```js
+const toggle = (ele: HTMLElement): string => (ele.style.display = ele.style.display === 'none' ? 'block' : 'none');
+
+// Or
+const toggle = (ele: HTMLElement): boolean => (ele.hidden = !ele.hidden);
+```

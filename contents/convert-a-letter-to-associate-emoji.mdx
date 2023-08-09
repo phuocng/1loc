@@ -1,0 +1,25 @@
+---
+category: String
+created: '2020-08-02'
+title: Convert a letter to associate emoji
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const letterToEmoji = (c) => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
+```
+
+**TypeScript version**
+
+```js
+const letterToEmoji = (c: string): string => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
+```
+
+**Examples**
+
+```js
+letterToEmoji('a'); // 🇦
+letterToEmoji('b'); // 🇧
+```

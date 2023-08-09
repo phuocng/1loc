@@ -1,0 +1,28 @@
+---
+category: Object
+contributors:
+    - tugsanunlu
+created: '2020-05-20'
+title: Check if multiple objects are equal
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isEqual = (...objects) => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+```
+
+**TypeScript version**
+
+```js
+const isEqual = (...objects: object[]): boolean =>
+    objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+```
+
+**Examples**
+
+```js
+isEqual({ foo: 'bar' }, { foo: 'bar' }); // true
+isEqual({ foo: 'bar' }, { bar: 'foo' }); // false
+```

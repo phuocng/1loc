@@ -1,0 +1,20 @@
+---
+category: Misc
+contributors:
+    - furkankose
+created: '2020-05-06'
+title: Wait for an amount of time
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+```
+
+**TypeScript version**
+
+```js
+const wait = async (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+```

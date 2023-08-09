@@ -1,0 +1,26 @@
+---
+category: Date Time
+contributors:
+    - ognjenst
+created: '2022-12-27'
+title: Get the hours and minutes from the decimal time
+---
+
+**JavaScript version**
+
+```js
+const getHoursAndMinutes = (value) => [Math.floor(value), Math.floor((value * 60) % 60)];
+```
+
+**TypeScript version**
+
+```js
+const getHoursAndMinutes = (value: number): [number, number] => [Math.floor(value), Math.floor((value * 60) % 60)];
+```
+
+**Examples**
+
+```js
+getHoursAndMinutes(4.5); //[4, 30]
+getHoursAndMinutes(7.89); // [7, 53]
+```

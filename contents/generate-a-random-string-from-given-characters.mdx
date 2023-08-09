@@ -1,0 +1,32 @@
+---
+category: Random
+created: '2020-04-23'
+title: Generate a random string from given characters
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const generateString = (length, chars) =>
+    Array(length)
+        .fill('')
+        .map((v) => chars[Math.floor(Math.random() * chars.length)])
+        .join('');
+```
+
+**TypeScript version**
+
+```js
+const generateString = (length: number, chars: string) =>
+    Array(length)
+        .fill('')
+        .map((v) => chars[Math.floor(Math.random() * chars.length)])
+        .join('');
+```
+
+**Examples**
+
+```js
+generateString(10, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+```

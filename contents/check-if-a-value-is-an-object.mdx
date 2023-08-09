@@ -1,0 +1,28 @@
+---
+category: Validator
+created: '2020-05-13'
+title: Check if a value is an object
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isObject = (v) => v !== null && typeof v === 'object';
+```
+
+**TypeScript version**
+
+```js
+const isObject = (v: any): boolean => v !== null && typeof v === 'object';
+```
+
+**Examples**
+
+```js
+isObject(null); // false
+isObject('hello world'); // false
+
+isObject({}); // true
+isObject([]); // true
+```

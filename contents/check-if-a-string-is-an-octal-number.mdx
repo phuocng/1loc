@@ -1,0 +1,18 @@
+---
+category: Validator
+created: '2021-04-10'
+title: Check if a string is an octal number
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isOctal = (str) => /^(0o)?[0-7]+$/i.test(str);
+```
+
+**TypeScript version**
+
+```js
+const isOctal = (str: string): boolean => /^(0o)?[0-7]+$/i.test(str);
+```

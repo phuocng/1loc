@@ -1,0 +1,20 @@
+---
+category: Random
+contributors:
+    - jonrandy
+created: '2020-04-19'
+title: Get a random item from an array
+updated: '2021-10-22'
+---
+
+**JavaScript version**
+
+```js
+const randomItem = (arr) => arr[(Math.random() * arr.length) | 0];
+```
+
+**TypeScript version**
+
+```js
+const randomItem = <T,_>(arr: T[]): T => arr[(Math.random() * arr.length) | 0];
+```

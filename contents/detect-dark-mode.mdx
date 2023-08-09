@@ -1,0 +1,18 @@
+---
+category: Misc
+created: '2020-05-02'
+title: Detect dark mode
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+```
+
+**TypeScript version**
+
+```js
+const isDarkMode: boolean = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+```

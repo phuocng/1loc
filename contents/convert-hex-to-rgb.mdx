@@ -1,0 +1,35 @@
+---
+category: Misc
+created: '2020-04-19'
+title: Convert hex to rgb
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const hexToRgb = (hex) =>
+    hex
+        .replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`)
+        .substring(1)
+        .match(/.{2}/g)
+        .map((x) => parseInt(x, 16));
+```
+
+**TypeScript version**
+
+```js
+const hexToRgb = (hex: string): string =>
+    hex
+        .replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (_, r, g, b) => `#${r}${r}${g}${g}${b}${b}`)
+        .substring(1)
+        .match(/.{2}/g)
+        .map((x) => parseInt(x, 16));
+```
+
+**Examples**
+
+```js
+hexToRgb('#00ffff'); // [0, 255, 255]
+hexToRgb('#0ff'); // [0, 255, 255]
+```

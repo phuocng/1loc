@@ -1,0 +1,27 @@
+---
+category: String
+contributors:
+    - marcobiedermann
+created: '2020-05-18'
+title: Check if a string is a palindrome
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isPalindrome = (str) => str === str.split('').reverse().join('');
+```
+
+**TypeScript version**
+
+```js
+const isPalindrome = (str: string): boolean => str === str.split('').reverse().join('');
+```
+
+**Examples**
+
+```js
+isPalindrome('abc'); // false
+isPalindrom('abcba'); // true
+```

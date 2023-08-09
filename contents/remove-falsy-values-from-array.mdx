@@ -1,0 +1,27 @@
+---
+category: Array
+contributors:
+    - vreymond
+created: '2020-05-09'
+title: Remove falsy values from array
+updated: '2021-10-22'
+---
+
+**JavaScript version**
+
+```js
+const removeFalsy = (arr) => arr.filter(Boolean);
+```
+
+**TypeScript version**
+
+```js
+const removeFalsy = <T,_>(arr: T[]): T[] => arr.filter(Boolean);
+```
+
+**Example**
+
+```js
+removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false]);
+// ['a string', true, 5, 'another string']
+```

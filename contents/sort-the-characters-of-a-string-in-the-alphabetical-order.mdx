@@ -1,0 +1,32 @@
+---
+category: String
+created: '2020-05-16'
+title: Sort the characters of a string in the alphabetical order
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const sort = (str) =>
+    str
+        .split('')
+        .sort((a, b) => a.localeCompare(b))
+        .join('');
+```
+
+**TypeScript version**
+
+```js
+const sort = (str: string): string =>
+    str
+        .split('')
+        .sort((a, b) => a.localeCompare(b))
+        .join('');
+```
+
+**Examples**
+
+```js
+sort('hello world'); // dehllloorw
+```

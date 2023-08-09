@@ -1,0 +1,35 @@
+---
+category: Random
+contributors:
+    - PiyushSuthar
+    - Comet32
+created: '2020-08-10'
+title: Generate a random IP address
+updated: '2023-08-09'
+---
+
+**JavaScript version**
+
+```js
+const randomIp = () =>
+    Array(4)
+        .fill(0)
+        .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+        .join('.');
+```
+
+**TypeScript version**
+
+```js
+const randomIp = (): string =>
+    Array(4)
+        .fill(0)
+        .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+        .join('.');
+```
+
+**Examples**
+
+```js
+randomIp(); // 175.89.174.131
+```

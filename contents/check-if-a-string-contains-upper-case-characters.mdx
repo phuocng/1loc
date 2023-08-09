@@ -1,0 +1,25 @@
+---
+category: Validator
+created: '2020-05-16'
+title: Check if a string contains upper case characters
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const containsUpperCase = (str) => str !== str.toLowerCase();
+```
+
+**TypeScript version**
+
+```js
+const containsUpperCase = (str: string): boolean => str !== str.toLowerCase();
+```
+
+**Examples**
+
+```js
+containsUpperCase('Hello World'); // true
+containsUpperCase('hello world'); // false
+```

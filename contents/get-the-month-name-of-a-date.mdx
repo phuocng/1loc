@@ -1,0 +1,47 @@
+---
+category: Date Time
+created: '2020-05-05'
+title: Get the month name of a date
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+// `date` is a Date object
+const getMonthName = (date) =>
+    [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        ' November',
+        'December',
+    ][date.getMonth()];
+```
+
+**TypeScript version**
+
+```js
+const getMonthName = (date: Date): string =>
+    [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        ' November',
+        'December',
+    ][date.getMonth()];
+```

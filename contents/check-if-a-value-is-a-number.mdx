@@ -1,0 +1,20 @@
+---
+category: Validator
+contributors:
+    - nbayramberdiyev
+created: '2020-04-23'
+title: Check if a value is a number
+updated: '2021-11-03'
+---
+
+**JavaScript version**
+
+```js
+const isNumber = (value) => !isNaN(parseFloat(value)) && isFinite(value);
+```
+
+**TypeScript version**
+
+```js
+const isNumber = (value: any): number => !isNaN(parseFloat(value)) && isFinite(value);
+```

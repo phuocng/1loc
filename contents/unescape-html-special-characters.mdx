@@ -1,0 +1,30 @@
+---
+category: String
+created: '2020-05-29'
+title: Unescape HTML special characters
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const unescape = (str) =>
+    str
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#0*39;/g, "'")
+        .replace(/&quot;/g, '"');
+```
+
+**TypeScript version**
+
+```js
+const unescape = (str: string): string =>
+    str
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#0*39;/g, "'")
+        .replace(/&quot;/g, '"');
+```

@@ -1,0 +1,18 @@
+---
+category: DOM
+created: '2020-04-19'
+title: Insert given HTML after an element
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const insertHtmlAfter = (html, ele) => ele.insertAdjacentHTML('afterend', html);
+```
+
+**TypeScript version**
+
+```js
+const insertHtmlAfter = (html: string, ele: Element): void => ele.insertAdjacentHTML('afterend', html);
+```

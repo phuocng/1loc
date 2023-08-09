@@ -1,0 +1,18 @@
+---
+category: DOM
+created: '2020-04-19'
+title: Check if an element is focused
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const hasFocus = (ele) => ele === document.activeElement;
+```
+
+**TypeScript version**
+
+```js
+const hasFocus = (ele: Node): boolean => ele === document.activeElement;
+```

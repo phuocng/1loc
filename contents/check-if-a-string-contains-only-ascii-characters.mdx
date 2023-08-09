@@ -1,0 +1,18 @@
+---
+category: Validator
+created: '2020-06-09'
+title: Check if a string contains only ASCII characters
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const isAscii = (str) => /^[\x00-\x7F]+$/.test(str);
+```
+
+**TypeScript version**
+
+```js
+const isAscii = (str: string): boolean => /^[\x00-\x7F]+$/.test(str);
+```

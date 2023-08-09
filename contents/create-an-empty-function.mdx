@@ -1,0 +1,19 @@
+---
+category: Function
+contributors:
+    - jnields
+    - naugtur
+created: '2020-05-07'
+title: Create an empty function
+updated: '2020-05-27'
+---
+
+**JavaScript version**
+
+```js
+const noop = () => {};
+
+// Or
+const noop = Function();
+// calling Function() might be detected as using eval by some security tools
+```

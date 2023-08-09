@@ -1,0 +1,19 @@
+---
+category: DOM
+created: '2020-04-19'
+title: Replace an element
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
+```
+
+**TypeScript version**
+
+```js
+const replace = (ele: Element, newEle: Element): Element | null =>
+    ele.parentNode ? ele.parentNode.replaceChild(newEle, ele) : null;
+```

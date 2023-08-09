@@ -1,0 +1,17 @@
+---
+category: Object
+contributors:
+    - Namysh
+created: '2020-05-13'
+title: Shallow copy an object
+updated: '2020-07-16'
+---
+
+**JavaScript version**
+
+```js
+const shallowCopy = obj => Object.assign({}, obj);
+
+// or
+const shallowCopy = obj => {...obj};
+```

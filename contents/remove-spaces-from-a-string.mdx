@@ -1,0 +1,24 @@
+---
+category: String
+created: '2020-05-03'
+title: Remove spaces from a string
+updated: '2021-10-13'
+---
+
+**JavaScript version**
+
+```js
+const removeSpaces = (str) => str.replace(/\s/g, '');
+```
+
+**TypeScript version**
+
+```js
+const removeSpaces = (str: string): string => str.replace(/\s/g, '');
+```
+
+**Examples**
+
+```js
+removeSpaces('hel lo wor ld'); // 'helloworld'
+```

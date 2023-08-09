@@ -1,0 +1,31 @@
+---
+category: Validator
+created: '2021-02-25'
+title: Check if a flat array has duplicate values
+updated: '2022-01-26'
+---
+
+**JavaScript version**
+
+```js
+const hasDuplicateValues = (arr) => new Set(arr).size !== arr.length;
+
+// Or
+const hasDuplicateValues = (arr) => arr.some((item, index, arr) => arr.indexOf(item) !== index);
+```
+
+**TypeScript version**
+
+```js
+const hasDuplicateValues = <T,_>(arr: T[]): boolean => new Set(arr).size !== arr.length;
+
+// Or
+const hasDuplicateValues = <T,_>(arr: T[]): boolean => arr.some((item, index, arr) => arr.indexOf(item) !== index);
+```
+
+**Examples**
+
+```js
+hasDuplicateValues(['h', 'e', 'l', 'l', 'o']); // true
+hasDuplicateValues(['w', 'o', 'r', 'd']); // false
+```
