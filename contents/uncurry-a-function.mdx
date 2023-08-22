@@ -20,7 +20,7 @@ const uncurry =
 
 **Examples**
 
-```js
+```js examples.js
 const sum = (a) => (b) => (c) => a + b + c;
 uncurry(sum, 1)(1)(2)(3); // 6
 uncurry(sum, 2)(1, 2)(3); // 6

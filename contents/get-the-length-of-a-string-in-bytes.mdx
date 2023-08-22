@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js bytes.js
 const bytes = (str) => new Blob([str]).size;
 ```
 
 **TypeScript version**
 
-```js
+```ts bytes.ts
 const bytes = (str: string): number => new Blob([str]).size;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 bytes('hello world'); // 11
 bytes('🎉'); // 4
 ```

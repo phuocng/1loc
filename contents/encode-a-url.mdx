@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js encode.js
 // `encodeURIComponent` doesn't encode -_.!~*'()
 const encode = (url) =>
     encodeURIComponent(url)
@@ -22,7 +22,7 @@ const encode = (url) =>
 
 **TypeScript version**
 
-```js
+```ts encode.ts
 const encode = (url: string): string =>
     encodeURIComponent(url)
         .replace(/!/g, '%21')

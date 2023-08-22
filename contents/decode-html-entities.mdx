@@ -6,13 +6,13 @@ title: Decode HTML entities
 
 **JavaScript version**
 
-```js
+```js decodeHtmlEntities.js
 const decodeHtmlEntities = (str) => str.replace(/&#(\w+)(^\w|;)?/g, (_, dec) => String.fromCharCode(dec));
 ```
 
 **TypeScript version**
 
-```js
+```ts decodeHtmlEntities.ts
 const decodeHtmlEntities = (str: string): string =>
     str.replace(/&#(\w+)(^\w|;)?/g, (_, dec) => String.fromCharCode(dec));
 ```

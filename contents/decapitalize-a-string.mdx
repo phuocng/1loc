@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js decapitalize.js
 const decapitalize = (str) => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
 
 // Or
@@ -16,7 +16,7 @@ const decapitalize = ([first, ...rest]) => `${first.toLowerCase()}${rest.join(''
 
 **TypeScript version**
 
-```js
+```ts decapitalize.ts
 const decapitalize = (str: string): string => `${str.charAt(0).toLowerCase()}${str.slice(1)}`;
 
 // Or
@@ -25,6 +25,6 @@ const decapitalize = ([first, ...rest]: string): string => `${first.toLowerCase(
 
 **Examples**
 
-```js
+```js examples.js
 decapitalize('Hello world'); // 'hello world'
 ```

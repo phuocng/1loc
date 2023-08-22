@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isMongoId.js
 const isMongoId = (str) => str.length === 24 && /^[A-F0-9]+$/i.test(str);
 
 // Or
@@ -16,7 +16,7 @@ const isMongoId = (str) => str.length === 24 && str.split('').every((c) => '0123
 
 **TypeScript version**
 
-```js
+```ts isMongoId.ts
 const isMongoId = (str: string): boolean => str.length === 24 && /^[A-F0-9]+$/i.test(str);
 
 // Or

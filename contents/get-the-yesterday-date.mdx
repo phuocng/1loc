@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js yesterday.js
 const yesterday = ((d) => new Date(d.setDate(d.getDate() - 1)))(new Date());
 
 // Or
@@ -16,7 +16,7 @@ const yesterday = new Date(new Date().valueOf() - 1000 * 60 * 60 * 24);
 
 **TypeScript version**
 
-```js
+```ts yesterday.ts
 const yesterday: Date = ((d) => new Date(d.setDate(d.getDate() - 1)))(new Date());
 
 // Or
@@ -25,5 +25,5 @@ const yesterday: Date = new Date(new Date().valueOf() - 1000 * 60 * 60 * 24);
 
 ## See also
 
--   [Determine one year from now](https://phuoc.ng/collections/1-loc/determine-one-year-from-now)
--   [Get the tomorrow date](https://phuoc.ng/collections/1-loc/get-the-tomorrow-date)
+-   [Determine one year from now](https://phuoc.ng/collection/1-loc/determine-one-year-from-now)
+-   [Get the tomorrow date](https://phuoc.ng/collection/1-loc/get-the-tomorrow-date)

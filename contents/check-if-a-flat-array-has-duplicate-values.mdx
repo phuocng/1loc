@@ -7,7 +7,7 @@ updated: '2022-01-26'
 
 **JavaScript version**
 
-```js
+```js hasDuplicateValues.js
 const hasDuplicateValues = (arr) => new Set(arr).size !== arr.length;
 
 // Or
@@ -16,7 +16,7 @@ const hasDuplicateValues = (arr) => arr.some((item, index, arr) => arr.indexOf(i
 
 **TypeScript version**
 
-```js
+```ts hasDuplicateValues.ts
 const hasDuplicateValues = <T,_>(arr: T[]): boolean => new Set(arr).size !== arr.length;
 
 // Or
@@ -25,7 +25,7 @@ const hasDuplicateValues = <T,_>(arr: T[]): boolean => arr.some((item, index, ar
 
 **Examples**
 
-```js
+```js examples.js
 hasDuplicateValues(['h', 'e', 'l', 'l', 'o']); // true
 hasDuplicateValues(['w', 'o', 'r', 'd']); // false
 ```

@@ -9,19 +9,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js trim.js
 const trim = (str, char) => str.split(char).filter(Boolean).join();
 ```
 
 **TypeScript version**
 
-```js
+```ts trim.ts
 const trim = (str: string, char: string): string => str.split(char).filter(Boolean).join();
 ```
 
 **Examples**
 
-```js
+```js examples.js
 trim('/hello world//', '/'); // hello world
 trim('"hello world"', '"'); // hello world
 trim('   hello world ', ' '); // hello world

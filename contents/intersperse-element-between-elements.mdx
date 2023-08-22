@@ -8,7 +8,7 @@ title: Intersperse element between elements
 
 **JavaScript version**
 
-```js
+```js intersperse.js
 const intersperse = (a, s) => [...Array(2 * a.length - 1)].map((_, i) => (i % 2 ? s : a[i / 2]));
 ```
 

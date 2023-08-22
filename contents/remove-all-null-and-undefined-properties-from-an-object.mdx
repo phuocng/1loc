@@ -9,7 +9,7 @@ updated: '2023-05-15'
 
 **JavaScript version**
 
-```js
+```js removeNullUndefined.js
 const removeNullUndefined = (obj) => Object.entries(obj).reduce((a, [k, v]) => (v == null ? a : ((a[k] = v), a)), {});
 
 // Or
@@ -48,7 +48,7 @@ const removeNullUndefined = <T extends Record<string, any>>(obj: T) =>
 
 **Examples**
 
-```js
+```js examples.js
 removeNullUndefined({
     foo: null,
     bar: undefined,

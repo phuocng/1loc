@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js replace.js
 const replace = (ele, newEle) => ele.parentNode.replaceChild(newEle, ele);
 ```
 
 **TypeScript version**
 
-```js
+```ts replace.ts
 const replace = (ele: Element, newEle: Element): Element | null =>
     ele.parentNode ? ele.parentNode.replaceChild(newEle, ele) : null;
 ```

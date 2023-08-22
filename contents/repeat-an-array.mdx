@@ -7,7 +7,7 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js repeat.js
 // `arr` is an array
 const repeat = (arr, n) => [].concat(...Array(n).fill(arr));
 
@@ -26,7 +26,7 @@ const repeat = (arr, n) => Array.from({ length: arr.length * n }, (_, i) => arr[
 
 **TypeScript version**
 
-```js
+```ts repeat.ts
 const repeat = <T,_>(arr: T[], n: number): T[] => [].concat(...Array(n).fill(arr));
 
 // Or
@@ -44,6 +44,6 @@ const repeat = <T,_>(arr: T[], n: number): T[] => Array.from({ length: arr.lengt
 
 **Example**
 
-```js
+```js example.js
 repeat([1, 2, 3], 3); // [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ```

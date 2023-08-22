@@ -9,13 +9,13 @@ updated: '2020-08-18'
 
 **JavaScript version**
 
-```js
+```js boxHandler.js
 const boxHandler = (x) => ({ next: (f) => boxHandler(f(x)), done: (f) => f(x) });
 ```
 
 **Examples**
 
-```js
+```js examples.js
 // First example
 const getPercentNumber = (str) =>
     boxHandler(str)

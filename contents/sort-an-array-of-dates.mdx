@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js sortDescending.js
 // `arr` is an array of `Date` items
 const sortDescending = (arr) => arr.sort((a, b) => a.getTime() > b.getTime());
 
@@ -16,7 +16,7 @@ const sortAscending = (arr) => arr.sort((a, b) => a.getTime() < b.getTime());
 
 **TypeScript version**
 
-```js
+```ts sortDescending.ts
 const sortDescending = (arr: Date[]): Date[] => arr.sort((a, b) => a.getTime() - b.getTime());
 
 const sortAscending = (arr: Date[]): Date[] => arr.sort((a, b) => b.getTime() - a.getTime());

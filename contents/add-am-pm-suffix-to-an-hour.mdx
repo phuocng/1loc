@@ -7,20 +7,20 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js suffixAmPm.js
 // `h` is an hour number between 0 and 23
 const suffixAmPm = (h) => `${h % 12 === 0 ? 12 : h % 12}${h < 12 ? 'am' : 'pm'}`;
 ```
 
 **TypeScript version**
 
-```js
+```ts suffixAmPm.ts
 const suffixAmPm = (h: number): string => `${h % 12 === 0 ? 12 : h % 12}${h < 12 ? 'am' : 'pm'}`;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 suffixAmPm(0); // '12am'
 suffixAmPm(5); // '5am'
 suffixAmPm(12); // '12pm'

@@ -6,7 +6,7 @@ title: Compose functions
 
 **JavaScript version**
 
-```js
+```js compose.js
 // Compose functions from right to left
 const compose =
     (...fns) =>
@@ -16,7 +16,7 @@ const compose =
 
 **Examples**
 
-```js
+```js examples.js
 const lowercase = (str) => str.toLowerCase();
 const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 const reverse = (str) => str.split('').reverse().join('');

@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js coalesce.js
 const coalesce = (...args) => args.find((item) => item !== undefined && item !== null);
 
 // Or
@@ -16,7 +16,7 @@ const coalesce = (...args) => args.find((item) => ![undefined, null].includes(it
 
 **TypeScript version**
 
-```js
+```ts coalesce.ts
 const coalesce = (...args: any[]): any[] => args.find((item) => item !== undefined && item !== null);
 
 // Or
@@ -25,6 +25,6 @@ const coalesce = (...args: any[]): any[] => args.find((item) => ![undefined, nul
 
 **Examples**
 
-```js
+```js examples.js
 coalesce(undefined, null, 'helloworld', NaN); // 'helloworld'
 ```

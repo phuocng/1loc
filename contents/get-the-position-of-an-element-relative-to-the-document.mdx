@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getPosition.js
 const getPosition = (ele) => (
     (r = ele.getBoundingClientRect()), { left: r.left + window.scrollX, top: r.top + window.scrollY }
 );
@@ -15,6 +15,6 @@ const getPosition = (ele) => (
 
 **Example**
 
-```js
+```js example.js
 getPosition(document.body); // { left: 0, top: 0 }
 ```

@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js trimSlashes.js
 const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '');
 
 // Or
@@ -16,7 +16,7 @@ const trimSlashes = (str) => str.split('/').filter(Boolean).join('/');
 
 **TypeScript version**
 
-```js
+```ts trimSlashes.ts
 const trimSlashes = (str: string): string => str.replace(/^\/+|\/+$/g, '');
 
 // Or
@@ -25,6 +25,6 @@ const trimSlashes = (str: string): string => str.split('/').filter(Boolean).join
 
 **Examples**
 
-```js
+```js examples.js
 trimSlashes('//hello/world///'); // hello/world
 ```

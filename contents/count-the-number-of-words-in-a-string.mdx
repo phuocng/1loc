@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js countWords.js
 const countWords = (str) => str.trim().split(/\s+/).length;
 ```
 
 **TypeScript version**
 
-```js
+```ts countWords.ts
 const countWords = (str: string): number => str.trim().split(/\s+/).length;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 countWords('Hello World'); // 2
 countWords('Hello    World'); // 2
 countWords('  Hello  World  '); // 2

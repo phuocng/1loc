@@ -9,7 +9,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js randomColor.js
 const randomColor = () => `#${Math.random().toString(16).slice(2, 8).padEnd(6, '0')}`;
 
 // Or
@@ -18,7 +18,7 @@ const randomColor = () => `#${(~~(Math.random() * (1 << 24))).toString(16)}`;
 
 **TypeScript version**
 
-```js
+```ts randomColor.ts
 const randomColor = (): string => `#${Math.random().toString(16).slice(2, 8).padEnd(6, '0')}`;
 
 // Or

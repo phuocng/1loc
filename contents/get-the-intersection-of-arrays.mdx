@@ -10,19 +10,19 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js getIntersection.js
 const getIntersection = (a, ...arr) => [...new Set(a)].filter((v) => arr.every((b) => b.includes(v)));
 ```
 
 **TypeScript version**
 
-```js
+```ts getIntersection.ts
 const getIntersection = <T,_>(a: T[], ...arr: T[][]): T[] => [...new Set(a)].filter((v) => arr.every((b) => b.includes(v)));
 ```
 
 **Examples**
 
-```js
+```js examples.js
 getIntersection([1, 2, 3], [2, 3, 4, 5]); // [2, 3]
 getIntersection([1, 2, 3], [2, 3, 4, 5], [1, 3, 5]); // [3]
 ```

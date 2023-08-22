@@ -9,20 +9,20 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js monthDiff.js
 const monthDiff = (startDate, endDate) =>
     Math.max(0, (endDate.getFullYear() - startDate.getFullYear()) * 12 - startDate.getMonth() + endDate.getMonth());
 ```
 
 **TypeScript version**
 
-```js
+```ts monthDiff.ts
 const monthDiff = (startDate: Date, endDate: Date): number =>
     Math.max(0, (endDate.getFullYear() - startDate.getFullYear()) * 12 - startDate.getMonth() + endDate.getMonth());
 ```
 
 **Example**
 
-```js
+```js example.js
 monthDiff(new Date('2020-01-01'), new Date('2021-01-01')); // 12
 ```

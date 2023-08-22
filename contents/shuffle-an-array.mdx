@@ -9,7 +9,7 @@ updated: '2021-12-22'
 
 **JavaScript version**
 
-```js
+```js shuffle.js
 const shuffle = (arr) =>
     arr
         .map((a) => ({ sort: Math.random(), value: a }))
@@ -19,7 +19,7 @@ const shuffle = (arr) =>
 
 **TypeScript version**
 
-```js
+```ts shuffle.ts
 const shuffle = <T,_>(arr: T[]): T[] =>
     arr
         .map((a) => ({ sort: Math.random(), value: a }))
@@ -29,6 +29,6 @@ const shuffle = <T,_>(arr: T[]): T[] =>
 
 **Example**
 
-```js
+```js example.js
 shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // [9, 1, 10, 6, 8, 5, 2, 3, 7, 4]
 ```

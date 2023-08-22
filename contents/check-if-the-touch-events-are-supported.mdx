@@ -7,14 +7,14 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js touchSupported.js
 const touchSupported = () =>
     'ontouchstart' in window || (window.DocumentTouch && document instanceof window.DocumentTouch);
 ```
 
 **TypeScript version**
 
-```js
+```ts touchSupported.ts
 const touchSupported = (): boolean => (
     'ontouchstart' in window || (window as any)['DocumentTouch'] && document instanceof (window as any)['DocumentTouch']
 );

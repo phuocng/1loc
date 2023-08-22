@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getUrlParams.js
 const getUrlParams = (query) =>
     Array.from(new URLSearchParams(query)).reduce(
         (p, [k, v]) => Object.assign({}, p, { [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v }),
@@ -17,7 +17,7 @@ const getUrlParams = (query) =>
 
 **TypeScript version**
 
-```js
+```ts getUrlParams.ts
 const getUrlParams = (query: string): Record<string, string> => (
     Array.from(new URLSearchParams(query)).reduce((p, [k, v]) => Object.assign({}, p, { [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v }), {} as Record<string, string>)
 );
@@ -25,7 +25,7 @@ const getUrlParams = (query: string): Record<string, string> => (
 
 **Examples**
 
-```js
+```js examples.js
 getUrlParams(location.search); // Get the parameters of the current URL
 
 getUrlParams('foo=Foo&bar=Bar'); // { foo: "Foo", bar: "Bar" }

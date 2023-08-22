@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js zip.js
 const zip = (...arr) => Array.from({ length: Math.max(...arr.map((a) => a.length)) }, (_, i) => arr.map((a) => a[i]));
 ```
 
 **Example**
 
-```js
+```js example.js
 zip(['a', 'b', 'c', 'd', 'e'], [1, 2, 3, 4, 5]); // [['a', 1], ['b', 2], ['c', 3], ['d', 4], ['e', 5]]
 
 /*

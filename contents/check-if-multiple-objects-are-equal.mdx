@@ -9,20 +9,20 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isEqual.js
 const isEqual = (...objects) => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
 ```
 
 **TypeScript version**
 
-```js
+```ts isEqual.ts
 const isEqual = (...objects: object[]): boolean =>
     objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isEqual({ foo: 'bar' }, { foo: 'bar' }); // true
 isEqual({ foo: 'bar' }, { bar: 'foo' }); // false
 ```

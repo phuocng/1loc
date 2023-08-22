@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js maxBy.js
 const maxBy = (arr, key) => arr.reduce((a, b) => (a[key] >= b[key] ? a : b), {});
 ```
 
 **TypeScript version**
 
-```js
+```ts maxBy.ts
 const maxBy = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: K): T => (
     arr.reduce((a, b) => (a[key] >= b[key] ? a : b), {} as T)
 );
@@ -21,7 +21,7 @@ const maxBy = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: 
 
 **Example**
 
-```js
+```js example.js
 const people = [
     { name: 'Bar', age: 24 },
     { name: 'Baz', age: 32 },

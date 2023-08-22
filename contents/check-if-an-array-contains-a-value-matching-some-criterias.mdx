@@ -12,7 +12,7 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js contains.js
 const contains = (arr, criteria) => arr.some((v) => criteria(v));
 
 // Or
@@ -24,7 +24,7 @@ const contains = (arr, criteria) => arr.filter(criteria).length > 0;
 
 **TypeScript version**
 
-```js
+```ts contains.ts
 const contains = <T,_>(arr: T[], criteria: (a: T) => boolean): boolean => arr.some((v) => criteria(v));
 
 // Or
@@ -36,7 +36,7 @@ const contains = <T,_>(arr: T[], criteria: (a: T) => boolean): boolean => arr.fi
 
 **Examples**
 
-```js
+```js examples.js
 contains([10, 20, 30], (v) => v > 25); // true
 contains([10, 20, 30], (v) => v > 100 || v < 15); // true
 contains([10, 20, 30], (v) => v > 100); // false

@@ -6,7 +6,7 @@ title: Omit a subset of properties from an object
 
 **JavaScript version**
 
-```js
+```js omit.js
 const omit = (obj, keys) =>
     Object.keys(obj)
         .filter((k) => !keys.includes(k))
@@ -15,6 +15,6 @@ const omit = (obj, keys) =>
 
 **Examples**
 
-```js
+```js examples.js
 omit({ a: '1', b: '2', c: '3' }, ['a', 'b']); // { c: '3' }
 ```

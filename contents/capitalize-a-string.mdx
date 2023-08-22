@@ -10,7 +10,7 @@ updated: '2020-04-19'
 
 **JavaScript version**
 
-```js
+```js capitalize.js
 const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 // Or
@@ -22,7 +22,7 @@ const capitalize = (str) => str.replace(/^([a-z])/, (first) => first.toUpperCase
 
 **TypeScript version**
 
-```js
+```ts capitalize.ts
 const capitalize = (str: string): string => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 // Or
@@ -34,6 +34,6 @@ const capitalize = (str: string): string => str.replace(/^([a-z])/, (first) => f
 
 **Examples**
 
-```js
+```js examples.js
 capitalize('hello world'); // 'Hello world'
 ```

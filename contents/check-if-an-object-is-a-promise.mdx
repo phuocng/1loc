@@ -9,14 +9,14 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isPromise.js
 const isPromise = (obj) =>
     !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
 ```
 
 **TypeScript version**
 
-```js
+```ts isPromise.ts
 const isPromise = (obj: any): boolean =>
     !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
 ```

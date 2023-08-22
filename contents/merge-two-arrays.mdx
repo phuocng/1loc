@@ -7,7 +7,7 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js merge.js
 // Merge but don't remove the duplications
 const merge = (a, b) => a.concat(b);
 // Or
@@ -21,7 +21,7 @@ const merge = (a, b) => [...new Set([...a, ...b])];
 
 **TypeScript version**
 
-```js
+```ts merge.ts
 // Merge but don't remove the duplications
 const merge = <T,_>(a: T[], b: T[]): T[] => a.concat(b);
 // Or

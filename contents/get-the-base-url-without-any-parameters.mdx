@@ -9,7 +9,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js baseUrl.js
 const baseUrl = (url) => (url.indexOf('?') === -1 ? url : url.slice(0, url.indexOf('?')));
 
 // Or
@@ -22,7 +22,7 @@ const baseUrl = (url) => url.split('?')[0];
 
 **TypeScript version**
 
-```js
+```ts baseUrl.ts
 const baseUrl = (url: string): string => (url.indexOf('?') === -1 ? url : url.slice(0, url.indexOf('?')));
 
 // Or
@@ -35,6 +35,6 @@ const baseUrl = (url: string): string => url.split('?')[0];
 
 **Examples**
 
-```js
+```js examples.js
 baseUrl('https://domain.com/path/sub/path?foo=bar&hello=world'); // 'https://domain.com/path/sub/path'
 ```

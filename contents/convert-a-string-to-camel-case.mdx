@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js toCamelCase.js
 const toCamelCase = (str) => str.trim().replace(/[-_\s]+(.)?/g, (_, c) => (c ? c.toUpperCase() : ''));
 ```
 
 **TypeScript version**
 
-```js
+```ts toCamelCase.ts
 const toCamelCase = (str: string): string => str.trim().replace(/[-_\s]+(.)?/g, (_, c) => (c ? c.toUpperCase() : ''));
 ```
 
 **Examples**
 
-```js
+```js examples.js
 toCamelCase('background-color'); // backgroundColor
 toCamelCase('-webkit-scrollbar-thumb'); // WebkitScrollbarThumb
 toCamelCase('_hello_world'); // HelloWorld

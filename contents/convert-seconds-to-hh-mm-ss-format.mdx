@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js formatSeconds.js
 // `s` is number of seconds
 const formatSeconds = (s) => new Date(s * 1000).toISOString().substr(11, 8);
 
@@ -21,7 +21,7 @@ const formatSeconds = (s) =>
 
 **TypeScript version**
 
-```js
+```ts formatSeconds.ts
 const formatSeconds = (s: number): string => new Date(s * 1000).toISOString().substr(11, 8);
 
 // Or
@@ -35,7 +35,7 @@ const formatSeconds = (s: number): string => (
 
 **Examples**
 
-```js
+```js examples.js
 formatSeconds(200); // 00:03:20
 formatSeconds(500); // 00:08:20
 ```

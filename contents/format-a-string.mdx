@@ -8,7 +8,7 @@ title: Format a string
 
 **JavaScript version**
 
-```js
+```js format.js
 const format = (str, ...vals) => vals.reduce((s, v, i) => s.replace(new RegExp('\\{' + i + '\\}', 'g'), v), str);
 ```
 
@@ -21,7 +21,7 @@ const format = (str: string, ...vals: unknown[]): string =>
 
 **Examples**
 
-```js
+```js examples.js
 const template = 'My name is {0} and I am {1} years old';
 
 format(template, 'John', 30));

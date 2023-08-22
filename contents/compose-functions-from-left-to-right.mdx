@@ -6,7 +6,7 @@ title: Compose functions from left to right
 
 **JavaScript version**
 
-```js
+```js pipe.js
 // Compose functions from left to right
 const pipe =
     (...fns) =>
@@ -16,7 +16,7 @@ const pipe =
 
 **Examples**
 
-```js
+```js examples.js
 const lowercase = (str) => str.toLowerCase();
 const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 const reverse = (str) => str.split('').reverse().join('');
