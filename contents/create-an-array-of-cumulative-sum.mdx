@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js accumulate.js
 const accumulate = (arr) =>
     arr.map(
         (
@@ -22,7 +22,7 @@ const accumulate = (arr) => arr.reduce((a, b, i) => (i === 0 ? [b] : [...a, b + 
 
 **TypeScript version**
 
-```js
+```ts accumulate.ts
 const accumulate = (arr: number[]): number[] =>
     arr.map(
         (
@@ -37,7 +37,7 @@ const accumulate = (arr: number[]): number[] => arr.reduce((a, b, i) => (i === 0
 
 **Example**
 
-```js
+```js example.js
 accumulate([1, 2, 3, 4]); // [1, 3, 6, 10]
 // 1             = 1
 // 1 + 2         = 3

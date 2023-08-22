@@ -10,7 +10,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js toObject.js
 const toObject = (arr, key) => arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {});
 
 // Or
@@ -19,7 +19,7 @@ const toObject = (arr, key) => Object.fromEntries(arr.map((it) => [it[key], it])
 
 **TypeScript version**
 
-```js
+```ts toObject.ts
 const toObject = <T extends Record<string, any>, K extends keyof T>(arr: T[], key: K): Record<string, T> => (
     arr.reduce((a, b) => ({ ...a, [b[key]]: b }), {})
 );
@@ -31,7 +31,7 @@ const toObject = <T extends Record<string, any>, K extends keyof T>(arr: T[], ke
 
 **Example**
 
-```js
+```js example.js
 toObject(
     [
         { id: '1', name: 'Alpha', gender: 'Male' },

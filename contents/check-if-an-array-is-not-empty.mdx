@@ -10,19 +10,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isNotEmpty.js
 const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
 ```
 
 **TypeScript version**
 
-```js
+```ts isNotEmpty.ts
 const isNotEmpty = (arr: any): boolean => Array.isArray(arr) && Object.keys(arr).length > 0;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isNotEmpty([]); // false
 isNotEmpty([1, 2, 3]); // true
 ```

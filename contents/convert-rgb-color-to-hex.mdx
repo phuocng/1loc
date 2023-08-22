@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js rgbToHex.js
 const rgbToHex = (red, green, blue) => `#${((1 << 24) + (red << 16) + (green << 8) + blue).toString(16).slice(1)}`;
 
 // Or
@@ -16,7 +16,7 @@ const rgbToHex = (red, green, blue) => `#${[red, green, blue].map((v) => v.toStr
 
 **TypeScript version**
 
-```js
+```ts rgbToHex.ts
 const rgbToHex = (red: number, green: number, blue: number): string =>
     `#${((1 << 24) + (red << 16) + (green << 8) + blue).toString(16).slice(1)}`;
 
@@ -27,6 +27,6 @@ const rgbToHex = (red: number, green: number, blue: number): string =>
 
 **Examples**
 
-```js
+```js examples.js
 rgbToHex(0, 255, 255); // '#00ffff'
 ```

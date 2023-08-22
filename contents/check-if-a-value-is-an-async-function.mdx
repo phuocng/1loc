@@ -6,13 +6,13 @@ title: Check if a value is an async function
 
 **JavaScript version**
 
-```js
+```js isAsyncFunction.js
 const isAsyncFunction = (v) => Object.prototype.toString.call(v) === '[object AsyncFunction]';
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isAsyncFunction(function () {}); // false
 isAsyncFunction(function* () {}); // false
 isAsyncFunction(async function () {}); // true

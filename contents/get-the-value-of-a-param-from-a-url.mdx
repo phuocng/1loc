@@ -7,18 +7,18 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getParam.js
 const getParam = (url, param) => new URLSearchParams(new URL(url).search).get(param);
 ```
 
 **TypeScript version**
 
-```js
+```ts getParam.ts
 const getParam = (url: string, param: string): string | null => new URLSearchParams(new URL(url).search).get(param);
 ```
 
 **Examples**
 
-```js
+```js examples.js
 getParam('http://domain.com?message=hello', 'message'); // 'hello'
 ```

@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js transpose.js
 const transpose = (matrix) => matrix[0].map((col, i) => matrix.map((row) => row[i]));
 
 // Or
@@ -19,7 +19,7 @@ const transpose = (matrix) => matrix.reduce((prev, next) => next.map((item, i) =
 
 **TypeScript version**
 
-```js
+```ts transpose.ts
 const transpose = <T,>(matrix: T[][]): T[][] => matrix[0].map((col, i) => matrix.map((row) => row[i]));
 
 // Or
@@ -33,7 +33,7 @@ const transpose = <T,>(matrix: T[][]): T[][] => (
 
 **Examples**
 
-```js
+```js examples.js
 transpose([
     // [
     [1, 2, 3], //      [1, 4, 7],

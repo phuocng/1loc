@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js sortBy.js
 const sortBy = (arr, k) => arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0));
 ```
 
 **TypeScript version**
 
-```js
+```ts sortBy.ts
 const sortBy = <T extends Record<string, any>, K extends keyof T>(arr: T[], k: K): T[] => (
     arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0))
 );
@@ -21,7 +21,7 @@ const sortBy = <T extends Record<string, any>, K extends keyof T>(arr: T[], k: K
 
 **Example**
 
-```js
+```js example.js
 const people = [
     { name: 'Foo', age: 42 },
     { name: 'Bar', age: 24 },

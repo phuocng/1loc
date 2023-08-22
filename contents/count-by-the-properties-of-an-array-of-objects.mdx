@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js countBy.js
 const countBy = (arr, prop) => arr.reduce((prev, curr) => ((prev[curr[prop]] = ++prev[curr[prop]] || 1), prev), {});
 ```
 
 **TypeScript version**
 
-```js
+```ts countBy.ts
 const countBy = <T extends Record<string, string>, K extends keyof T>(arr: T[], prop: K): Record<string, number> => (
     arr.reduce((prev, curr) => ((prev[curr[prop]] = ++prev[curr[prop]] || 1), prev), {} as Record<string, number>)
 );
@@ -21,7 +21,7 @@ const countBy = <T extends Record<string, string>, K extends keyof T>(arr: T[], 
 
 **Example**
 
-```js
+```js example.js
 countBy(
     [
         { branch: 'audi', model: 'q8', year: '2019' },

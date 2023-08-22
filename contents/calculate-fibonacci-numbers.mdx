@@ -7,20 +7,20 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js fibo.js
 const fibo = (n, memo = {}) => memo[n] || (n <= 2 ? 1 : (memo[n] = fibo(n - 1, memo) + fibo(n - 2, memo)));
 ```
 
 **TypeScript version**
 
-```js
+```ts fibo.ts
 const fibo = (n: number, memo: Record<string, number> = {}): number =>
     memo[n] || (n <= 2 ? 1 : (memo[n] = fibo(n - 1, memo) + fibo(n - 2, memo)));
 ```
 
 **Examples**
 
-```js
+```js examples.js
 fibo(1); // 1
 fibo(2); // 1
 fibo(3); // 2

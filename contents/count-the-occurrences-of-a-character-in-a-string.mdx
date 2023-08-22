@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js countOccurrences.js
 const countOccurrences = (str, char) => [...str].reduce((a, v) => (v === char ? a + 1 : a), 0);
 
 // Or
@@ -22,7 +22,7 @@ const countOccurrences = (str, char) => str.split('').filter((item) => item === 
 
 **TypeScript version**
 
-```js
+```ts countOccurrences.ts
 const countOccurrences = (str: string, char: string): number => [...str].reduce((a, v) => (v === char ? a + 1 : a), 0);
 
 // Or
@@ -38,6 +38,6 @@ const countOccurrences = (str: string, char: string): number => str.split('').fi
 
 **Examples**
 
-```js
+```js examples.js
 countOccurrences('a.b.c.d.e', '.'); // 4
 ```

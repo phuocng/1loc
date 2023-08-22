@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js toUnixPath.js
 const toUnixPath = (path) => path.replace(/[\\/]+/g, '/').replace(/^([a-zA-Z]+:|\.\/)/, '');
 ```
 
 **TypeScript version**
 
-```js
+```ts toUnixPath.ts
 const toUnixPath = (path: string): string => path.replace(/[\\/]+/g, '/').replace(/^([a-zA-Z]+:|\.\/)/, '');
 ```
 
 **Examples**
 
-```js
+```js examples.js
 toUnixPath('./foo/bar/baz'); // foo/bar/baz
 toUnixPath('C:\\foo\\bar\\baz'); // /foo/bar/baz
 ```

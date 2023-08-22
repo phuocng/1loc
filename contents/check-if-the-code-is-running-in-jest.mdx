@@ -6,12 +6,12 @@ title: Check if the code is running in Jest
 
 **JavaScript version**
 
-```js
+```js isRunningInJest.js
 const isRunningInJest = typeof process !== 'undefined' && process.env.JEST_WORKER_ID !== undefined;
 ```
 
 **TypeScript version**
 
-```js
+```ts isRunningInJest.ts
 const isRunningInJest: boolean = typeof process !== 'undefined' && process.env.JEST_WORKER_ID !== undefined;
 ```

@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js toFullHexColor.js
 const toFullHexColor = (color) =>
     `#${(color.startsWith('#') ? color.slice(1) : color)
         .split('')
@@ -17,7 +17,7 @@ const toFullHexColor = (color) =>
 
 **TypeScript version**
 
-```js
+```ts toFullHexColor.ts
 const toFullHexColor = (color: string): string =>
     `#${(color.startsWith('#') ? color.slice(1) : color)
         .split('')
@@ -27,7 +27,7 @@ const toFullHexColor = (color: string): string =>
 
 **Examples**
 
-```js
+```js examples.js
 toFullHexColor('123'); // '#112233'
 toFullHexColor('#123'); // '#112233'
 toFullHexColor('#abc'); // '#aabbcc'

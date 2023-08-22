@@ -9,7 +9,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js prefixWithZeros.js
 const prefixWithZeros = (n, length) => (n / Math.pow(10, length)).toFixed(length).substr(2);
 
 // Or
@@ -21,7 +21,7 @@ const prefixWithZeros = (n, length) => String(n).padStart(length, '0');
 
 **TypeScript version**
 
-```js
+```ts prefixWithZeros.ts
 const prefixWithZeros = (n: number, length: number): string => (n / Math.pow(10, length)).toFixed(length).substr(2);
 
 // Or
@@ -33,6 +33,6 @@ const prefixWithZeros = (n: number, length: number): string => String(n).padStar
 
 **Examples**
 
-```js
+```js examples.js
 prefixWithZeros(42, 5); // '00042'
 ```

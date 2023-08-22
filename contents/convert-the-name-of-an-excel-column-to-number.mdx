@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getIndex.js
 const getIndex = (col) => col.split('').reduce((prev, next) => prev * 26 + parseInt(next, 36) - 9, 0);
 ```
 
 **TypeScript version**
 
-```js
+```ts getIndex.ts
 const getIndex = (col: string): number => col.split('').reduce((prev, next) => prev * 26 + parseInt(next, 36) - 9, 0);
 ```
 
 **Examples**
 
-```js
+```js examples.js
 getIndex('A'); // 1
 getIndex('B'); // 2
 getIndex('C'); // 3

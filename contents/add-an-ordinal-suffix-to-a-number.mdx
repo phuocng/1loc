@@ -7,20 +7,20 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js addOrdinal.js
 // `n` is a position number
 const addOrdinal = (n) => `${n}${['st', 'nd', 'rd'][((((n + 90) % 100) - 10) % 10) - 1] || 'th'}`;
 ```
 
 **TypeScript version**
 
-```js
+```ts addOrdinal.ts
 const addOrdinal = (n: number): string => `${n}${['st', 'nd', 'rd'][((((n + 90) % 100) - 10) % 10) - 1] || 'th'}`;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 addOrdinal(1); // '1st'
 addOrdinal(2); // '2nd'
 addOrdinal(3); // '3rd'

@@ -6,7 +6,7 @@ title: Partially apply a function
 
 **JavaScript version**
 
-```js
+```js partial.js
 const partial =
     (fn, ...a) =>
     (...b) =>
@@ -15,7 +15,7 @@ const partial =
 
 **Examples**
 
-```js
+```js examples.js
 const sum = (x, y) => x + y;
 const inc = partial(sum, 1);
 inc(9); // 10

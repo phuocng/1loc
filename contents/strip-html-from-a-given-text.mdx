@@ -7,12 +7,12 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js stripHtml.js
 const stripHtml = (html) => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
 ```
 
 **TypeScript version**
 
-```js
+```ts stripHtml.ts
 const stripHtml = (html: string): string => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
 ```

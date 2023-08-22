@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js unzip.js
 const unzip = (arr) =>
     arr.reduce(
         (acc, c) => (c.forEach((v, i) => acc[i].push(v)), acc),
@@ -17,7 +17,7 @@ const unzip = (arr) =>
 
 **Example**
 
-```js
+```js example.js
 unzip([
     ['a', 1],
     ['b', 2],

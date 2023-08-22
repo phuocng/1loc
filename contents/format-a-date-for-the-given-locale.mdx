@@ -15,12 +15,12 @@ const format = (date, locale) => new Intl.DateTimeFormat(locale).format(date);
 
 **TypeScript version**
 
-```js
+```ts format.ts
 const format = (date: Date, locale: string): string => new Intl.DateTimeFormat(locale).format(date);
 ```
 
 **Example**
 
-```js
+```js example.js
 format(new Date(), 'pt-BR'); // 06/05/2020
 ```

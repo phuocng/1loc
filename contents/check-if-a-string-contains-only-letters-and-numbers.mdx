@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isAlphanumeric.js
 const isAlphanumeric = (str) => /^[0-9A-Z]+$/i.test(str);
 ```
 
 **TypeScript version**
 
-```js
+```ts isAlphanumeric.ts
 const isAlphanumeric = (str: string): boolean => /^[0-9A-Z]+$/i.test(str);
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isAlphanumeric('helloworld'); // true
 isAlphanumeric('HelloWorld'); // true
 isAlphanumeric('hello world'); // false

@@ -7,18 +7,18 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js union.js
 const union = (...arr) => [...new Set(arr.flat())];
 ```
 
 **TypeScript version**
 
-```js
+```ts union.ts
 const union = <T,_>(...arr: T[][]): T[] => [...new Set(arr.flat())];
 ```
 
 **Example**
 
-```js
+```js example.js
 union([1, 2], [2, 3], [3]); // [1, 2, 3]
 ```

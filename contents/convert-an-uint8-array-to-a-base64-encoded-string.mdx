@@ -6,7 +6,7 @@ title: Convert an uint8 array to a base64 encoded string
 
 **JavaScript version**
 
-```js
+```js uint8ToBase64.js
 const uint8ToBase64 = (arr) =>
     btoa(
         Array(arr.length)
@@ -21,7 +21,7 @@ const uint8ToBase64 = (arr) => Buffer.from(arr).toString('base64');
 
 **TypeScript version**
 
-```js
+```ts uint8ToBase64.ts
 const uint8ToBase64 = (arr: Uint8Array): string =>
     btoa(
         Array(arr.length)
@@ -36,4 +36,4 @@ const uint8ToBase64 = (arr: Uint8Array): string => Buffer.from(arr).toString('ba
 
 ## See also
 
--   [Convert a base64 encoded string to an uint8 array](https://phuoc.ng/collections/1-loc/convert-a-base64-encoded-string-to-an-uint8-array)
+-   [Convert a base64 encoded string to an uint8 array](https://phuoc.ng/collection/1-loc/convert-a-base64-encoded-string-to-an-uint8-array)

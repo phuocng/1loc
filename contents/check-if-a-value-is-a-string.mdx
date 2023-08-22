@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isString.js
 const isString = (value) => Object.prototype.toString.call(value) === '[object String]';
 ```
 
 **TypeScript version**
 
-```js
+```ts isString.ts
 const isString = (value: any): boolean => Object.prototype.toString.call(value) === '[object String]';
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isString('hello world'); // true
 isString(new String('hello world')); // true
 isString(10); // false

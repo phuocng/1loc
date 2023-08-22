@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js redirectHttps.js
 const redirectHttps = () =>
     location.protocol === 'https:' ? {} : location.replace(`https://${location.href.split('//')[1]}`);
 
@@ -17,7 +17,7 @@ const redirectHttps = () => (location.protocol === 'https:' ? {} : (location.pro
 
 **TypeScript version**
 
-```js
+```ts redirectHttps.ts
 const redirectHttps = (): void =>
     location.protocol === 'https:' ? void 0 : location.replace(`https://${location.href.split('//')[1]}`);
 

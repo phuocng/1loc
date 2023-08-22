@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js insertBefore.js
 const insertBefore = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele, anotherEle);
 
 // Or
@@ -16,7 +16,7 @@ const insertBefore = (ele, anotherEle) => anotherEle.insertAdjacentElement('befo
 
 **TypeScript version**
 
-```js
+```ts insertBefore.ts
 const insertBefore = (ele: Element, anotherEle: Element): Element | null =>
     anotherEle.parentNode ? anotherEle.parentNode.insertBefore(ele, anotherEle) : null;
 

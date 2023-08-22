@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js numberOfDays.js
 const numberOfDays = (year) => ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 ? 366 : 365);
 
 // Or
@@ -16,7 +16,7 @@ const numberOfDays = (year) => (new Date(year, 1, 29).getDate() === 29 ? 366 : 3
 
 **TypeScript version**
 
-```js
+```ts numberOfDays.ts
 const numberOfDays = (year: number): number => ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 ? 366 : 365);
 
 // Or

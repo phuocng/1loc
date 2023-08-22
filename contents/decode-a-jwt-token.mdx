@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js decode.js
 const decode = (token) =>
     decodeURIComponent(
         atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
@@ -19,7 +19,7 @@ const decode = (token) =>
 
 **TypeScript version**
 
-```js
+```ts decode.ts
 const decode = (token: string): string =>
     decodeURIComponent(
         atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
@@ -31,7 +31,7 @@ const decode = (token: string): string =>
 
 **Examples**
 
-```js
+```js examples.js
 decode(`
     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
     eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0I

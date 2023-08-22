@@ -6,12 +6,12 @@ title: Get the value of a cookie
 
 **JavaScript version**
 
-```js
+```js cookie.js
 const cookie = (name) => `; ${document.cookie}`.split(`; ${name}=`).pop().split(';').shift();
 ```
 
 **Examples**
 
-```js
+```js examples.js
 cookie('_ga'); // GA1.2.825309271.1581874719
 ```

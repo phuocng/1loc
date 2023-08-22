@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js isNumeric.js
 const isNumeric = (str) => !/[^0-9]/.test(str);
 ```
 
 **TypeScript version**
 
-```js
+```ts isNumeric.ts
 const isNumeric = (str: string): boolean => !/[^0-9]/.test(str);
 ```
 
 **Examples**
 
-```js
+```js examples.js
 isNumeric(2); // true
 isNumeric('23'); // true
 isNumeric('00123'); // true

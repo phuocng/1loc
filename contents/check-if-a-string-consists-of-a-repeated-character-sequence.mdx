@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js consistsRepeatedSubstring.js
 const consistsRepeatedSubstring = (str) => `${str}${str}`.indexOf(str, 1) !== str.length;
 ```
 
 **TypeScript version**
 
-```js
+```ts consistsRepeatedSubstring.ts
 const consistsRepeatedSubstring = (str: string): boolean => `${str}${str}`.indexOf(str, 1) !== str.length;
 ```
 
 **Examples**
 
-```js
+```js examples.js
 consistsRepeatedSubstring('aa'); // true
 consistsRepeatedSubstring('aaa'); // true
 consistsRepeatedSubstring('ababab'); // true

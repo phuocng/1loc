@@ -7,18 +7,18 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js snakeToCamel.js
 const snakeToCamel = (str) => str.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substr(1));
 ```
 
 **TypeScript version**
 
-```js
+```ts snakeToCamel.ts
 const snakeToCamel = (str: string): string => str.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substr(1));
 ```
 
 **Examples**
 
-```js
+```js examples.js
 snakeToCamel('HELLO_world'); // 'helloWorld'
 ```

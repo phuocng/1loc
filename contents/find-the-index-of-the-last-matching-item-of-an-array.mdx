@@ -7,7 +7,7 @@ updated: '2021-10-22'
 
 **JavaScript version**
 
-```js
+```js lastIndex.js
 const lastIndex = (arr, predicate) => arr.reduce((prev, curr, index) => (predicate(curr) ? index : prev), -1);
 
 // Or
@@ -16,7 +16,7 @@ const lastIndex = (arr, predicate) => arr.map((item) => predicate(item)).lastInd
 
 **TypeScript version**
 
-```js
+```ts lastIndex.ts
 const lastIndex = <T,_>(arr: T[], predicate: (a: T) => boolean): number => arr.reduce((prev, curr, index) => (predicate(curr) ? index : prev), -1);
 
 // Or
@@ -25,7 +25,7 @@ const lastIndex = <T,_>(arr: T[], predicate: (a: T) => boolean): number => arr.m
 
 **Examples**
 
-```js
+```js examples.js
 lastIndex([1, 3, 5, 7, 9, 2, 4, 6, 8], (i) => i % 2 === 1); // 4
 lastIndex([1, 3, 5, 7, 9, 8, 6, 4, 2], (i) => i > 6); // 5
 ```

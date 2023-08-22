@@ -7,18 +7,18 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getTimezone.js
 const getTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
 ```
 
 **TypeScript version**
 
-```js
+```ts getTimezone.ts
 const getTimezone = (): string => Intl.DateTimeFormat().resolvedOptions().timeZone;
 ```
 
 **Example**
 
-```js
+```js example.js
 getTimezone(); // 'Asia/Saigon'
 ```

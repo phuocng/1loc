@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js letterToEmoji.js
 const letterToEmoji = (c) => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
 ```
 
 **TypeScript version**
 
-```js
+```ts letterToEmoji.ts
 const letterToEmoji = (c: string): string => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
 ```
 
 **Examples**
 
-```js
+```js examples.js
 letterToEmoji('a'); // 🇦
 letterToEmoji('b'); // 🇧
 ```

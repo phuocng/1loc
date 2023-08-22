@@ -7,13 +7,13 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js siblings.js
 const siblings = (ele) => [].slice.call(ele.parentNode.children).filter((child) => child !== ele);
 ```
 
 **TypeScript version**
 
-```js
+```ts siblings.ts
 const siblings = (ele: Node): Node[] =>
     ele.parentNode ? [].slice.call(ele.parentNode.children).filter((child) => child !== ele) : [];
 ```

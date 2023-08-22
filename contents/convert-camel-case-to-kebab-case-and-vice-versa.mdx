@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js kebabToCamel.js
 const kebabToCamel = (str) => str.replace(/-./g, (m) => m.toUpperCase()[1]);
 
 const camelToKebab = (str) => str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
@@ -15,7 +15,7 @@ const camelToKebab = (str) => str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLower
 
 **TypeScript version**
 
-```js
+```ts kebabToCamel.ts
 const kebabToCamel = (str: string): string => str.replace(/-./g, (m) => m.toUpperCase()[1]);
 
 const camelToKebab = (str: string): string => str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
@@ -23,7 +23,7 @@ const camelToKebab = (str: string): string => str.replace(/([a-z0-9])([A-Z])/g, 
 
 **Examples**
 
-```js
+```js examples.js
 kebabToCamel('background-color'); // 'backgroundColor'
 camelToKebab('backgroundColor'); // 'background-color'
 ```

@@ -9,7 +9,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js unique.js
 const unique = (arr) => [...new Set(arr)];
 
 // Or
@@ -21,7 +21,7 @@ const unique = (arr) => arr.reduce((acc, el) => (acc.includes(el) ? acc : [...ac
 
 **TypeScript version**
 
-```js
+```ts unique.ts
 const unique = <T,>(arr: T[]): T[] => [...new Set(arr)];
 
 // Or

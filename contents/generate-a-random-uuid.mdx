@@ -8,7 +8,7 @@ title: Generate a random UUID
 
 **JavaScript version**
 
-```js
+```js uuid.js
 const uuid = (a) =>
     a
         ? (a ^ ((Math.random() * 16) >> (a / 4))).toString(16)

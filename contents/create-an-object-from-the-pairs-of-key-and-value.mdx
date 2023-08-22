@@ -9,7 +9,7 @@ updated: '2020-05-20'
 
 **JavaScript version**
 
-```js
+```js toObj.js
 const toObj = (arr) => Object.fromEntries(arr);
 
 // Or
@@ -18,7 +18,7 @@ const toObj = (arr) => arr.reduce((a, c) => ((a[c[0]] = c[1]), a), {});
 
 **Examples**
 
-```js
+```js examples.js
 toObj([
     ['a', 1],
     ['b', 2],

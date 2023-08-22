@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js reverse.js
 const reverse = (str) => str.split('').reverse().join('');
 
 // Or
@@ -22,7 +22,7 @@ const reverse = (str) => (str === '' ? '' : `${reverse(str.substr(1))}${str.char
 
 **TypeScript version**
 
-```js
+```ts reverse.ts
 const reverse = (str: string): string => str.split('').reverse().join('');
 
 // Or
@@ -37,6 +37,6 @@ const reverse = (str: string): string => (str === '' ? '' : `${reverse(str.subst
 
 **Examples**
 
-```js
+```js examples.js
 reverse('hello world'); // 'dlrow olleh'
 ```

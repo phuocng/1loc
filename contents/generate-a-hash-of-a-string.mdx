@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js hash.js
 const hash = (str) => str.split('').reduce((prev, curr) => (Math.imul(31, prev) + curr.charCodeAt(0)) | 0, 0);
 
 // Or
@@ -16,7 +16,7 @@ const hash = (str) => str.split('').reduce((prev, curr) => ((prev << 5) - prev +
 
 **TypeScript version**
 
-```js
+```ts hash.ts
 const hash = (str: string): number =>
     str.split('').reduce((prev, curr) => (Math.imul(31, prev) + curr.charCodeAt(0)) | 0, 0);
 
@@ -27,6 +27,6 @@ const hash = (str: string): number =>
 
 **Examples**
 
-```js
+```js examples.js
 hash('hello'); // 99162322
 ```

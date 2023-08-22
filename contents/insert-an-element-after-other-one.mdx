@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js insertAfter.js
 const insertAfter = (ele, anotherEle) => anotherEle.parentNode.insertBefore(ele, anotherEle.nextSibling);
 
 // Or
@@ -16,7 +16,7 @@ const insertAfter = (ele, anotherEle) => anotherEle.insertAdjacentElement('after
 
 **TypeScript version**
 
-```js
+```ts insertAfter.ts
 const insertAfter = (ele: Element, anotherEle: Element): Element | null =>
     anotherEle.parentNode ? anotherEle.parentNode.insertBefore(ele, anotherEle.nextSibling) : null;
 

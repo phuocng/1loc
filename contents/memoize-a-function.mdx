@@ -9,7 +9,7 @@ updated: '2021-10-06'
 
 **JavaScript version**
 
-```js
+```js memoize.js
 const memoize = (fn) =>
     (
         (cache = Object.create(null)) =>
@@ -20,7 +20,7 @@ const memoize = (fn) =>
 
 **Examples**
 
-```js
+```js examples.js
 // Calculate Fibonacci numbers
 const fibo = memoize((n) => (n <= 2 ? 1 : fibo(n - 1) + fibo(n - 2)));
 

@@ -7,19 +7,19 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js getTypeOf.js
 const getTypeOf = (obj) => Object.prototype.toString.call(obj).match(/\[object (.*)\]/)[1];
 ```
 
 **TypeScript version**
 
-```js
+```ts getTypeOf.ts
 const getTypeOf = (obj: any): string => (Object.prototype.toString.call(obj).match(/\[object (.*)\]/) as string[])[1];
 ```
 
 **Examples**
 
-```js
+```js examples.js
 getTypeOf('hello world'); // String
 getTypeOf(1000); // Number
 getTypeOf(Infinity); // Number

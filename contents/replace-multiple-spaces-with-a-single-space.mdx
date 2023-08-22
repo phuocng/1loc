@@ -7,7 +7,7 @@ updated: '2021-10-13'
 
 **JavaScript version**
 
-```js
+```js replaceSpaces.js
 // Replace spaces, tabs and new line characters
 const replaceSpaces = (str) => str.replace(/\s\s+/g, ' ');
 
@@ -17,7 +17,7 @@ const replaceOnlySpaces = (str) => str.replace(/  +/g, ' ');
 
 **TypeScript version**
 
-```js
+```ts replaceSpaces.ts
 const replaceSpaces = (str: string): string => str.replace(/\s\s+/g, ' ');
 
 const replaceOnlySpaces = (str: string): string => str.replace(/  +/g, ' ');
@@ -25,6 +25,6 @@ const replaceOnlySpaces = (str: string): string => str.replace(/  +/g, ' ');
 
 **Examples**
 
-```js
+```js examples.js
 replaceSpaces('this\n   is     \ta    \rmessage'); // 'this is a message'
 ```
