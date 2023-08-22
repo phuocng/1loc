@@ -1,0 +1,32 @@
+---
+category: Random
+created: '2023-08-22'
+title: Generate a weighted random number in given range
+---
+
+**JavaScript version**
+
+```js weightedRandom.js
+const weightedRandom = (min, max) => ~~(Math.pow(Math.random(), 2) * (max - min)) + min;
+```
+
+**TypeScript version**
+
+```ts weightedRandom.ts
+const weightedRandom = (min: number, max: number): number => ~~(Math.pow(Math.random(), 2) * (max - min)) + min;
+```
+
+**Examples**
+
+```js examples.js
+weightedRandom(2, 10);  // 7
+weightedRandom(2, 10);  // 6
+weightedRandom(2, 10);  // 4
+weightedRandom(2, 10);  // 3
+weightedRandom(2, 10);  // 5
+```
+
+## See also
+
+-   [Generate a random floating point number in given range](https://phuoc.ng/collection/1-loc/generate-a-random-floating-point-number-in-given-range)
+-   [Generate a random integer in given range](https://phuoc.ng/collection/1-loc/generate-a-random-integer-in-given-range)
