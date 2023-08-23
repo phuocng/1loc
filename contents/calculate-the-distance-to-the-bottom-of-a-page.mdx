@@ -1,0 +1,23 @@
+---
+category: DOM
+created: '2023-08-23'
+title: Calculate the distance to the bottom of a page
+---
+
+The following snippet calculates how far you are from the bottom of the page.
+
+Here's how it works: it takes the total height of the page (`document.body.scrollHeight`), subtracts the height of your screen (`window.innerHeight`), and then subtracts how far down you've already scrolled (`window.scrollY`).
+
+The result is the distance from your current position to the bottom of the page.
+
+**JavaScript version**
+
+```js distanceToBottom.js
+const distanceToBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
+```
+
+**TypeScript version**
+
+```js distanceToBottom.ts
+const distanceToBottom: number = document.body.scrollHeight - window.innerHeight - window.scrollY;
+```
