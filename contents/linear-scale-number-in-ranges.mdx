@@ -1,0 +1,36 @@
+---
+category: Math
+contributors:
+    - iamandrewluca
+created: '2023-09-28'
+title: Linear Scale of a Number between two ranges
+---
+
+**JavaScript version**
+
+```js linear-scale.js
+function linearScale(value, inMin, inMax, outMin, outMax) {
+    return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+}
+```
+
+**TypeScript version**
+
+```ts linear-scale.ts
+function linearScale(value: number, inMin: number, inMax: number, outMin: number, outMax: number) {
+    return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+}
+```
+
+**Examples**
+
+```js examples.js
+linearScale(5, 0, 10, 0, 100); // 50
+linearScale(10, 10, 20, 0, 100); // 0
+linearScale(3, 0, 9, 0, 90); // 30
+```
+
+## See also
+
+-   [Normalize the ratio of a number in a range](https://phuoc.ng/collection/1-loc/normalize-the-ratio-of-a-number-in-a-range)
+-   [Calculate the linear interpolation between two numbers](https://phuoc.ng/collection/1-loc/calculate-the-linear-interpolation-between-two-numbers)
