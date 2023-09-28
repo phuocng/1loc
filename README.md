@@ -12,5 +12,5 @@ This project is developed by _Nguyen Huu Phuoc_. I love building products and sh
 
 Be my friend on
 
--   [Twitter](https://twitter.com/nghuuphuoc)
+-   [Twitter](https://twitter.com/_phuocng)
 -   [Github](https://github.com/phuocng)
