@@ -1,0 +1,30 @@
+---
+category: Misc
+created: '2023-11-10'
+openGraphCover: /og/1-loc/convert-lab-color-lch-color.png
+title: Convert a LAB color to an LCH color
+---
+
+**JavaScript version**
+
+```js labToLch.js
+const labToLch = (l, a, b) => [
+    l,
+    Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)),
+    Math.atan2(b, a) * 180 / Math.PI,
+];
+```
+
+**TypeScript version**
+
+```ts labToLch.ts
+const labToLch = (l: number, a: number, b: number): number[] => [
+    l,
+    Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)),
+    Math.atan2(b, a) * 180 / Math.PI,
+];
+```
+
+## See also
+
+-   [Convert an LCH color to a LAB color](https://phuoc.ng/collection/1-loc/convert-an-lch-color-to-a-lab-color/)
