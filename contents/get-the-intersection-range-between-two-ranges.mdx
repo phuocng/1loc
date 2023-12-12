@@ -1,0 +1,25 @@
+---
+category: Number
+created: '2023-12-07'
+openGraphCover: /og/1-loc/get-intersection-range-between-two-ranges.png
+title: Get the intersection range between two ranges
+---
+
+**JavaScript version**
+
+```js intersection.js
+const intersection = (a, b) => (a[0] > b[1] || a[1] < b[0]) ? [] : [Math.max(a[0], b[0]), Math.min(a[1], b[1])];
+```
+
+**TypeScript version**
+
+```ts intersection.ts
+const intersection = (a: [number, number], b: [number, number]): number[] => (a[0] > b[1] || a[1] < b[0]) ? [] : [Math.max(a[0], b[0]), Math.min(a[1], b[1])];
+```
+
+**Examples**
+
+```js examples.js
+intersection([0, 20], [15, 35]);    // [15, 20]
+intersection([0, 20], [40, 50]);    // []
+```
