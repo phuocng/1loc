@@ -1,0 +1,20 @@
+---
+category: DOM
+created: '2023-12-10'
+openGraphCover: /og/1-loc/compare-two-dom-rects-size-position-match.png
+title: Compare two DOMRects for size and position match
+---
+
+**JavaScript version**
+
+```js compare.js
+const compare = (a, b) => ['top', 'left', 'width', 'height'].every(key => a[key] === b[key]);
+```
+
+**Example**
+
+```js example.js
+const a = new DOMRect(0, 0, 100, 200);
+const b = new DOMRect(0, 0, 100, 200);
+compare(a, b);  // true
+```
