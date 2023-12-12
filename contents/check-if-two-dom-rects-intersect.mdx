@@ -1,0 +1,30 @@
+---
+category: DOM
+created: '2023-12-12'
+openGraphCover: /og/1-loc/check-two-dom-rects-intersect.png
+title: Check if two DOMRects intersect
+---
+
+**JavaScript version**
+
+```js intersect.js
+const intersect = (a, b) => (b.right >= a.left && b.left <= a.right && b.top <= a.bottom && b.bottom >= a.top);
+```
+
+**TypeScript version**
+
+```ts intersect.ts
+const intersect = (a: DOMRect, b: DOMRect): boolean => (b.right >= a.left && b.left <= a.right && b.top <= a.bottom && b.bottom >= a.top);
+```
+
+**Example**
+
+```js example.js
+const a = new DOMRect(0, 0, 40, 40);
+const b = new DOMRect(10, 10, 20, 20);
+intersect(a, b);        // true
+```
+
+## See also
+
+-   [Check if a given DOMRect is contained within another DOMRect](https://phuoc.ng/collection/1-loc/check-if-a-given-dom-rect-is-contained-within-another-dom-rect/)
