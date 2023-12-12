@@ -1,0 +1,40 @@
+---
+category: DOM
+created: '2023-12-11'
+openGraphCover: /og/1-loc/check-given-dom-rect-contained-within-another-dom-rect.png
+title: Check if a given DOMRect is contained within another DOMRect
+---
+
+**JavaScript version**
+
+```js isContained.js
+const isContained = (target, container) => (
+    target.left >= container.left &&
+    target.left + target.width <= container.left + container.width &&
+    target.top >= container.top &&
+    target.top + target.height <= container.top + container.height
+);
+```
+
+**TypeScript version**
+
+```ts isContained.ts
+const isContained = (target: DOMRect, container: DOMRect): boolean => (
+    target.left >= container.left &&
+    target.left + target.width <= container.left + container.width &&
+    target.top >= container.top &&
+    target.top + target.height <= container.top + container.height
+);
+```
+
+**Example**
+
+```js example.js
+const target = new DOMRect(10, 10, 20, 20);
+const container = new DOMRect(0, 0, 40, 40);
+isContained(target, container);     // true
+```
+
+## See also
+
+-   [Check if two DOMRects intersect](https://phuoc.ng/collection/1-loc/check-if-two-dom-rects-intersect/)
