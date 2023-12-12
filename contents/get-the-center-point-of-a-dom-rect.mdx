@@ -1,0 +1,24 @@
+---
+category: DOM
+created: '2023-12-09'
+openGraphCover: /og/1-loc/get-center-point-dom-rect.png
+title: Get the center point of a DOMRect
+---
+
+**JavaScript version**
+
+```js getCenter.js
+const getCenter = rect => [rect.left + rect.width / 2, rect.top + rect.height / 2];
+```
+
+**TypeScript version**
+
+```ts getCenter.ts
+const getCenter = (rect: DOMRect): [number, number] => [rect.left + rect.width / 2, rect.top + rect.height / 2];
+```
+
+**Examples**
+
+```js example.js
+getCenter(new DOMRect(0, 0, 200, 400));     // [100, 200]
+```
