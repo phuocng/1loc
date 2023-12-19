@@ -1,0 +1,29 @@
+---
+category: DOM
+created: '2023-12-15'
+openGraphCover: /og/1-loc/check-element-has-css-overflow.png
+tags: CSS overflow, getComputedStyle
+title: Check if an element has CSS overflow
+---
+
+**JavaScript version**
+
+```js hasCssOverflow.js
+const hasCssOverflow = (ele) => ["auto", "scroll"].includes(window.getComputedStyle(ele)["overflow"]);
+```
+
+**TypeScript version**
+
+```ts hasCssOverflow.ts
+const hasCssOverflow = (ele: HTMLElement) => ["auto", "scroll"].includes(window.getComputedStyle(ele)["overflow"]);
+```
+
+The `hasCssOverflow` function checks if an HTML element has CSS overflow. First, it gets the element's computed styles using `window.getComputedStyle`. This method returns an object with all the CSS properties applied to the element.
+
+Next, we check the `overflow` property of this object and see if it's either `auto` or `scroll`. If it is, we know the element has CSS overflow and return `true`.
+
+If neither of these values is present in the `overflow` property, we know there's no CSS overflow on the element and return `false`.
+
+## See also
+
+-   [Check if an element has overflow](https://phuoc.ng/collection/1-loc/check-if-an-element-has-overflow/)
