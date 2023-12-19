@@ -1,0 +1,28 @@
+---
+category: DOM
+created: '2023-12-16'
+openGraphCover: /og/1-loc/check-element-has-overflow.png
+title: Check if an element has overflow
+---
+
+**JavaScript version**
+
+```js hasOverflow.js
+const hasOverflow = (ele) => ele.scrollHeight > ele.clientHeight || ele.scrollWidth > ele.clientWidth;
+```
+
+**TypeScript version**
+
+```ts hasOverflow.ts
+const hasOverflow = (ele: HTMLElement) => ele.scrollHeight > ele.clientHeight || ele.scrollWidth > ele.clientWidth;
+```
+
+The `hasOverflow` function checks if an HTML element has overflow in its content. It does this by comparing the element's `scrollHeight` and `scrollWidth` properties to its `clientHeight` and `clientWidth` properties, respectively.
+
+If the scroll height or width is greater than the client height or width, it means there's overflow in the content. In this case, the function returns `true`, indicating overflow. If there's no overflow, the function returns `false`.
+
+This function is useful when you want to check if an element needs scrolling. You can use it to determine whether a scroll bar should be displayed for an element based on whether it has overflow or not.
+
+## See also
+
+-   [Check if an element has CSS overflow](https://phuoc.ng/collection/1-loc/check-if-an-element-has-css-overflow/)
