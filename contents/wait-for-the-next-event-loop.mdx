@@ -1,0 +1,53 @@
+---
+category: Misc
+created: '2023-12-14'
+openGraphCover: /og/1-loc/wait-next-event-loop.png
+tags: event loop, next tick, requestAnimationFrame, setTimeout(0)
+title: Wait for the next event loop
+---
+
+In JavaScript, there may be times when you need to wait for the next event loop before executing a block of code. For example, you might want to ensure that certain updates to the DOM have been completed before running a function.
+
+To do this, you can create a `Promise` that resolves after the next event loop. The following `waitForNextLoop()` function uses `setTimeout` with a delay of `0` to queue a function call on the event loop. When this function is called, it resolves the `Promise`. This `Promise` can be used in other parts of your code to ensure that the next event loop has completed before proceeding.
+
+```js waitForNextLoop.js
+const waitForNextLoop = async () => new Promise((resolve) => {
+    setTimeout(() => {
+        resolve();
+    }, 0);
+});
+```
+
+Here's an example of how you can use the `waitForNextLoop()` function:
+
+```js
+waitForNextLoop().then(() => {
+    console.log('This code runs after the next event loop!');
+});
+```
+
+By using `requestAnimationFrame` instead of `setTimeout`, we can provide some performance benefits. This is because `requestAnimationFrame` allows the browser to optimize when to run your code. It also ensures that your code runs at a consistent frame rate, which can help prevent jank and stuttering in animations.
+
+Here's the modified version:
+
+```ts nextTick.ts
+const nextTick = (): Promise<void> => new Promise((resolve) => requestAnimationFrame(() => resolve()));
+```
+
+When you call `nextTick()`, it returns a new `Promise` that resolves when the next animation frame is ready to be rendered. This ensures that any updates to the UI or animations will be finished before the `Promise` resolves.
+
+Here's an example of how to use the `nextTick()` function:
+
+```js
+async function doSomethingAsync() {
+    await nextTick();
+    // Code here will run after the next animation frame
+}
+
+doSomethingAsync();
+```
+
+## See also
+
+-   [setTimeout(0) vs requestAnimationFrame](https://phuoc.ng/collection/this-vs-that/set-timeout-zero-vs-request-animation-frame/)
+-   [Wait for an amount of time](https://phuoc.ng/collection/1-loc/wait-for-an-amount-of-time/)
