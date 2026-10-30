@@ -2,7 +2,7 @@
 category: Misc
 created: '2020-05-23'
 title: Decode a JWT token
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
@@ -10,7 +10,7 @@ updated: '2021-10-13'
 ```js decode.js
 const decode = (token) =>
     decodeURIComponent(
-        atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
+        atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))
             .split('')
             .map((c) => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`)
             .join('')
@@ -22,7 +22,7 @@ const decode = (token) =>
 ```ts decode.ts
 const decode = (token: string): string =>
     decodeURIComponent(
-        atob(token.split('.')[1].replace('-', '+').replace('_', '/'))
+        atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'))
             .split('')
             .map((c) => `%${('00' + c.charCodeAt(0).toString(16)).slice(-2)}`)
             .join('')
@@ -39,4 +39,7 @@ decode(`
 `);
 
 // { "sub": "1234567890", "name": "John Doe", "iat": 1516239022 }
+
+// A payload with several `-` and `_` characters
+decode('x.eyJub3RlIjoiPz8-PjYiLCJ4Ijoifn5-Pz8_Pz8_In0.y'); // {"note":"??>>6","x":"~~~??????"}
 ```

@@ -2,19 +2,19 @@
 category: Validator
 created: '2020-04-19'
 title: Check if a number is a power of 2
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js isPowerOfTwo.js
-const isPowerOfTwo = (n) => (n & (n - 1)) === 0;
+const isPowerOfTwo = (n) => n > 0 && (n & (n - 1)) === 0;
 ```
 
 **TypeScript version**
 
 ```ts isPowerOfTwo.ts
-const isPowerOfTwo = (n: number): boolean => (n & (n - 1)) === 0;
+const isPowerOfTwo = (n: number): boolean => n > 0 && (n & (n - 1)) === 0;
 ```
 
 **Examples**
@@ -22,4 +22,6 @@ const isPowerOfTwo = (n: number): boolean => (n & (n - 1)) === 0;
 ```js examples.js
 isPowerOfTwo(256); // true
 isPowerOfTwo(129); // false
+isPowerOfTwo(1); // true
+isPowerOfTwo(0); // false
 ```

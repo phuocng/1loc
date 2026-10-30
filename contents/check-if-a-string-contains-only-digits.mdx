@@ -2,19 +2,19 @@
 category: Validator
 created: '2020-05-09'
 title: Check if a string contains only digits
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js isNumeric.js
-const isNumeric = (str) => !/[^0-9]/.test(str);
+const isNumeric = (str) => /^[0-9]+$/.test(str);
 ```
 
 **TypeScript version**
 
 ```ts isNumeric.ts
-const isNumeric = (str: string): boolean => !/[^0-9]/.test(str);
+const isNumeric = (str: string): boolean => /^[0-9]+$/.test(str);
 ```
 
 **Examples**
@@ -28,4 +28,5 @@ isNumeric('1.23'); // false
 isNumeric('-Infinity'); // false
 isNumeric('Infinity'); // false
 isNumeric('NaN'); // false
+isNumeric(''); // false
 ```

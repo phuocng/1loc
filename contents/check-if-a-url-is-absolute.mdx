@@ -2,19 +2,19 @@
 category: String
 created: '2020-05-15'
 title: Check if a URL is absolute
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js isAbsoluteUrl.js
-const isAbsoluteUrl = (url) => /^[a-z][a-z0-9+.-]*:/.test(url);
+const isAbsoluteUrl = (url) => /^[a-z][a-z0-9+.-]*:/i.test(url);
 ```
 
 **TypeScript version**
 
 ```ts isAbsoluteUrl.ts
-const isAbsoluteUrl = (url: string): boolean => /^[a-z][a-z0-9+.-]*:/.test(url);
+const isAbsoluteUrl = (url: string): boolean => /^[a-z][a-z0-9+.-]*:/i.test(url);
 ```
 
 **Examples**
@@ -22,6 +22,7 @@ const isAbsoluteUrl = (url: string): boolean => /^[a-z][a-z0-9+.-]*:/.test(url);
 ```js examples.js
 isAbsoluteUrl('https://phuoc.ng'); // true
 isAbsoluteUrl('https://phuoc.ng/collection/1-loc'); // true
+isAbsoluteUrl('HTTPS://phuoc.ng'); // true
 isAbsoluteUrl('phuoc.ng'); // false
 isAbsoluteUrl('//phuoc.ng'); // false
 ```

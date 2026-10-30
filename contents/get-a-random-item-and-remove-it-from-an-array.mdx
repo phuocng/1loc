@@ -2,19 +2,19 @@
 category: Random
 created: '2021-01-16'
 title: Get a random item and remove it from an array
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js randomItem.js
-const randomItem = (arr) => arr.splice((Math.random() * arr.length) | 0, 1);
+const randomItem = (arr) => arr.splice((Math.random() * arr.length) | 0, 1)[0];
 ```
 
 **TypeScript version**
 
 ```ts randomItem.ts
-const randomItem = <T,>(arr: T[]): T => arr.splice((Math.random() * arr.length) | 0, 1) as unknown as T;
+const randomItem = <T,>(arr: T[]): T => arr.splice((Math.random() * arr.length) | 0, 1)[0];
 ```
 
 **Examples**

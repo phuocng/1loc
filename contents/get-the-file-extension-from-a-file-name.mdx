@@ -2,17 +2,26 @@
 category: String
 created: '2020-04-19'
 title: Get the file extension from a file name
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js ext.js
-const ext = (fileName) => fileName.split('.').pop();
+const ext = (fileName) => (fileName.lastIndexOf('.') > 0 ? fileName.slice(fileName.lastIndexOf('.') + 1) : '');
 ```
 
 **TypeScript version**
 
 ```ts ext.ts
-const ext = (fileName: string): string => fileName.split('.').pop();
+const ext = (fileName: string): string => (fileName.lastIndexOf('.') > 0 ? fileName.slice(fileName.lastIndexOf('.') + 1) : '');
+```
+
+**Examples**
+
+```js examples.js
+ext('index.html'); // 'html'
+ext('archive.tar.gz'); // 'gz'
+ext('README'); // ''
+ext('.gitignore'); // ''
 ```

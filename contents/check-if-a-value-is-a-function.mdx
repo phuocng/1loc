@@ -2,15 +2,13 @@
 category: Function
 created: '2020-05-15'
 title: Check if a value is a function
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js isFunction.js
-const isFunction = (v) =>
-    ['[object Function]', '[object GeneratorFunction]', '[object AsyncFunction]', '[object Promise]'].includes(
-        Object.prototype.toString.call(v)
-    );
+const isFunction = (v) => typeof v === 'function';
 ```
 
 **Examples**
@@ -19,4 +17,6 @@ const isFunction = (v) =>
 isFunction(function () {}); // true
 isFunction(function* () {}); // true
 isFunction(async function () {}); // true
+isFunction(class {}); // true
+isFunction(Promise.resolve()); // false
 ```

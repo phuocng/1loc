@@ -4,7 +4,7 @@ contributors:
     - Kikobeats
 created: '2020-05-16'
 title: Memoize a function
-updated: '2021-10-06'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
@@ -12,9 +12,9 @@ updated: '2021-10-06'
 ```js memoize.js
 const memoize = (fn) =>
     (
-        (cache = Object.create(null)) =>
+        (cache = new Map()) =>
         (arg) =>
-            cache[arg] || (cache[arg] = fn(arg))
+            cache.has(arg) ? cache.get(arg) : cache.set(arg, fn(arg)).get(arg)
     )();
 ```
 
@@ -30,4 +30,11 @@ fibo(3); // 2
 fibo(4); // 3
 fibo(5); // 5
 fibo(6); // 8
+
+// Falsy results are cached too
+let calls = 0;
+const isEven = memoize((n) => (calls++, n % 2 === 0));
+isEven(3); // false
+isEven(3); // false
+calls; // 1
 ```

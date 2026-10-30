@@ -4,23 +4,24 @@ contributors:
     - codepo8
 created: '2020-04-30'
 title: Find the length of the longest string in an array
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js findLongest.js
-const findLongest = (words) => Math.max(...words.map((el) => el.length));
+const findLongest = (words) => Math.max(0, ...words.map((el) => el.length));
 ```
 
 **TypeScript version**
 
 ```ts findLongest.ts
-const findLongest = (words: string[]): number => Math.max(...words.map((el) => el.length));
+const findLongest = (words: string[]): number => Math.max(0, ...words.map((el) => el.length));
 ```
 
 **Example**
 
 ```js example.js
 findLongest(['always', 'look', 'on', 'the', 'bright', 'side', 'of', 'life']); // 6
+findLongest([]); // 0
 ```

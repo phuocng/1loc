@@ -2,27 +2,22 @@
 category: Random
 created: '2020-04-23'
 title: Generate a random string from given characters
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js generateString.js
+// `crypto.getRandomValues` is available in browsers and Node.js 19+
 const generateString = (length, chars) =>
-    Array(length)
-        .fill('')
-        .map((v) => chars[Math.floor(Math.random() * chars.length)])
-        .join('');
+    Array.from(crypto.getRandomValues(new Uint32Array(length)), (n) => chars[n % chars.length]).join('');
 ```
 
 **TypeScript version**
 
 ```ts generateString.ts
-const generateString = (length: number, chars: string) =>
-    Array(length)
-        .fill('')
-        .map((v) => chars[Math.floor(Math.random() * chars.length)])
-        .join('');
+const generateString = (length: number, chars: string): string =>
+    Array.from(crypto.getRandomValues(new Uint32Array(length)), (n) => chars[n % chars.length]).join('');
 ```
 
 **Examples**

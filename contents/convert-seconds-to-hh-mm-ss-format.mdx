@@ -2,19 +2,13 @@
 category: Date Time
 created: '2020-05-15'
 title: 'Convert seconds to hh:mm:ss format'
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js formatSeconds.js
 // `s` is number of seconds
-const formatSeconds = (s) => new Date(s * 1000).toISOString().substr(11, 8);
-
-// Or
-const formatSeconds = (s) => new Date(s * 1000).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
-
-// Or
 const formatSeconds = (s) =>
     [parseInt(s / 60 / 60), parseInt((s / 60) % 60), parseInt(s % 60)].join(':').replace(/\b(\d)\b/g, '0$1');
 ```
@@ -22,12 +16,6 @@ const formatSeconds = (s) =>
 **TypeScript version**
 
 ```ts formatSeconds.ts
-const formatSeconds = (s: number): string => new Date(s * 1000).toISOString().substr(11, 8);
-
-// Or
-const formatSeconds = (s: number): string => (new Date(s * 1000).toUTCString().match(/(\d\d:\d\d:\d\d)/) as string[])[0];
-
-// Or
 const formatSeconds = (s: number): string => (
     [parseInt(`${s / 3600}`), parseInt(`${(s / 60) % 60}`), parseInt(`${s % 60}`)].join(':').replace(/\b(\d)\b/g, '0$1')
 );
@@ -38,4 +26,5 @@ const formatSeconds = (s: number): string => (
 ```js examples.js
 formatSeconds(200); // 00:03:20
 formatSeconds(500); // 00:08:20
+formatSeconds(90061); // 25:01:01
 ```

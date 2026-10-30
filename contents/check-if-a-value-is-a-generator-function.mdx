@@ -2,12 +2,14 @@
 category: Function
 created: '2020-05-15'
 title: Check if a value is a generator function
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js isGeneratorFunction.js
-const isGeneratorFunction = (v) => Object.prototype.toString.call(v) === '[object GeneratorFunction]';
+const isGeneratorFunction = (v) =>
+    ['[object GeneratorFunction]', '[object AsyncGeneratorFunction]'].includes(Object.prototype.toString.call(v));
 ```
 
 **Examples**
@@ -15,4 +17,5 @@ const isGeneratorFunction = (v) => Object.prototype.toString.call(v) === '[objec
 ```js examples.js
 isGeneratorFunction(function () {}); // false
 isGeneratorFunction(function* () {}); // true
+isGeneratorFunction(async function* () {}); // true
 ```

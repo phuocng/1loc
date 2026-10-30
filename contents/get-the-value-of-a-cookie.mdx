@@ -2,16 +2,21 @@
 category: Misc
 created: '2020-05-28'
 title: Get the value of a cookie
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js cookie.js
-const cookie = (name) => `; ${document.cookie}`.split(`; ${name}=`).pop().split(';').shift();
+const cookie = (name) => {
+    const parts = `; ${document.cookie}`.split(`; ${name}=`);
+    return parts.length > 1 ? parts.pop().split(';').shift() : null;
+};
 ```
 
 **Examples**
 
 ```js examples.js
 cookie('_ga'); // GA1.2.825309271.1581874719
+cookie('missing'); // null
 ```

@@ -2,15 +2,16 @@
 category: DOM
 created: '2021-04-21'
 title: Get the position of an element relative to the document
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js getPosition.js
-const getPosition = (ele) => (
-    (r = ele.getBoundingClientRect()), { left: r.left + window.scrollX, top: r.top + window.scrollY }
-);
+const getPosition = (ele) => {
+    const r = ele.getBoundingClientRect();
+    return { left: r.left + window.scrollX, top: r.top + window.scrollY };
+};
 ```
 
 **Example**

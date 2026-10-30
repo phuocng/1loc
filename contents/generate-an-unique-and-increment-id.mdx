@@ -2,12 +2,13 @@
 category: Misc
 created: '2021-04-05'
 title: Generate an unique and increment id
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js uid.js
-const uid = (() => ((id = 0), () => id++))();
+const uid = ((id = 0) => () => id++)();
 ```
 
 **Examples**

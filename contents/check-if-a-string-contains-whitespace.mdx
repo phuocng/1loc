@@ -2,26 +2,24 @@
 category: Validator
 created: '2020-04-19'
 title: Check if a string contains whitespace
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js containsWhitespace.js
-const containsWhitespace = (str) => (str) => /\s/.test(str);
+const containsWhitespace = (str) => /\s/.test(str);
 ```
 
 **TypeScript version**
 
 ```ts containsWhitespace.ts
-const containsWhitespace =
-    (str: string): boolean =>
-    (str) =>
-        /\s/.test(str);
+const containsWhitespace = (str: string): boolean => /\s/.test(str);
 ```
 
 **Examples**
 
 ```js examples.js
 containsWhitespace('hello world'); // true
+containsWhitespace('hello'); // false
 ```

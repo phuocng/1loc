@@ -2,22 +2,30 @@
 category: Date Time
 created: '2020-04-19'
 title: Sort an array of dates
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js sortDescending.js
 // `arr` is an array of `Date` items
-const sortDescending = (arr) => arr.sort((a, b) => a.getTime() > b.getTime());
+const sortDescending = (arr) => arr.sort((a, b) => b.getTime() - a.getTime());
 
-const sortAscending = (arr) => arr.sort((a, b) => a.getTime() < b.getTime());
+const sortAscending = (arr) => arr.sort((a, b) => a.getTime() - b.getTime());
 ```
 
 **TypeScript version**
 
 ```ts sortDescending.ts
-const sortDescending = (arr: Date[]): Date[] => arr.sort((a, b) => a.getTime() - b.getTime());
+const sortDescending = (arr: Date[]): Date[] => arr.sort((a, b) => b.getTime() - a.getTime());
 
-const sortAscending = (arr: Date[]): Date[] => arr.sort((a, b) => b.getTime() - a.getTime());
+const sortAscending = (arr: Date[]): Date[] => arr.sort((a, b) => a.getTime() - b.getTime());
+```
+
+**Examples**
+
+```js examples.js
+const dates = [new Date('2020-01-03'), new Date('2020-01-01'), new Date('2020-01-02')];
+sortAscending(dates).map((d) => d.toISOString().slice(0, 10)); // ['2020-01-01', '2020-01-02', '2020-01-03']
+sortDescending(dates).map((d) => d.toISOString().slice(0, 10)); // ['2020-01-03', '2020-01-02', '2020-01-01']
 ```

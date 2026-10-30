@@ -2,25 +2,20 @@
 category: Random
 created: '2020-04-23'
 title: Generate a random string with given length
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js generateString.js
+// `crypto.getRandomValues` is available in browsers and Node.js 19+
 const generateString = (length) =>
-    Array(length)
-        .fill('')
-        .map((v) => Math.random().toString(36).charAt(2))
-        .join('');
+    Array.from(crypto.getRandomValues(new Uint32Array(length)), (n) => (n % 36).toString(36)).join('');
 ```
 
 **TypeScript version**
 
 ```ts generateString.ts
 const generateString = (length: number): string =>
-    Array(length)
-        .fill('')
-        .map((v) => Math.random().toString(36).charAt(2))
-        .join('');
+    Array.from(crypto.getRandomValues(new Uint32Array(length)), (n) => (n % 36).toString(36)).join('');
 ```

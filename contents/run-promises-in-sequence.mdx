@@ -2,27 +2,28 @@
 category: Misc
 created: '2020-05-02'
 title: Run Promises in sequence
-updated: '2021-10-13'
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
 
 ```js run.js
-// `promises` is an array of `Promise`
-const run = (promises) => promises.reduce((p, c) => p.then((rp) => c.then((rc) => [...rp, rc])), Promise.resolve([]));
+// `tasks` is an array of functions; each returns a `Promise` when called
+const run = (tasks) => tasks.reduce((p, c) => p.then((rp) => c().then((rc) => [...rp, rc])), Promise.resolve([]));
 ```
 
 **TypeScript version**
 
 ```ts run.ts
-const run = (promises: Promise<any>[]): Promise<any> =>
-    promises.reduce((p, c) => p.then((rp) => c.then((rc) => [...rp, rc])), Promise.resolve([]));
+const run = (tasks: (() => Promise<any>)[]): Promise<any[]> =>
+    tasks.reduce((p, c) => p.then((rp) => c().then((rc) => [...rp, rc])), Promise.resolve([] as any[]));
 ```
 
 **Examples**
 
 ```js examples.js
-run(promises).then((results) => {
-    // `results` is an array of promise results in the same order
+const tasks = [() => fetch('/a'), () => fetch('/b')];
+run(tasks).then((results) => {
+    // `results` is an array of results in the same order; `/b` is requested only after `/a` settles
 });
 ```

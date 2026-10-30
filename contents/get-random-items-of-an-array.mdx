@@ -2,6 +2,7 @@
 category: Random
 created: '2021-01-16'
 title: Get random items of an array
+updated: '2026-10-29'
 ---
 
 **JavaScript version**
@@ -9,12 +10,10 @@ title: Get random items of an array
 ```js randomItems.js
 const randomItems = (arr, count) =>
     arr
-        .concat()
-        .reduce(
-            (p, _, __, arr) =>
-                p[0] < count ? [p[0] + 1, p[1].concat(arr.splice((Math.random() * arr.length) | 0, 1))] : p,
-            [0, []]
-        )[1];
+        .map((item) => [Math.random(), item])
+        .sort((a, b) => a[0] - b[0])
+        .slice(0, count)
+        .map(([, item]) => item);
 ```
 
 **Examples**
